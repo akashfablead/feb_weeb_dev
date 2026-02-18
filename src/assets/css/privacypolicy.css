@@ -1,0 +1,183 @@
+:root {
+    --primary: #ff623d;
+    --soft-primary: #fff1ed;
+    --accent: #f8cfc5;
+    --text-muted: #6c757d;
+    --font-family: 'Inter', sans-serif;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: var(--font-family);
+    color: var(--text-muted);
+    background-color: #fefefe;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+h1, h5, h6 {
+    color: var(--primary);
+}
+
+.section-title1 h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-title1 .lead {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.section-title1 .badge {
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.75rem;
+}
+
+.card {
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card-header-policy {
+    background: hsl(14deg 100% 57% / 10%) !important;
+    /* color: var(--primary); */
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.25rem;
+}
+
+.card-body {
+    padding: 1.25rem;
+}
+
+ul.list-unstyled {
+    padding-left: 1rem;
+}
+
+ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+ul.list-unstyled li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+ul.list-unstyled li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1rem;
+}
+
+ul.list-unstyled li::before {
+    content: '•';
+    color: var(--primary);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.support-list {
+  list-style: none;        /* removes bullets */
+  padding: 0;              /* removes default padding */
+  margin: 0;               /* removes default margin */
+}
+
+.support-list li {
+  margin-bottom: 0.5rem;   /* adds vertical spacing between items */
+  font-size: 1rem;         /* optional: control text size */
+  line-height: 1.5;        /* optional: improve readability */
+}
+
+
+.border-start {
+    border-left-width: 4px !important;
+}
+
+.bg-light {
+    background-color: #f9f9f9 !important;
+}
+
+.bg-opacity-10 {
+    background-color: rgba(255, 98, 61, 0.1) !important;
+}
+
+.bg-opacity-25 {
+    background-color: rgba(255, 98, 61, 0.25) !important;
+}
+
+.text-primary-policy {
+    color: var(--primary) !important;
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+.shadow-sm {
+    box-shadow: var(--shadow) !important;
+}
+
+.mt-3, .mb-4 {
+    margin-top: 1.5rem !important;
+}
+
+.ps-3 {
+    padding-left: 1rem !important;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fs-5 {
+    font-size: 1.125rem;
+}
+
+.display-5 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 576px) {
+    .section-title1 h1 {
+        font-size: 2rem;
+    }
+
+    .section-title1 .lead {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-header-policy {
+        font-size: 1rem;
+    }
+}
