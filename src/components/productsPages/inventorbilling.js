@@ -16,10 +16,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
 import TopBar from "../topBar";
-import inveory_profuct_list from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-product-list-page.png";
 
-import inventor_billing_software_main_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-billing-software-dashboard.png";
-import inventor_billing_software_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-billing-management-page.png";
+import inveory_profuct_list from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-product-list-page.png";
+import inventor_billing_software_main_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-billing-management-page.png";
+import inventor_billing_software_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-inventory-billing-software-dashboard.png";
 import purchase_list_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-purchase-list-management-page.png";
 import sales_page_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-sales-management-page.png";
 import add_purchase_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-add-purchase-entry-page.png";
@@ -27,6 +27,7 @@ import accounts_page_img_feb from "../../assets/images/Products/Inventory/fablea
 import sales_list_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-sales-list-management-page.png";
 import expense_list_page_img_feb from "../../assets/images/Products/Inventory/fableadtechnolabs-expense-list-management-page.png";
 import InnerCallToLog from "../innerCallToLog";
+
 import { Check2, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
@@ -70,10 +71,10 @@ function Inventorbilling() {
     },
     {
       img: expense_list_page_img_feb,
-      title: "Detailed Expense Tracking & Reporting",
-      alt: "Fablead Technolabs detailed expense tracking",
+      title: "Comprehensive Account & Ledger Management",
+      alt: "Fablead Technolabs detailed account ledger tracking",
       description:
-        "Keep a precise record of all your business expenditures with our detailed expense list.",
+        "Maintain accurate records of all financial transactions with a well-organized account and ledger system.",
     },
     {
       img: purchase_list_page_img_feb,
@@ -91,10 +92,10 @@ function Inventorbilling() {
     },
     {
       img: sales_page_page_img_feb,
-      title: "Intuitive Point-of-Sale (POS) Interface",
-      alt: "Fablead Technolabs point-of-sale interface",
+      title: "Smart GST Reporting & Compliance",
+      alt: "Fablead Technolabs smart GST reporting and compliance",
       description:
-        "Simplify your sales transactions with our user-friendly POS page. Quickly add products from",
+        "Simplify your tax management with our easy-to-use GST reporting system. Quickly generate accurate GST reports for sales and purchases.",
     },
     {
       img: add_purchase_page_img_feb,
@@ -105,10 +106,10 @@ function Inventorbilling() {
     },
     {
       img: accounts_page_img_feb,
-      title: "Financial Performance Overview",
+      title: "Invoice Summary Overview",
       alt: "Fablead Technolabs financial performance overview",
       description:
-        "Complete view of payments, profits, and balance — a snapshot of overall business performance.",
+        "Get a complete view of all invoices — paid, pending, and overdue — in one clear dashboard.",
     },
   ];
 
@@ -222,7 +223,8 @@ function Inventorbilling() {
             >
               <Image
                 src={inventor_billing_software_main_feb}
-                className="img-fluid rounded shadow object-fit-cover zoom-img"
+                // className="img-fluid rounded shadow object-fit-cover zoom-img"
+                className="img-fluid rounded shadow object-contain"
                 alt="Fablead Technolabs inventory billing software dashboard"
               />
             </Col>
