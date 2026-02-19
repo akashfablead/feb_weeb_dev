@@ -10,7 +10,7 @@ import Header from "../headers";
 import Footer from "../footer";
 import TopBar from "../topBar";
 import whattsupProductMainImage1 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-main-dashboard.png";
-import whattsupProductsImage10 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-marketing-platform.jpg";
+import whattsupProductsImage10 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-marketing-platform.png";
 import whattsupProductsImage2 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-catalog-image-2.png";
 import whattsupProductsImage7 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-marketing-image-7.png";
 import whattsupProductsImage9 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-marketing-image-9.png";
