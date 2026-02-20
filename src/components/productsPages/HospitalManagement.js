@@ -125,9 +125,7 @@ function HospitalManagement() {
       <TopBar />
       <Header />
       <section className="services section-bg fade-up">
-        {/* <div className="section-title1">
-          <div className="contact_us">Hospital & Clinic Management System (HMS)</div>
-        </div> */}
+      
         <div className="section-title1">
           <div className="pt-5" role="heading" aria-level="1">Hospital & Clinic Management System (HMS)</div>
           <p className="header-content prodectpage-ecommerce-subheading">
@@ -147,19 +145,7 @@ function HospitalManagement() {
                   </span>
                 </div>
                 <div className="development-content">
-                  {/* <p>
-                    <Link className="development-content-span" to="#">
-                      Streamline hospital operations, manage patient records,
-                      and enhance healthcare services with our custom Hospital
-                      Management solutions.
-                    </Link>
-                  </p> */}
-                  {/* <p>
-                    Fablead Developers Technolab offers powerful Hospital
-                    Management solutions to manage patient records, automate
-                    administrative tasks, and boost healthcare service
-                    efficiency.
-                  </p> */}
+               
                   <p>Our <strong>Hospital & Clinic Management System (HMS)</strong> is a robust, cloud-based platform built to streamline administrative tasks and enhance the overall quality of patient care. It ensures complete compliance with healthcare regulations while simplifying day-to-day operations for clinic staff.                  </p>
                   <p>It efficiently manages appointments, patient records, and billing, while also handling inventory and other tasks. The system fits clinics of all sizes and integrates smoothly into existing workflows.</p>
 
@@ -209,18 +195,6 @@ function HospitalManagement() {
                     administrative tasks, and improve healthcare service
                     delivery—all in one place.
                   </p>
-                  {/* <div className="row key-features-div">
-                    <ul className="feature-list">
-                      <li><Check2 className="service-icon me-2" /><strong>Digital Patient Profiles:</strong> Capture comprehensive patient information, including medical history, allergies, and insurance details.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Secure Access:</strong> Enable authorized personnel to access and update patient records in real-time, ensuring continuity of care.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Regulatory Compliance:</strong> Adhere to healthcare standards such as HIPAA and GDPR, ensuring data security and patient privacy.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Appointment Scheduling & Management:</strong> Schedule, reschedule, or cancel appointments through a user-friendly portal.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Automated Reminders:</strong> Reduce no-shows by sending automated SMS or email reminders to patients.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Billing & Invoicing:</strong> Simplify financial operations with integrated billing and invoicing tools.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Inventory & Pharmacy Management:</strong> Track medical supplies and manage prescriptions efficiently.</li>
-                      <li><Check2 className="service-icon me-2" /><strong>Analytics & Reporting:</strong> Gain actionable insights into hospital operations with comprehensive analytics.</li>
-                    </ul>
-                  </div> */}
 
                   <div className="row key-features-div">
                     <div id="why-us" className="why-us fade-up">
@@ -230,62 +204,6 @@ function HospitalManagement() {
                           className="d-flex flex-column justify-content-center align-items-stretch  order-lg-1"
                         >
                           <div className="accordion-list1">
-                            {/* <ul>
-                              <li>
-                                <a
-                                  data-bs-toggle="collapse"
-                                  className={`collapse ${accordionState.item1 ? "show" : ""}`}
-                                  onClick={() => handleAccordionToggle("item1")}
-                                >
-                                  01. Smart Features for Streamlined Patient Care{" "}
-                                  {accordionState.item1 ? (
-                                    <ChevronUp className="icon-close float-end" />
-                                  ) : (
-                                    <ChevronDown className="icon-show float-end" />
-                                  )}
-                                </a>
-                                <div
-                                  id="accordion-list-1"
-                                  className={`collapse ${accordionState.item1 ? "show" : ""}`}
-                                  data-bs-parent=".accordion-list"
-                                >
-                                  <ul className="list-unstyled">
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Digital Patient Profiles:</strong> Capture comprehensive patient information, including medical history, allergies, and insurance details.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Secure Access:</strong> Enable authorized personnel to access and update patient records in real-time, ensuring continuity of care.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Regulatory Compliance:</strong> Adhere to healthcare standards such as HIPAA and GDPR, ensuring data security and patient privacy.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Appointment Scheduling & Management:</strong> Schedule, reschedule, or cancel appointments through a user-friendly portal.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Automated Reminders:</strong> Reduce no-shows by sending automated SMS or email reminders to patients.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Billing & Invoicing:</strong> Simplify financial operations with integrated billing and invoicing tools.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Inventory & Pharmacy Management:</strong> Track medical supplies and manage prescriptions efficiently.
-                                    </li>
-                                    <li>
-                                      <Check2 className="service-icon me-2" />
-                                      <strong>Analytics & Reporting:</strong> Gain actionable insights into hospital operations with comprehensive analytics.
-                                    </li>
-                                  </ul>
-                                </div>
-                              </li>
-                            </ul> */}
                             <ul className="accordion-list1">
                               {/* 1. Patient Care */}
                               <li>

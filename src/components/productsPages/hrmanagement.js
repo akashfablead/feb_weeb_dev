@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
 import TopBar from "../topBar";
-import hr_management_main_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hr-management-system-dashboard.jpeg";
+import hr_management_main_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hr-management-system-dashboard.png";
 import attendance_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-attendance-management-page.png";
 import employee_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-employee-management-page.png";
 import leave_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-leave-management-page.png";

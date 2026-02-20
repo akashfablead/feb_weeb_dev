@@ -323,41 +323,41 @@ function Contact() {
 
                   {/* Conditional Product Selection */}
                   {formData.interest_type === 'product' && (
-                  <Col md={6}>
-                    <FormGroup>
-                      <FormLabel htmlFor="product_interest">
-                        Product Interest
-                      </FormLabel>
-                      <Form.Select
-                        name="product_interest"
-                        id="product_interest"
-                        value={formData.product_interest}
-                        onChange={handleInputChange}
-                        style={{ height: "45px", borderRadius: "20px" }}
+                    <Col md={6}>
+                      <FormGroup>
+                        <FormLabel htmlFor="product_interest">
+                          Product Interest
+                        </FormLabel>
+                        <Form.Select
+                          name="product_interest"
+                          id="product_interest"
+                          value={formData.product_interest}
+                          onChange={handleInputChange}
+                          style={{ height: "45px", borderRadius: "20px" }}
                           required
-                      >
-                        <option value="">Select Product</option>
-                        <option value="CRM Web & Mobile APP">
-                          CRM Web & Mobile APP (CRM)
-                        </option>
-                        <option value="Hospital Management">
-                          Hospital Management
-                        </option>
-                        <option value="HR Management System">HR Management System</option>
-                        <option value="Inventory & Billing Software">
-                          Inventory & Billing Software (ERP)
-                        </option>
-                        <option value="Ecommerce Web & Mobile App">
+                        >
+                          <option value="">Select Product</option>
+                          <option value="CRM Web & Mobile APP">
+                            CRM Web & Mobile APP (CRM)
+                          </option>
+                          <option value="Hospital Management">
+                            Hospital Management
+                          </option>
+                          <option value="HR Management System">HR Management System</option>
+                          <option value="Inventory & Billing Software">
+                            Inventory & Billing Software (ERP)
+                          </option>
+                          <option value="Ecommerce Web & Mobile App">
                             E-commerce Web & Mobile App
-                        </option>
+                          </option>
                           <option value="WhatsApp Bulk Messaging">WhatsApp Bulk Messaging Platform</option>
                           <option value="Real Estate Management">Real Estate Management System</option>
-                        <option value="Other">
-                          Other
-                        </option>
-                      </Form.Select>
-                    </FormGroup>
-                  </Col>
+                          <option value="Other">
+                            Other
+                          </option>
+                        </Form.Select>
+                      </FormGroup>
+                    </Col>
                   )}
                 </Row>
 

@@ -226,6 +226,30 @@ function Footer() {
                       </a>
                     </div>
                   </div>
+                  {/* <div className="d-flex flex-wrap align-items-center gap-3 mt-3">
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.techjockey.com/detail/fablead-hr?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                    >
+                      <img
+                        src="https://cdn.techjockey.com/web/assets/new-assets/images/badges_img/available_3.png"
+                        style={{ width: "80px", maxWidth: "100%" }}
+                        alt="Available on TechJockey"
+                      />
+                    </a>
+                    <a
+                      target="_blank"
+                      rel="noreferrer"
+                      href="https://www.techjockey.com/detail/fablead-erp?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                    >
+                      <img
+                        src="https://www.techjockey.com/tjapi/reviews_on_techjockey_badge?type=reviews-on-techjockey&oem-brand=fablead-technolab&badge=Badge_Review4"
+                        style={{ width: "80px", maxWidth: "100%" }}
+                        alt="Reviews on TechJockey"
+                      />
+                    </a>
+                  </div> */}
                 </div>
               </Col>
             </Row>
