@@ -59,10 +59,32 @@
   animation: pulse 2s infinite;
 }
 
+.techjockey-badge {
+  position: fixed;
+  bottom: 120px;
+  right: 32px;
+  width: 78px;
+  z-index: 1000;
+}
+
+.techjockey-badge img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .chatbot-toggle:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 25px rgba(240, 90, 40, 0.4);
   background: #E88C6C;
+}
+
+@media (max-width: 767px) {
+  .techjockey-badge {
+    bottom: 110px;
+    right: 20px;
+    width: 68px;
+  }
 }
 
 .chatbot-toggle-text {
@@ -87,9 +109,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(240, 90, 40, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 15px rgba(240, 90, 40, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(240, 90, 40, 0);
   }
@@ -117,6 +141,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -233,6 +258,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -454,7 +480,7 @@
     right: 15px;
     left: 15px;
   }
-  
+
   .chatbot-toggle {
     width: 55px;
     height: 55px;
@@ -462,11 +488,11 @@
     bottom: 15px;
     right: 15px;
   }
-  
+
   .chatbot-message {
     max-width: 90%;
   }
-  
+
   .chatbot-options {
     max-height: 100px;
     padding: 4px 0 2px;
@@ -479,26 +505,26 @@
   .chatbot-container {
     height: 75vh;
   }
-  
+
   .chatbot-header {
     padding: 12px;
   }
-  
+
   .chatbot-messages {
     padding: 12px;
   }
-  
+
   .chatbot-input-form {
     padding: 0 12px 12px;
     padding-top: 10px;
   }
-  
+
   .chatbot-options {
     padding: 6px 0 3px;
     gap: 4px;
     margin-top: 3px;
   }
-  
+
   .chatbot-option-btn {
     padding: 2px 6px;
     font-size: 10px;
@@ -573,4 +599,31 @@
 
 .chatbot-restart-btn:active {
   transform: translateY(0);
+}
+
+/* Badge footer */
+.chatbot-badge {
+  border-top: 1px solid #eaeaea;
+  background: #ffffff;
+  padding: 10px 15px 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0; /* keep visible on small heights */
+}
+
+.chatbot-badge-img {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .chatbot-badge {
+    padding: 8px 12px 10px;
+  }
+
+  .chatbot-badge-img {
+    width: 105px;
+  }
 }

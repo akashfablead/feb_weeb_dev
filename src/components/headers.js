@@ -48,8 +48,8 @@ function Header() {
   };
   return (
     <header id="header" className="fixed-top">
-      <Container className=" d-flex align-items-center">
-        <div className="logo me-auto">
+      <Container className="d-flex align-items-center justify-content-between gap-3">
+        <div className="logo">
           <Link to={logoUrl}>
             {" "}
             <Image
@@ -62,16 +62,15 @@ function Header() {
 
         <Navbar
           id="navbar"
-          className={`navbar ${mobileMenuOpen ? "navbar-mobile" : ""}`}
+          className={`navbar mx-auto ${mobileMenuOpen ? "navbar-mobile" : ""}`}
         >
           <ul>
             <li>
               <Link
                 to="/"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/") ? "active" : ""
-                }`}
+                className={`nav-link scrollto ${isNavLinkActive("/") ? "active" : ""
+                  }`}
               >
                 Home
               </Link>
@@ -80,9 +79,8 @@ function Header() {
               <Link
                 to="/crm"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto d-none  ${
-                  isNavLinkActive("/crm") ? "active" : ""
-                }`}
+                className={`nav-link scrollto d-none  ${isNavLinkActive("/crm") ? "active" : ""
+                  }`}
               >
                 Product
               </Link>
@@ -91,9 +89,8 @@ function Header() {
               <Link
                 to="/about"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/about") ? "active" : ""
-                }`}
+                className={`nav-link scrollto ${isNavLinkActive("/about") ? "active" : ""
+                  }`}
               >
                 About
               </Link>
@@ -102,17 +99,16 @@ function Header() {
               <Link
                 to="/services"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/services") ||
+                className={`nav-link scrollto ${isNavLinkActive("/services") ||
                   isNavLinkActive("/services/website-development") ||
                   isNavLinkActive("/services/website-design") ||
                   isNavLinkActive("/services/mobile-apps") ||
                   isNavLinkActive("/services/e-commerce") ||
                   isNavLinkActive("/services/cms-website") ||
                   isNavLinkActive("/services/web-maintenance")
-                    ? "active"
-                    : ""
-                }`}
+                  ? "active"
+                  : ""
+                  }`}
               >
                 Services
               </Link>
@@ -148,9 +144,8 @@ function Header() {
               <Link
                 to="/portfolio"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/portfolio") ? "active" : ""
-                }`}
+                className={`nav-link scrollto ${isNavLinkActive("/portfolio") ? "active" : ""
+                  }`}
               >
                 Portfolio
               </Link>
@@ -219,65 +214,13 @@ function Header() {
               </ul>
             </li>
 
-            {/* <li className="dropdown" onClick={toggleDropdown}>
-              <Link
-                to="/training-and-courses"
-                className={`${isNavLinkActive("/training-and-courses") ? "active" : ""
-                  }`}
-              >
-                <span className="nav-link scrollto">Training & Courses</span>
-                <i className="bi bi-chevron-down pt-1"></i>
-              </Link>
-              <ul className={dropdownActive ? "dropdown-active" : ""}>
-                <li>
-                  <Link
-                    to="/training-and-courses/front-end-development"
-                    className="product-dropdown"
-                  >
-                    Frontend Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/training-and-courses/back-end-development"
-                    className="product-dropdown"
-                  >
-                    Backend Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/training-and-courses/full-stack-development"
-                    className="product-dropdown"
-                  >
-                    Fullstack Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/training-and-courses/cms-development"
-                    className="product-dropdown"
-                  >
-                    Wordpress CMS Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/training-and-courses/mobile-app-development"
-                    className="product-dropdown"
-                  >
-                    Mobile App Development
-                  </Link>
-                </li>
-              </ul>
-            </li> */}
+
             <li>
               <Link
                 to="/careers"
                 rel="noopener noreferrer"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/careers") ? "active" : ""
-                }`}
+                className={`nav-link scrollto ${isNavLinkActive("/careers") ? "active" : ""
+                  }`}
               >
                 Careers
               </Link>
@@ -285,25 +228,28 @@ function Header() {
             <li>
               <Link
                 to="/contact"
-                className={`nav-link scrollto ${
-                  isNavLinkActive("/contact") ? "active" : ""
-                }`}
+                className={`nav-link scrollto ${isNavLinkActive("/contact") ? "active" : ""
+                  }`}
               >
                 Contact
               </Link>
             </li>
           </ul>
-          {/* <i
-            className="bi bi-list mobile-nav-toggle"
-            onClick={toggleMobileMenu}
-          ></i> */}
+
           <i
             onClick={toggleMobileMenu}
-            className={`bi ${
-              mobileMenuOpen ? "bi-x" : "bi-list"
-            } mobile-nav-toggle`}
+            className={`bi ${mobileMenuOpen ? "bi-x" : "bi-list"
+              } mobile-nav-toggle`}
           />
         </Navbar>
+
+        <Link
+          to="/contact"
+          className="get-quote-btn d-none d-lg-inline-flex align-items-center"
+          rel="noopener noreferrer"
+        >
+          Get Quote <i className="bi bi-arrow-right ms-2"></i>
+        </Link>
       </Container>
     </header>
   );
