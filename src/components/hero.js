@@ -5,15 +5,15 @@ import banner1 from "../assets/images/Hero_Banner/mobile-app.webp";
 import banner2 from "../assets/images/Hero_Banner/web design (3)-min.webp";
 import banner3 from "../assets/images/Hero_Banner/web-development.webp";
 import banner4 from "../assets/images/Hero_Banner/ecommerce.webp";
-import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
+// import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
-  {
-    image: ProdectBanner,
-    alt: "our-products",
-    title: "Complete Business Solutions Portfolio",
-    subtitle: "Discover our comprehensive range of products: CRM, Hospital Management, HR System, Inventory & Billing, E-commerce, and WhatsApp Bulk Messaging",
-  },
+  // {
+  //   image: ProdectBanner,
+  //   alt: "our-products",
+  //   title: "Complete Business Solutions Portfolio",
+  //   subtitle: "Discover our comprehensive range of products: CRM, Hospital Management, HR System, Inventory & Billing, E-commerce, and WhatsApp Bulk Messaging",
+  // },
   {
     image: banner1,
     alt: "mobile-app",
