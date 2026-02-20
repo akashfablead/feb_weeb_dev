@@ -226,7 +226,7 @@ function Footer() {
                       </a>
                     </div>
                   </div>
-                  {/* <div className="d-flex flex-wrap align-items-center gap-3 mt-3">
+                  <div className="d-flex flex-wrap align-items-center gap-3 mt-3">
                     <a
                       target="_blank"
                       rel="noreferrer"
@@ -249,7 +249,7 @@ function Footer() {
                         alt="Reviews on TechJockey"
                       />
                     </a>
-                  </div> */}
+                  </div>
                 </div>
               </Col>
             </Row>
