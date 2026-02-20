@@ -246,9 +246,9 @@ function Contact() {
                       <FormLabel htmlFor="phone">Phone Number</FormLabel>
                       <FormControl
                         type="tel"
-                        name="phone_no"   // ✅ FIX
+                        name="phone_no"
                         id="phone"
-                        value={formData.phone_no}   // ✅ FIX
+                        value={formData.phone_no}
                         onChange={handleInputChange}
                         required
                       />
