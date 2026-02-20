@@ -68,15 +68,28 @@ function AboutUs() {
           </Col>
           <Col
             lg={6}
-            className="align-items-stretch order-lg-2 img satisfied"
+            className="align-items-stretch order-lg-2 img satisfied d-flex justify-content-center"
             data-aos="zoom-in"
             data-aos-delay="150"
           >
-            <Image
-              src={AboutUsImage}
-              className="about_image"
-              alt="Fablead Developers Technolab"
-            />
+            <div className="about-media">
+              <Image
+                src={AboutUsImage}
+                className="about_image"
+                alt="Fablead Developers Technolab"
+              />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.techjockey.com/detail/fablead-erp?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+              >
+                <img
+                  src="https://www.techjockey.com/tjapi/reviews_on_techjockey_badge?type=reviews-on-techjockey&oem-brand=fablead-technolab&badge=Badge_Review4"
+                  className="about_badge"
+                  alt="Reviews on TechJockey"
+                />
+              </a>
+            </div>
           </Col>
         </Row>
       </Container>

@@ -5,7 +5,7 @@ import banner1 from "../assets/images/Hero_Banner/mobile-app.webp";
 import banner2 from "../assets/images/Hero_Banner/web design (3)-min.webp";
 import banner3 from "../assets/images/Hero_Banner/web-development.webp";
 import banner4 from "../assets/images/Hero_Banner/ecommerce.webp";
-// import ProdectBanner from "/../assets/images/Hero_Banner/prodect_banner.png";
+// import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
   // {
@@ -37,12 +37,6 @@ const slides = [
     alt: "web-development",
     title: "CMS based Website development and designing",
     subtitle: "Popular CMS options include WordPress, Joomla, Squarespace, Wix and many others.",
-  },
-  {
-    image: banner1,
-    alt: "mobile-app",
-    title: "Developing robust applications for both iOS and Android platforms.",
-    subtitle: "We prioritize user experience to create apps that users love and engage with effortlessly",
   },
 ];
 

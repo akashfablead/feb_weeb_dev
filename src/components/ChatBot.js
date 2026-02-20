@@ -551,10 +551,25 @@ const ChatBot = () => {
 
     if (!isOpen) {
         return (
-            <button className="chatbot-toggle" onClick={startChat}>
-                <FontAwesomeIcon icon={faComments} />
-                <span className="chatbot-toggle-text">Chat with us</span>
-            </button>
+            <>
+                <div className="techjockey-badge">
+                    <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.techjockey.com/detail/fablead-erp?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                    >
+                        <img
+                            src="https://www.techjockey.com/tjapi/reviews_on_techjockey_badge?type=reviews-on-techjockey&oem-brand=fablead-technolab&badge=Badge_Review4"
+                            className="about_badge"
+                            alt="Reviews on TechJockey"
+                        />
+                    </a>
+                </div>
+                <button className="chatbot-toggle" onClick={startChat}>
+                    <FontAwesomeIcon icon={faComments} />
+                    <span className="chatbot-toggle-text">Chat with us</span>
+                </button>
+            </>
         );
     }
 
