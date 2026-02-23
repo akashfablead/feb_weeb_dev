@@ -398,15 +398,15 @@ const portfolioItems = [
     id: 48,
     image: whatsappbluk,
     title: "WhatsApp Bulk Messaging",
-    category: "filter-react",
     description: "React JS",
+    filterClass: "filter-react",
   },
   {
     id: 49,
     image: tanishphysiofitness,
     title: "Tanish Physio & Fitness",
-    category: "filter-react",
     description: "React JS",
+    filterClass: "filter-react",
   },
 ];
 
