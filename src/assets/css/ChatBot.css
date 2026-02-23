@@ -618,6 +618,19 @@
   display: block;
 }
 
+/* External badge near floating button */
+.techjockey-badge {
+  position: fixed;
+  bottom: 120px;
+  right: 26px;
+  z-index: 1000;
+}
+
+.techjockey-badge .about_badge {
+  width: 70px;
+  height: auto;
+}
+
 @media (max-width: 480px) {
   .chatbot-badge {
     padding: 8px 12px 10px;

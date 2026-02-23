@@ -53,6 +53,8 @@ import brags from "../assets/images/portfolioImages/brags.png";
 import aim from "../assets/images/portfolioImages/aim.png";
 import Pharmaxy from "../assets/images/portfolioImages/Pharmaxy.png";
 import parkpal from "../assets/images/portfolioImages/parkpal.png";
+import whatsappbluk from "../assets/images/portfolioImages/react/whatsappBulk.png";
+import tanishphysiofitness from "../assets/images/portfolioImages/react/tanishphysiofitness.png";
 
 const portfolioItems = [
   {
@@ -392,7 +394,20 @@ const portfolioItems = [
     image: ReactFablead,
     filterClass: "filter-react",
   },
-
+  {
+    id: 48,
+    image: whatsappbluk,
+    title: "WhatsApp Bulk Messaging",
+    category: "filter-react",
+    description: "React JS",
+  },
+  {
+    id: 49,
+    image: tanishphysiofitness,
+    title: "Tanish Physio & Fitness",
+    category: "filter-react",
+    description: "React JS",
+  },
 ];
 
 function PortfolioPage() {
