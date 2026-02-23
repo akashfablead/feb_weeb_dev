@@ -3,7 +3,6 @@ import './index.css';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
-import { hydrate, render } from "react-dom";
 import ReactDOM from 'react-dom/client';
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // "proxy": "fableadtechnolabs.com/fablead_web",
