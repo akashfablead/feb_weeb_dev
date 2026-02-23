@@ -534,6 +534,9 @@ import aim from "../assets/images/portfolioImages/aim.png";
 import Pharmaxy from "../assets/images/portfolioImages/Pharmaxy.png";
 import parkpal from "../assets/images/portfolioImages/parkpal.png";
 import useWindowDimensions from "../hooks/useWindowDimensions";
+import whatsappbluk from "../assets/images/portfolioImages/react/whatsappBulk.png";
+import tanishphysiofitness from "../assets/images/portfolioImages/react/tanishphysiofitness.png";
+
 
 function Portfolio() {
   const { width } = useWindowDimensions();
@@ -811,9 +814,9 @@ function Portfolio() {
     {
       id: 35,
       image:Jackeames,   
-      title: "Jackeames",
-      category: "filter-squarespace",
-      description: "Squarespace",
+      title: "Jackeame ",
+      category:"filter-squarespace",
+      description:"Squarespace",
     },
     {
       id: 36,
@@ -892,12 +895,26 @@ function Portfolio() {
       category: "filter-react",
       description: "React JS",
     },
-    {
+  {
       id: 47,
       image: newIcon,
       title: "ToDo-App",
       category: "filter-react",
       description: "React Native",
+    },
+    {
+      id: 48,
+      image: whatsappbluk,
+      title: "WhatsApp Bulk Messaging",
+      category: "filter-react",
+      description: "React JS",
+    },
+    {
+      id: 49,
+      image: tanishphysiofitness,
+      title: "Tanish Physio & Fitness",
+      category: "filter-react",
+      description: "React JS",
     },
   ];
   const filteredItems = portfolioItems.filter((item) => {
@@ -910,21 +927,58 @@ function Portfolio() {
   return (
     <section id="portfolio" className="portfolio section-bg">
       <Container data-aos="fade-up">
-      <div className="section-title">
-            <div role="heading" aria-level="2">Our Works</div>
+        <div className="section-title">
+          <div role="heading" aria-level="2">Our Works</div>
         </div>
+
         <ul
           id="portfolio-flters"
           className="text-center justify-content-center p-0"
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <li data-filter="*" className="filter-active"><span>All</span></li>
-          <li data-filter=".filter-php"><span>PHP</span></li>
-          <li data-filter=".filter-wordpress"><span>WORDPRESS</span></li>
-          <li data-filter=".filter-squarespace"><span>SQUARESPACE</span></li>
-          <li data-filter=".filter-mobile-app"><span>MOBILE APP</span></li>
-          <li data-filter=".filter-react"><span>REACT & REACT NATIVE</span></li>
+          <li
+            data-filter="*"
+            className={activeFilter === "*" ? "filter-active" : ""}
+            onClick={() => setActiveFilter("*")}
+          >
+            <span>All</span>
+          </li>
+          <li
+            data-filter=".filter-php"
+            className={activeFilter === ".filter-php" ? "filter-active" : ""}
+            onClick={() => setActiveFilter(".filter-php")}
+          >
+            <span>PHP</span>
+          </li>
+          <li
+            data-filter=".filter-wordpress"
+            className={activeFilter === ".filter-wordpress" ? "filter-active" : ""}
+            onClick={() => setActiveFilter(".filter-wordpress")}
+          >
+            <span>WORDPRESS</span>
+          </li>
+          <li
+            data-filter=".filter-squarespace"
+            className={activeFilter === ".filter-squarespace" ? "filter-active" : ""}
+            onClick={() => setActiveFilter(".filter-squarespace")}
+          >
+            <span>SQUARESPACE</span>
+          </li>
+          <li
+            data-filter=".filter-mobile-app"
+            className={activeFilter === ".filter-mobile-app" ? "filter-active" : ""}
+            onClick={() => setActiveFilter(".filter-mobile-app")}
+          >
+            <span>MOBILE APP</span>
+          </li>
+          <li
+            data-filter=".filter-react"
+            className={activeFilter === ".filter-react" ? "filter-active" : ""}
+            onClick={() => setActiveFilter(".filter-react")}
+          >
+            <span>REACT & REACT NATIVE</span>
+          </li>
         </ul>
 
         <Row className="portfolio-container">
