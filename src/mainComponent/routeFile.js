@@ -52,7 +52,7 @@ function RoutesPage() {
                            Fablead Developers Technolab | Web Development & Design
                            Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -113,7 +113,7 @@ function RoutesPage() {
                            Fablead Developers Technolab | Web Development & Design
                            Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -174,7 +174,7 @@ function RoutesPage() {
                            About Fablead Developers Technolab | Web Development & Design
                            Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -199,7 +199,7 @@ function RoutesPage() {
                            Services | Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -224,7 +224,7 @@ function RoutesPage() {
                            Portfolio | Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -250,7 +250,7 @@ function RoutesPage() {
                            Training & Courses | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -277,7 +277,7 @@ function RoutesPage() {
                            Career at Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -303,7 +303,7 @@ function RoutesPage() {
                            CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design
                            Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -330,7 +330,7 @@ function RoutesPage() {
                            Ecommerce Web & Mobile APP | Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -355,7 +355,7 @@ function RoutesPage() {
                            Hospital & Clinic Management System (HMS) | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -380,7 +380,7 @@ function RoutesPage() {
                         <title>
                            Privacy Policy | Hospital Management | Fablead Developers Technolab
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta name="viewport" content="width=device-width, initial-scale=1" />
                         <meta name="theme-color" content="#000000" />
                         <meta
@@ -448,7 +448,7 @@ function RoutesPage() {
                            WhatsApp Bulk Messaging Platform | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -498,7 +498,7 @@ function RoutesPage() {
                            Real Estate | Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -525,7 +525,7 @@ function RoutesPage() {
                            HR Management System | Fablead Developers Technolab | Web Development
                            & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -552,7 +552,7 @@ function RoutesPage() {
                            Inventory & Billing Software (ERP) | Fablead Developers Technolab | Web Development
                            & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -578,7 +578,7 @@ function RoutesPage() {
                            Contact | Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -603,7 +603,7 @@ function RoutesPage() {
                            Cms-Website-development | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -628,7 +628,7 @@ function RoutesPage() {
                            Web-Maintenance | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -653,7 +653,7 @@ function RoutesPage() {
                            Website-Design | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -679,7 +679,7 @@ function RoutesPage() {
                            Website-Development | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -705,7 +705,7 @@ function RoutesPage() {
                            Mobile-Apps Fablead Developers Technolab | Web Development &
                            Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -731,7 +731,7 @@ function RoutesPage() {
                            E-Commerce-Development | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -757,7 +757,7 @@ function RoutesPage() {
                            Shopify-Development | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -782,7 +782,7 @@ function RoutesPage() {
                            Graphics-Design | Fablead Developers Technolab | Web
                            Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -807,7 +807,7 @@ function RoutesPage() {
                            Search-Engine-Optimization-Development | Fablead Developers
                            Technolab | Web Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -832,7 +832,7 @@ function RoutesPage() {
                            Server-Management & Support | Fablead Developers Technolab |
                            Web Development & Design Company
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -859,7 +859,7 @@ function RoutesPage() {
                            Frontend Development | React JS | Angular JS | Fablead
                            Developers Technolab{" "}
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -884,7 +884,7 @@ function RoutesPage() {
                            Backend Development | Node JS | Python | Codeigniter | Laravel
                            | Fablead Developers Technolab
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -911,7 +911,7 @@ function RoutesPage() {
                            Node JS | Python | Codeigniter | Laravel | Fablead Developers
                            Technolab{" "}
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -937,7 +937,7 @@ function RoutesPage() {
                            Mobile Application Development | Flutter | React Native |
                            Fablead Developers Technolab
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
@@ -963,7 +963,7 @@ function RoutesPage() {
                            CMS Development | Wordpress Development | Squarespace
                            Development | Fablead Developers Technolab
                         </title>
-                        <meta charset="utf-8" />
+                        <meta charSet="utf-8" />
                         <meta
                            name="viewport"
                            content="width=device-width, initial-scale=1"
