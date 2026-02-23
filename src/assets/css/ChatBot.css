@@ -485,8 +485,8 @@
     width: 55px;
     height: 55px;
     font-size: 18px;
-    bottom: 15px;
-    right: 15px;
+    bottom: 30px;
+    right: 30px;
   }
 
   .chatbot-message {
@@ -609,7 +609,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; /* keep visible on small heights */
+  flex-shrink: 0;
+  /* keep visible on small heights */
 }
 
 .chatbot-badge-img {
@@ -621,13 +622,13 @@
 /* External badge near floating button */
 .techjockey-badge {
   position: fixed;
-  bottom: 120px;
-  right: 26px;
+  bottom: 115px;
+  right: 32px;
   z-index: 1000;
 }
 
 .techjockey-badge .about_badge {
-  width: 70px;
+  width: 90px;
   height: auto;
 }
 
@@ -638,5 +639,20 @@
 
   .chatbot-badge-img {
     width: 105px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .techjockey-badge {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    z-index: 1000;
+  }
+
+  .techjockey-badge .about_badge {
+    width: 70px;
+    height: auto;
   }
 }
