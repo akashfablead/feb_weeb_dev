@@ -1,14 +1,7 @@
 import React, { useRef, useState } from "react";
 import Header from "../components/headers";
 import Footer from "../components/footer";
-import {
-  Row,
-  Col,
-  Form,
-  FormGroup,
-  FormLabel,
-  FormControl,
-} from "react-bootstrap";
+import { Row, Col, Form, FormGroup, FormLabel, FormControl, } from "react-bootstrap";
 import { useEffect } from "react";
 import TopBar from "../components/topBar";
 import ReCAPTCHA from "react-google-recaptcha";

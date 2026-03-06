@@ -2,20 +2,11 @@ import React from "react";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import { Row, Col, Button, Container } from "react-bootstrap";
-import {
-  ChevronDoubleRight,
-  ChevronDown,
-  ChevronUp,
-  ChevronRight,
-} from "react-bootstrap-icons";
+import { ChevronDoubleRight, ChevronDown, ChevronUp, ChevronRight, } from "react-bootstrap-icons";
 import Log from "../components/innerCallToLog";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-regular-svg-icons";
-import {
-  faRocket,
-  faGift,
-  faHandshake,
-} from "@fortawesome/free-solid-svg-icons";
+import { faRocket, faGift, faHandshake, } from "@fortawesome/free-solid-svg-icons";
 import Testimonial from "../components/testimonial";
 import { useEffect } from "react";
 import TopBar from "../components/topBar";

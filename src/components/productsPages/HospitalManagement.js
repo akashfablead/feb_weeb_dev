@@ -1,15 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import {
-  faBolt,
-  faCaretDown,
-  faChartLine,
-  faDesktop,
-  faEarthAmericas,
-  faMobileScreenButton,
-  faShield,
-  faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faCaretDown, faChartLine, faDesktop, faEarthAmericas, faMobileScreenButton, faShield, faTv, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -125,7 +116,7 @@ function HospitalManagement() {
       <TopBar />
       <Header />
       <section className="services section-bg fade-up">
-      
+
         <div className="section-title1">
           <div className="pt-5" role="heading" aria-level="1">Hospital & Clinic Management System (HMS)</div>
           <p className="header-content prodectpage-ecommerce-subheading">
@@ -145,7 +136,7 @@ function HospitalManagement() {
                   </span>
                 </div>
                 <div className="development-content">
-               
+
                   <p>Our <strong>Hospital & Clinic Management System (HMS)</strong> is a robust, cloud-based platform built to streamline administrative tasks and enhance the overall quality of patient care. It ensures complete compliance with healthcare regulations while simplifying day-to-day operations for clinic staff.                  </p>
                   <p>It efficiently manages appointments, patient records, and billing, while also handling inventory and other tasks. The system fits clinics of all sizes and integrates smoothly into existing workflows.</p>
 
@@ -178,6 +169,7 @@ function HospitalManagement() {
             >
               <Image
                 src={Hospital_Managment}
+                loading="eager"
                 className="img-fluid rounded shadow object-fit-cover zoom-img"
                 alt="Hospital Management"
               />
@@ -329,6 +321,7 @@ function HospitalManagement() {
                   <div>
                     <Image
                       src={hopital_dashboard}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs hospital management dashboard"
                     />
@@ -337,6 +330,7 @@ function HospitalManagement() {
                   <div>
                     <Image
                       src={appointntment_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs hospital appointment management page"
                     />
@@ -344,6 +338,7 @@ function HospitalManagement() {
                   <div>
                     <Image
                       src={patient_detail_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs patient detail management page"
                     />
@@ -351,6 +346,7 @@ function HospitalManagement() {
                   <div>
                     <Image
                       src={calender_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs calendar view page"
                     />
@@ -439,22 +435,6 @@ function HospitalManagement() {
           </Row>
 
           <section className="py-5">
-            {/* <Row className="portfolio-container1" data-aos="fade-up" data-aos-delay="200">
-              <Col lg={6}>
-                <div className="d-flex justify-content-center align-items-center">
-                  <span className="heding-title-span">
-                    <h2 className="heading-title">Hospital Management Screens</h2>
-                  </span>
-                </div>
-              </Col>
-              <Col lg={6}>
-                <div className="d-flex justify-content-center align-items-center">
-                  <span className="heding-title-span">
-                    <h2 className="heading-title">Mobile App Screen</h2>
-                  </span>
-                </div>
-              </Col>
- </Row> */}
 
             <Row className="d-none d-lg-flex hr-screens-row portfolio-container1" data-aos="fade-up" data-aos-delay="200">
               <Col lg={7}>
@@ -491,7 +471,7 @@ function HospitalManagement() {
                         <Col key={colIndex} lg={12} md={12} className="">
                           <div className="card border-0 portfolio-img text-center">
                             <div className="image-container-prodect-screens">
-                              <Image src={img} className="card-img-top" alt={alt} />
+                              <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
                             </div>
                             <div className="card-body-prodect-info text-center">
                               <h5 className="card-title">{title}</h5>
@@ -504,16 +484,11 @@ function HospitalManagement() {
                   ))}
                 </div>
               </Col>
-              {/* <Col lg={5} className="">
-                  <div className="mobile-app-screen">
-                    <Image src={mobile_screen_image} className="img-fluid rounded shadow object-fit-cover" alt="Mobile App Screen" />
-                  </div>
-                </Col> */}
 
               <Col lg={5} className="">
                 <div className="grid-container">
                   <div className=" mobile-app-screen">
-                    <Image src={mobile_screen_image} className="img-fluid rounded shadow object-fit-cover" alt="Fablead Technolabs hospital management system mobile app screen" />
+                    <Image src={mobile_screen_image} loading="lazy" className="img-fluid rounded shadow object-fit-cover" alt="Fablead Technolabs hospital management system mobile app screen" />
                   </div>
                   <div>
                     <Link className="w-100 btn-learn-more-prodect text-center mt-3" to="/contact">Book Your Free Demo Now <FaArrowCircleRight className="appointment-btn mx-2 mb-1" /></Link>

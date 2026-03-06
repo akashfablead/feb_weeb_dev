@@ -1,17 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-// import Careers from "../pages/career";
-import {
-    faBolt,
-    faCaretDown,
-    faChartLine,
-    faDesktop,
-    faEarthAmericas,
-    faMobile,
-    faMobileScreenButton,
-    faShield,
-    faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChartLine, faMobile, faShield, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -23,12 +12,7 @@ import leave_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnol
 import manage_attendance_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-manage-attendance-page.png";
 
 import InnerCallToLog from "../innerCallToLog";
-import {
-    Check2,
-    ChevronDoubleRight,
-    ChevronDown,
-    ChevronUp,
-} from "react-bootstrap-icons";
+import { Check2, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -194,6 +178,7 @@ function HRManagement() {
                         >
                             <Image
                                 src={hr_management_main_feb}
+                                loading="eager"
                                 className="img-fluid rounded shadow object-fit-cover zoom-img"
                                 alt="Fablead Technolabs HRMS employee management dashboard"
                             />
@@ -333,16 +318,16 @@ function HRManagement() {
                                 {/* <Image src={Crm_main_feb} className="img-fluid rounded shadow zoom-img" alt="CRM_main_feb" /> */}
                                 <Slider {...sliderSettings}>
                                     <div>
-                                        <Image src={attendance_page_img_feb} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS attendance management page" />
+                                        <Image src={attendance_page_img_feb} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS attendance management page" />
                                     </div>
                                     <div>
-                                        <Image src={employee_page_img_feb} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS employee management dashboard" />
+                                        <Image src={employee_page_img_feb} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS employee management dashboard" />
                                     </div>
                                     <div>
-                                        <Image src={leave_page_img_feb} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS leave management page" />
+                                        <Image src={leave_page_img_feb} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS leave management page" />
                                     </div>
                                     <div>
-                                        <Image src={manage_attendance_page_img_feb} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS manage attendance page" />
+                                        <Image src={manage_attendance_page_img_feb} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS manage attendance page" />
                                     </div>
                                 </Slider>
                             </Col>
@@ -468,7 +453,7 @@ function HRManagement() {
                                                     <Col key={colIndex} md={12} lg={12} className="">
                                                         <div className="card border-0 portfolio-img text-center">
                                                             <div className="image-container-prodect-screens">
-                                                                <Image src={img} className="card-img-top" alt={alt} />
+                                                                <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
                                                             </div>
                                                             <div className="card-body-prodect-info">
                                                                 <h5 className="card-title">{title}</h5>
@@ -483,21 +468,12 @@ function HRManagement() {
                                 </div>
                             </Col>
 
-                            {/* <Col lg={5} className="">
-      <div className="mobile-app-screen">
-        <Image
-          src={mobile_screenn_image}
-          className="img-fluid rounded shadow object-fit-cover"
-          alt="Mobile App Screen"
-        />
-      </div>
-    </Col> */}
-
                             <Col lg={5} className="">
                                 <div className="grid-container">
                                     <div className=" mobile-app-screen">
                                         <Image
                                             src={mobile_screenn_image}
+                                            loading="lazy"
                                             className="img-fluid rounded shadow object-fit-cover"
                                             alt="Fablead Technolabs HRMS mobile application screens"
                                         />

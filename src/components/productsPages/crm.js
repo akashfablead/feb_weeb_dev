@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import {
-  faChartLine,
-  faDesktop,
-  faEarthAmericas,
-  faMobileScreenButton,
-  faShield,
-  faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChartLine, faEarthAmericas, faShield, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -188,6 +181,7 @@ function CRM() {
             >
               <Image
                 src={Crm_main_feb}
+                loading="eager"
                 className="img-fluid rounded shadow object-fit-cover zoom-img"
                 alt="Fablead Technolabs CRM dashboard for lead and sales management"
               />
@@ -210,24 +204,7 @@ function CRM() {
                   </p>
                   <div id="why-us" className="why-us fade-up">
                     <div data-aos="fade-up">
-                      {/* <Col lg={12} className="d-flex flex-column justify-content-center align-items-stretch order-lg-1">
-                        <div className="accordion-list1">
-                          <ul>
-                            <li>
-                              <a data-bs-toggle="collapse" className={`collapse ${accordionState.item1 ? "show" : ""}`} onClick={() => handleAccordionToggle("item1")}>
-                                01. Our CRM is ideal for:{" "}
-                                {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
-                              </a>
-                              <div id="accordion-list-1" className={`collapse ${accordionState.item1 ? "show" : ""}`} data-bs-parent=".accordion-list">
-                                <ul className="list-unstyled">
-                                  <li><Check2 className="service-icon me-2" /><strong>Small to Medium Enterprises (SMEs):</strong> Looking to centralize customer data and improve team collaboration.</li>
-                                  <li><Check2 className="service-icon me-2" /><strong>Sales Teams:</strong> Seeking tools for lead management, sales forecasting, and performance tracking.</li>
-                                </ul>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </Col> */}
+
                       <Col
                         lg={12}
                         className="d-flex flex-column justify-content-center align-items-stretch order-lg-1"
@@ -382,6 +359,7 @@ function CRM() {
                   <div>
                     <Image
                       src={Lead}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img"
                       alt="Fablead Technolabs CRM lead management dashboard"
                     />
@@ -389,6 +367,7 @@ function CRM() {
                   <div>
                     <Image
                       src={Deal}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img"
                       alt="Fablead Technolabs CRM deal management dashboard"
                     />
@@ -396,6 +375,7 @@ function CRM() {
                   <div>
                     <Image
                       src={followup}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img"
                       alt="Fablead Technolabs CRM follow-up management dashboard"
                     />
@@ -403,6 +383,7 @@ function CRM() {
                   <div>
                     <Image
                       src={Pipeline}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img"
                       alt="Fablead Technolabs CRM pipeline management dashboard"
                     />
@@ -501,25 +482,6 @@ function CRM() {
             </Col>
           </Row>
           <section className="py-5">
-            {/* <Row className="portfolio-container1" data-aos="fade-up" data-aos-delay="200">
-      <Col lg={6}>
-             <div className="d-flex justify-content-center align-items-center">
-                <span className="heding-title-span">
-                  <h2 className="heading-title">CRM Screens</h2>
-                </span>
-              </div>
-          
-              </Col>
-             
-               <Col lg={6}>
-                 <div className="d-flex justify-content-center align-items-center">
-                 <span className="heding-title-span">
-                   <h2 className="heading-title">Mobile App Screen</h2>
-                 </span>
-               </div>
-              </Col>
-</Row> */}
-
             <Row
               className="d-none d-lg-flex hr-screens-row portfolio-container1"
               data-aos="fade-up"
@@ -565,6 +527,7 @@ function CRM() {
                             <div className="image-container-prodect-screens">
                               <Image
                                 src={img}
+                                loading="lazy"
                                 className="card-img-top"
                                 alt={title}
                               />
@@ -587,6 +550,7 @@ function CRM() {
                   <div className=" mobile-app-screen">
                     <Image
                       src={mobile_screens}
+                      loading="lazy"
                       className="img-fluid rounded shadow object-fit-cover"
                       alt="Mobile App Screen"
                     />

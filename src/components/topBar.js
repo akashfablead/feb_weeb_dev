@@ -1,11 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import {
-  Twitter,
-  Facebook,
-  Linkedin,
-  EnvelopeFill,
-} from "react-bootstrap-icons";
+import { Twitter, Facebook, Linkedin, EnvelopeFill, } from "react-bootstrap-icons";
 import { MetaTags } from "react-meta-tags";
 
 function TopBar() {

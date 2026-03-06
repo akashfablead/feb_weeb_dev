@@ -68,74 +68,74 @@ function Cmsheader() {
           <Modal.Title>Get Started</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-        <Form
-         
-                role="form"
-                className="php-email-form"
-              >
-              <Row>
-                <Col lg={6}>
-                    <FormGroup >
-                      <FormLabel htmlFor="name">Your Name</FormLabel>
-                      <FormControl
-                        type="text"
-                        name="name"
-                        id="name"
-                       
-                        required
-                      />
-                    </FormGroup>
-                    </Col>
-                    <Col lg={6}>
-                    <FormGroup>
-                      <FormLabel htmlFor="email">Your Email</FormLabel>
-                      <FormControl
-                        type="email"
-                        name="email"
-                        id="email"
-                       
-                        required
-                      />
-                    </FormGroup>
-                    </Col>
-                    </Row>
+          <Form
 
-                <FormGroup className="mt-2">
-                  <FormLabel htmlFor="subject">Phone Number</FormLabel>
-                  <Form.Control
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    
-                    required
-                  />
-                </FormGroup>
-                <FormGroup className="mt-2">
-                  <FormLabel htmlFor="message">Message</FormLabel>
+            role="form"
+            className="php-email-form"
+          >
+            <Row>
+              <Col lg={6}>
+                <FormGroup >
+                  <FormLabel htmlFor="name">Your Name</FormLabel>
                   <FormControl
-                    as="textarea"
-                    name="message"
-                    rows="5"
-                   id="message"
+                    type="text"
+                    name="name"
+                    id="name"
+
                     required
                   />
                 </FormGroup>
-         
-                <FormGroup className="mt-3">
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
-                      onChange={handleVerification}
-                    />
-                  </FormGroup>
-              </Form>
+              </Col>
+              <Col lg={6}>
+                <FormGroup>
+                  <FormLabel htmlFor="email">Your Email</FormLabel>
+                  <FormControl
+                    type="email"
+                    name="email"
+                    id="email"
+
+                    required
+                  />
+                </FormGroup>
+              </Col>
+            </Row>
+
+            <FormGroup className="mt-2">
+              <FormLabel htmlFor="subject">Phone Number</FormLabel>
+              <Form.Control
+                type="text"
+                name="subject"
+                id="subject"
+
+                required
+              />
+            </FormGroup>
+            <FormGroup className="mt-2">
+              <FormLabel htmlFor="message">Message</FormLabel>
+              <FormControl
+                as="textarea"
+                name="message"
+                rows="5"
+                id="message"
+                required
+              />
+            </FormGroup>
+
+            <FormGroup className="mt-3">
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
+                onChange={handleVerification}
+              />
+            </FormGroup>
+          </Form>
         </Modal.Body>
         <Modal.Footer>
-        
+
           <button type="submit" className="send-message-btn-getstarted-form-crm">
             Submit
           </button>
-          
+
         </Modal.Footer>
       </Modal>
     </>

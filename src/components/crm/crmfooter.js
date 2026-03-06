@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
-import {  ChevronDoubleRight, Twitter, Facebook, Linkedin} from 'react-bootstrap-icons';
 import logo from '../../assets/images/CRM/fablead_crm.png'
 import { Link, useLocation } from "react-router-dom";
 

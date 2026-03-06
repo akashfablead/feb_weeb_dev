@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import { faBolt, faCaretDown, faChartLine, faDesktop, faEarthAmericas, faMobileScreenButton, faShield, faTv } from "@fortawesome/free-solid-svg-icons";
+import { faChartLine, faEarthAmericas, faShield } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -16,7 +16,6 @@ import { Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { faChartBar } from "@fortawesome/free-regular-svg-icons";
 import { MdCall, MdOutlineArrowOutward } from "react-icons/md";
 import mobile_screen from "../../assets/images/Products/ecommerce/fableadtechnolabs-mobile-app-screen-dashboard.png";
 import { FaArrowCircleRight } from "react-icons/fa";
@@ -158,6 +157,7 @@ function EcommerceAndMobileApp() {
             <Col lg={5} className="d-flex justify-content-center order-lg-2 order-md-2 img satisfied" data-aos="zoom-in" data-aos-delay="150">
               <Image
                 src={E_commerce}
+                loading="lazy"
                 className="img-fluid rounded shadow object-fit-cover zoom-img"
                 alt="Fablead Technolabs ecommerce management dashboard"
               />
@@ -247,16 +247,16 @@ function EcommerceAndMobileApp() {
               <Col lg={5} className="img satisfied align-content-around prodect-slider-img order-lg-2 order-md-2 " data-aos="zoom-in" data-aos-delay="150">
                 <Slider {...sliderSettings}>
                   <div>
-                    <Image src={All_Products} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce all products listing page" />
+                    <Image src={All_Products} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce all products listing page" />
                   </div>
                   <div>
-                    <Image src={Cart} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce shopping cart page" />
+                    <Image src={Cart} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce shopping cart page" />
                   </div>
                   <div>
-                    <Image src={checkout} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce checkout page" />
+                    <Image src={checkout}  loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce checkout page" />
                   </div>
                   <div>
-                    <Image src={Ecom_admin} className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce admin dashboard" />
+                    <Image src={Ecom_admin}  loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce admin dashboard" />
                   </div>
                 </Slider>
               </Col>
@@ -290,23 +290,6 @@ function EcommerceAndMobileApp() {
           </Row>
 
           <section className="py-5">
-            {/* <Row className="portfolio-container1" data-aos="fade-up" data-aos-delay="200">
-    <Col lg={6}>
-      <div className="d-flex justify-content-center align-items-center">
-        <span className="heding-title-span">
-          <h2 className="heading-title">E-commerce Website Screens</h2>
-        </span>
-      </div>
-    </Col>
-    <Col lg={6}>
-      <div className="d-flex justify-content-center align-items-center">
-        <span className="heding-title-span">
-          <h2 className="heading-title">Mobile App Screen</h2>
-        </span>
-      </div>
-    </Col>
-  </Row> */}
-
             <Row className="d-none d-lg-flex hr-screens-row portfolio-container1" data-aos="fade-up" data-aos-delay="200">
               <Col lg={7}>
                 <div className="d-flex justify-content-center align-items-center">
@@ -344,7 +327,7 @@ function EcommerceAndMobileApp() {
                         <Col key={colIndex} lg={12} md={12} className="">
                           <div className="card border-0 portfolio-img text-center">
                             <div className="image-container-prodect-screens">
-                              <Image src={img} className="card-img-top" alt={alt} />
+                              <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
                             </div>
                             <div className="card-body-prodect-info text-center">
                               <h5 className="card-title">{title}</h5>
@@ -361,7 +344,7 @@ function EcommerceAndMobileApp() {
               <Col lg={5} className="">
                 <div className="grid-container">
                   <div className=" mobile-app-screen">
-                    <Image src={mobile_screen} className="img-fluid rounded shadow object-fit-cover" alt="Fablead Technolabs ecommerce mobile app screen" />
+                    <Image src={mobile_screen} loading="lazy" className="img-fluid rounded shadow object-fit-cover" alt="Fablead Technolabs ecommerce mobile app screen" />
                   </div>
                   <div>
                     <Link className="w-100 btn-learn-more-prodect text-center mt-3" to="/contact">Book Your Free Demo Now <FaArrowCircleRight className="appointment-btn mx-2 mb-1" /></Link>
@@ -369,15 +352,6 @@ function EcommerceAndMobileApp() {
                   </div>
                 </div>
               </Col>
-              {/* <Col lg={5} className="">
-      <div className="mobile-app-screen">
-        <Image
-          src={mobile_screen} // Replace with your mobile app screen image
-          className="img-fluid rounded shadow object-fit-cover"
-          alt="Mobile App Screen"
-        />
-      </div>
-    </Col> */}
             </Row>
           </section>
 

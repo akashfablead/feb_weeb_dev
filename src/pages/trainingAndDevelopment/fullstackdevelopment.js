@@ -1,19 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  Col,
-  Container,
-  Row,
-} from "react-bootstrap";
+import { Col, Container, Row, } from "react-bootstrap";
 import fullstackimg from "../../assets/images/TrainingDevelopment/fullstack.png";
-import {
-  ChevronUp,
-  ChevronDown,
-  ChevronDoubleRight,
-  Check2,
-  HandIndex,
-  UniversalAccessCircle,
-  FastForwardBtnFill,
-} from "react-bootstrap-icons";
+import { ChevronUp, ChevronDown, ChevronDoubleRight, Check2, HandIndex, UniversalAccessCircle, FastForwardBtnFill, } from "react-bootstrap-icons";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../../components/footer";
 import Headers from "../../components/headers";
@@ -153,9 +141,6 @@ function FullStackDevelopment() {
               className="d-flex flex-column  align-items-stretch "
             >
               <div className="pb-4">
-                {/* <div>
-                  <Image src={fullstackimg} alt="Full Stack Development" className="front-end-img mb-4" />
-                </div> */}
 
                 <div className="development-heading-div d-flex justify-content-between">
                   <span className="heding-title-span">
@@ -251,51 +236,11 @@ function FullStackDevelopment() {
               </div>
               <div className="accordion-list ">
                 <ul>
-                  {/* <li>
-                    <a
-                      data-bs-toggle="collapse"
-                      className={`collapse ${accordionState.item1 ? "show" : ""
-                        }`}
-                      onClick={() => handleAccordionToggle("item1")}
-                    >
-                      FULL STACK Development - WORDPRESS DEVELOPMENT
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
-                    </a>
-                    <div
-                      id="accordion-list-1"
-                      className={`wordpress-development collapse ${accordionState.item1 ? "show" : ""
-                        }`}
-                      data-bs-parent=".accordion-list"
-                    >
-                      <p><strong> Basic & Advance Training Course Topics </strong></p>
-                      <p><ChevronDoubleRight className="service-icon" /> HTML / HTML5, CSS / CSS3, Bootstrap, JavaScript, JQuery</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Setting up a Local PHP Development Environment (e.g., XAMPP, WAMP)</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Basics of PHP , Functions and Parameters</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Arrays and Associative Arrays, Forms (GET and POST methods)</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Handling User Input and Form Validation</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Error Handling and Debugging Techniques</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Object-Oriented Programming (OOP) in PHP</p>
-                      <p><ChevronDoubleRight className="service-icon" /> MySQL Database and complex SQL Queries</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Setup WordPress Locally, WordPress Architecture (Core Files, Themes, Plugins)</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Theme Development Basics (Creating a Basic Theme Structure)</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Enqueuing Stylesheets and Scripts in WordPress</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Actions and Filters, Custom Functions in WordPress</p>
-                      <p><ChevronDoubleRight className="service-icon" /> WordPress Plugin Development</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Creating Custom Post Types and Taxonomies</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Advanced Custom Fields (ACF) and Custom Meta Boxes</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Security Best Practices for WordPress Development</p>
-                      <p><ChevronDoubleRight className="service-icon" /> SEO and Performance Optimization Techniques in WordPress</p>
-                      <p><ChevronDoubleRight className="service-icon" /> Deploying and Managing WordPress Websites</p>
-
-
-                    </div>
-                  </li> */}
                   <li>
                     <a
                       data-bs-toggle="collapse"
-                      className={`collapse ${
-                        accordionState.item2 ? "show" : ""
-                      }`}
+                      className={`collapse ${accordionState.item2 ? "show" : ""
+                        }`}
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       FullStack Development - FrontEnd
@@ -307,9 +252,8 @@ function FullStackDevelopment() {
                     </a>
                     <div
                       id="accordion-list-2"
-                      className={`collapse  angular-development ${
-                        accordionState.item2 ? "show" : ""
-                      }`}
+                      className={`collapse  angular-development ${accordionState.item2 ? "show" : ""
+                        }`}
                     >
                       <div className="inner-accordian-list">
                         {" "}
@@ -327,9 +271,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items1 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items1 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" /> HTML /
@@ -403,9 +346,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items2 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items2 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" /> HTML /
@@ -459,9 +401,8 @@ function FullStackDevelopment() {
                   <li>
                     <a
                       data-bs-toggle="collapse"
-                      className={`collapse ${
-                        accordionState.item2 ? "show" : ""
-                      }`}
+                      className={`collapse ${accordionState.item2 ? "show" : ""
+                        }`}
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       Full Stack Development - BackEnd
@@ -473,9 +414,8 @@ function FullStackDevelopment() {
                     </a>
                     <div
                       id="accordion-list-2"
-                      className={`collapse  angular-development ${
-                        accordionState.item3 ? "show" : ""
-                      }`}
+                      className={`collapse  angular-development ${accordionState.item3 ? "show" : ""
+                        }`}
                     >
                       <div className="inner-accordian-list">
                         {" "}
@@ -493,9 +433,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items1 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items1 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" /> Basic
@@ -589,9 +528,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items2 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items2 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" /> OOPs
@@ -667,9 +605,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items3 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items3 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" />
@@ -792,9 +729,8 @@ function FullStackDevelopment() {
                         </span>
                       </div>
                       <div
-                        className={`collapse${
-                          innerAccordionState.items4 ? "show" : ""
-                        }`}
+                        className={`collapse${innerAccordionState.items4 ? "show" : ""
+                          }`}
                       >
                         <p>
                           <ChevronDoubleRight className="service-icon" />
@@ -898,89 +834,6 @@ function FullStackDevelopment() {
               data-aos="zoom-in"
               data-aos-delay="150"
             >
-              {/* <Form
-                onSubmit={handleSubmit}
-                role="form"
-                className="php-email-form development-contact-form p-4"
-              >
-
-                <span className="applictiondevlopment-getfree mb-lg-3">
-                  <h5 className="mb-lg-3">GET FREE COUNSELLING NOW</h5>
-                </span>
-                <Row className="mb-2">
-                  {successMessage && <div className="alert alert-success">{successMessage}</div>}
-
-                  <Col md={12}>
-                    <FormGroup>
-                      <FormLabel htmlFor="name">Your Name</FormLabel>
-                      <FormControl
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col md={12}>
-                    <FormGroup>
-                      <FormLabel htmlFor="email">Your Email</FormLabel>
-                      <FormControl
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </FormGroup>
-                  </Col>
-                </Row>
-                <FormGroup className="mb-2">
-                  <FormLabel htmlFor="subject">Subject</FormLabel>
-                  <Form.Control
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <FormLabel htmlFor="message">Message</FormLabel>
-                  <FormControl
-                    as="textarea"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </FormGroup>
-                {/* <div className="my-3">
-                  <div className="loading">Loading</div>
-                  <div className="error-message"></div>
-                  <div className="sent-message">
-                    Your message has been sent. Thank you!
-                  </div>
-                </div> 
-                <Row className="re-captcha my-3">
-                  <Col lg={12} >
-
-                    <ReCAPTCHA
-                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
-                      onChange={handleVerification}
-                    />
-                  </Col>
-                  <Col lg={12} className="mt-3 ">
-                    <div class="btn-learn-more" >
-                      <button type="Submit">Send Message</button>
-                    </div>
-                  </Col>
-                </Row>
-              </Form> */}
               <Counsellingform />
 
               <div className="popular-coarses mt-4">
@@ -1072,15 +925,7 @@ function FullStackDevelopment() {
                   >
                     FullStack Development
                   </Link>
-                  {/* <ul className="sublinks">
-
-                    <li>
-                      <ChevronDoubleRight className="service-icon" />
-                      <Link to="/training-and-courses/full-stack-development" className="mx-2">
-                        WordPress Development
-                      </Link>
-                    </li>
-                  </ul> */}
+                
                 </div>
                 <div class="icon-box-content">
                   <ChevronDoubleRight className="service-icon" />

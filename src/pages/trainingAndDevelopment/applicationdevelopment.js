@@ -122,10 +122,6 @@ function ApplicationDevelopment() {
             >
               <div className="pb-4">
 
-                {/* <div>
-                  <Image src={applicationdev} alt="Application Development" className="front-end-img mb-4" />
-                </div> */}
-
                 <div className="development-heading-div d-flex justify-content-between">
                   <span className="heding-title-span">
                     <h1 className="heading-title ">MOBILE APP DEVELOPMENT COURSE</h1>
@@ -174,12 +170,7 @@ function ApplicationDevelopment() {
                       <p className="ms-2">100% Practical</p>
                     </div>
                   </div>
-                  {/* <div  className="col-md-6 col-6 pt-3 pt-3  my-4 text-center development-icons">
-<span className="text-blue">
-<Building className="" size={32} />
-</span>
-<h5 className="mb-0">Career Support</h5>
-</div> */}
+
                 </div>
                 <div className="what-we-learn pt-4">
                   <h4 className="">KEY FEATURES</h4>

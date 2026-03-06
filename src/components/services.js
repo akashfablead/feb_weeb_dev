@@ -1,15 +1,4 @@
-import {
-  faCartArrowDown,
-  faDesktop,
-  faMobileScreenButton,
-  faTv,
-  faDiamond,
-  faCogs,
-  faServer,
-  faPaintBrush,
-  faCartShopping,
-  faStore,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faServer, faPaintBrush, faStore, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useEffect } from "react";
@@ -328,7 +317,7 @@ function Services() {
                 24/7.{" "}
               </p>
               <div className="text-center">
-               <Link to="/services/server-management"
+                <Link to="/services/server-management"
                   className="btn-learn-more mt-4"
                 >
                   <button>Read More</button>

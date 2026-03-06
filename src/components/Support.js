@@ -1,9 +1,5 @@
 import { useRef, useState } from "react";
-import {
-    Container,
-    Row,
-    Col,
-} from "react-bootstrap";
+import { Container, Row, Col, } from "react-bootstrap";
 import { BASE_URL } from "../utils";
 import TopBar from "./topBar";
 import Headers from "./headers";
@@ -11,7 +7,6 @@ import InnerCallToLog from "./innerCallToLog";
 import Footer from "./footer";
 import { ChevronDoubleRight, ChevronDown, ChevronUp, FileText } from "react-bootstrap-icons";
 import Contact from "./contact";
-import { FaBookOpen, FaBug, FaCreditCard, FaShieldAlt, FaUserCog, FaWrench } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookOpen, faBug, faShieldAlt, faUserCog, faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faCreditCard } from "@fortawesome/free-regular-svg-icons";
@@ -255,8 +250,6 @@ const SupportPage = () => {
                                 </Row>
                             </Container>
                         </section>
-
-
                         <Contact />
                     </Container>
 

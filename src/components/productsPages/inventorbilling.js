@@ -1,17 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 // import Careers from "../pages/career";
-import {
-  faBolt,
-  faCaretDown,
-  faChartLine,
-  faDesktop,
-  faEarthAmericas,
-  faMobile,
-  faMobileScreenButton,
-  faShield,
-  faTv,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faDesktop, faEarthAmericas, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -225,6 +215,7 @@ function Inventorbilling() {
                 src={inventor_billing_software_main_feb}
                 // className="img-fluid rounded shadow object-fit-cover zoom-img"
                 className="img-fluid rounded shadow object-contain"
+                loading="eager"
                 alt="Fablead Technolabs inventory billing software dashboard"
               />
             </Col>
@@ -448,6 +439,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={inventor_billing_software_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs inventory and billing dashboard"
                     />
@@ -455,6 +447,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={sales_page_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs sales management page"
                     />
@@ -462,6 +455,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={inveory_profuct_list}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs inventory product list management"
                     />
@@ -469,6 +463,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={add_purchase_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs add purchase entry page"
                     />
@@ -476,6 +471,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={sales_list_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs sales list management page"
                     />
@@ -483,6 +479,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={expense_list_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs expense list management page"
                     />
@@ -490,6 +487,7 @@ function Inventorbilling() {
                   <div>
                     <Image
                       src={purchase_list_page_img_feb}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs purchase list management page"
                     />
@@ -603,7 +601,7 @@ function Inventorbilling() {
                   <div key={i} className="grid-item">
                     <div className="card border-0 portfolio-img text-center mb-0">
                       <div className="image-container-prodect-screens">
-                        <Image src={img} className="card-img-top" alt={alt} />
+                        <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
                       </div>
                       <div className="card-body-prodect-info text-center">
                         <h5 className="card-title">{title}</h5>

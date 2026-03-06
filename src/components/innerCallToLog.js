@@ -1,7 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { FiPhoneCall } from "react-icons/fi";
 import { FaEnvelope, FaPhone } from "react-icons/fa";
 
 function Log() {
@@ -13,9 +12,7 @@ function Log() {
             <h3 className="cta-heading">Grow Your Business With Us.</h3>
             <p>Don't To Miss Our Special Offers! Flexible and cost-effective solutions.</p>
           </Col>
-          {/* <Col lg={3} className="col-lg-3 cta-btn-container text-center">
-            <Link className="cta-btn align-middle" to="/contact"><FiPhoneCall className="me-2" /> Contact Us</Link>
-          </Col> */}
+
           <Col lg={3} className="text-center align-content-center">
             <div className="d-flex justify-content-center gap-2 flex-wrap">
               <Link

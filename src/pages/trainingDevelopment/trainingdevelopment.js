@@ -47,6 +47,7 @@ function TrainingDevelopment() {
                       className="w-100 h-100"
                       src={Reactimg}
                       alt="react-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -79,6 +80,7 @@ function TrainingDevelopment() {
                       className="w-100 h-100"
                       src={Angular}
                       alt="angular-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -111,6 +113,7 @@ function TrainingDevelopment() {
                       className="w-100 h-100"
                       src={Nodejs}
                       alt="Nodejs-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -137,13 +140,13 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <img
                       className="w-100 h-100"
                       src={Python}
                       alt="Python-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -170,13 +173,13 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <img
                       className="w-100 h-100"
                       src={Wordpress}
                       alt="Wordpress-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -204,10 +207,9 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
-                    <img className="w-100 h-100" src={Php} alt="php-icon" />
+                    <img className="w-100 h-100" src={Php} alt="php-icon" loading="lazy" />
                   </div>
                 </div>
                 <h4 className="text-center">
@@ -234,10 +236,9 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
-                    <img className="w-100 h-100" src={laravel} alt="php-icon" />
+                    <img className="w-100 h-100" src={laravel} alt="php-icon" loading="lazy" />
                   </div>
                 </div>
                 <h4 className="text-center">
@@ -264,13 +265,13 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <img
                       className="w-100 h-100"
                       src={Flutter}
                       alt="flutter-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -298,13 +299,13 @@ function TrainingDevelopment() {
               data-aos="zoom-in"
             >
               <div className="icon-box">
-                {/* <i ><FontAwesomeIcon icon={faMobileScreenButton} /></i> */}
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <img
                       className="w-100 h-100"
                       src={Reactnative}
                       alt="Reactnative-icon"
+                      loading="lazy"
                     />
                   </div>
                 </div>

@@ -403,82 +403,7 @@ function FrontEndDevelopment() {
               data-aos="zoom-in"
               data-aos-delay="150"
             >
-              {/* <Form
-                onSubmit={handleSubmit}
-                role="form"
-                className="php-email-form development-contact-form p-4"
-              >
-                <span className="applictiondevlopment-getfree mb-lg-3">
-                  <h5 className="mb-lg-3">GET FREE COUNSELLING NOW</h5>
-                </span>
-                <Row className="mb-2">
-                  {successMessage && <div className="alert alert-success">{successMessage}</div>}
-
-                  <Col md={12}>
-                    <FormGroup>
-                      <FormLabel htmlFor="name">Your Name</FormLabel>
-                      <FormControl
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </FormGroup>
-                  </Col>
-                  <Col md={12}>
-                    <FormGroup>
-                      <FormLabel htmlFor="email">Your Email</FormLabel>
-                      <FormControl
-                        type="email"
-                        name="email"
-                        id="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                      />
-                    </FormGroup>
-                  </Col>
-                </Row>
-                <FormGroup className="mb-2">
-                  <FormLabel htmlFor="subject">Subject</FormLabel>
-                  <Form.Control
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </FormGroup>
-                <FormGroup>
-                  <FormLabel htmlFor="message">Message</FormLabel>
-                  <FormControl
-                    as="textarea"
-                    name="message"
-                    rows="5"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </FormGroup>
-
-                <Row className="re-captcha my-3">
-                  <Col lg={12} >
-
-                    <ReCAPTCHA
-                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
-                      onChange={handleVerification}
-                    />
-                  </Col>
-                  <Col lg={12} className="mt-3 ">
-                    <div class="btn-learn-more" >
-                      <button type="Submit">Send Message</button>
-                    </div>
-                  </Col>
-                </Row>
-              </Form> */}
+             
               <Counsellingform />
 
               <div className="popular-coarses mt-4">
@@ -570,16 +495,7 @@ function FrontEndDevelopment() {
                   >
                     FullStack Development
                   </Link>
-                  {/* <ul className="sublinks">
-
-                    <li>
-                      <ChevronDoubleRight className="service-icon" />
-                      <Link to="/training-and-courses/full-stack-development" className="mx-2">
-                        WordPress Development
-                      </Link>
-                    </li>
-
-                  </ul> */}
+                  
                 </div>
                 <div class="icon-box-content">
                   <ChevronDoubleRight className="service-icon" />

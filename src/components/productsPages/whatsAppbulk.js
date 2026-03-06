@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
-import {
-  faBolt,
-  faDesktop,
-  faEarthAmericas,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBolt, faDesktop, faEarthAmericas, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Header from "../headers";
 import Footer from "../footer";
@@ -192,6 +188,7 @@ function WhatsAppbulk() {
             >
               <Image
                 src={whattsupProductMainImage1}
+                loading="eager"
                 className="img-fluid rounded shadow object-fit-cover zoom-img"
                 alt="Fablead Technolabs WhatsApp marketing platform overview"
               />
@@ -381,6 +378,7 @@ function WhatsAppbulk() {
                   <div>
                     <Image
                       src={whattsupProductsImage10}
+                      loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs WhatsApp marketing platform overview"
                     />
@@ -495,6 +493,7 @@ function WhatsAppbulk() {
                         <div className="image-container-prodect-screens">
                           <Image
                             src={img}
+                            loading="lazy"
                             className="card-img-top"
                             alt={alt}
                           />

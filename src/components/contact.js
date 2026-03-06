@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { useState } from "react";
 import { Row, Col, Form, FormGroup, FormLabel, FormControl, Button, Container } from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
-import { Link, useLocation } from "react-router-dom";
+import { Link, } from "react-router-dom";
 import { BASE_URL } from "../utils";
 
 function Contact() {
