@@ -2,17 +2,7 @@ import React from "react";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import { Row, Col, Container } from "react-bootstrap";
-import {
-  faCartArrowDown,
-  faDesktop,
-  faMobileScreenButton,
-  faTv,
-  faDiamond,
-  faCogs,
-  faStore,
-  faPaintBrush,
-  faServer
-} from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faStore, faPaintBrush, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Log from "../components/innerCallToLog";
 import { useEffect } from "react";
