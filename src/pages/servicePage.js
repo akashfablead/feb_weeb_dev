@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import Header from "../components/headers";
-import Footer from "../components/footer";
-import { Row, Col, Container } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faStore, faPaintBrush, faServer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Log from "../components/innerCallToLog";
-import { useEffect } from "react";
 import TopBar from "../components/topBar";
 import { Link } from "react-router-dom";
+
+const Log = lazy(() => import("../components/innerCallToLog"));
+const Footer = lazy(() => import("../components/footer"));
 
 function ServicePage() {
   useEffect(() => {
@@ -19,7 +21,7 @@ function ServicePage() {
       <Header />
       <section className="services section-bg fade-up">
         <div className="section-title1">
-          <div className=" pt-5">Services</div>
+          <div className=" pt-5" role="heading" aria-level="1">Services</div>
           <p className="header-content">
             Accelerate internal process & develop / design <br />
             web applications & mobile applications as per requirements.
@@ -38,7 +40,7 @@ function ServicePage() {
                   <div className="mainicon-div">
                     <i>
                       {" "}
-                      <FontAwesomeIcon icon={faTv} />{" "}
+                      <FontAwesomeIcon icon={faTv} aria-hidden="true" />{" "}
                     </i>
                   </div>
                 </div>
@@ -56,7 +58,8 @@ function ServicePage() {
                     to="/services/website-development"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
+                    {/* <button>Read More</button> */}
                   </Link>
                 </div>
               </div>
@@ -71,7 +74,7 @@ function ServicePage() {
                 <div className="icon text-center w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faDesktop} />
+                      <FontAwesomeIcon icon={faDesktop} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
@@ -87,7 +90,7 @@ function ServicePage() {
                     to="/services/website-design"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -103,7 +106,7 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faMobileScreenButton} />
+                      <FontAwesomeIcon icon={faMobileScreenButton} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
@@ -119,7 +122,7 @@ function ServicePage() {
                     to="/services/mobile-apps"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -135,7 +138,7 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faCartArrowDown} />
+                      <FontAwesomeIcon icon={faCartArrowDown} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
@@ -151,7 +154,7 @@ function ServicePage() {
                     to="/services/e-commerce"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -166,7 +169,7 @@ function ServicePage() {
                 <div className="icon text-center w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faDiamond} />
+                      <FontAwesomeIcon icon={faDiamond} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
@@ -184,7 +187,7 @@ function ServicePage() {
                     to="/services/cms-website"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -199,7 +202,7 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faCogs} />
+                      <FontAwesomeIcon icon={faCogs} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
@@ -234,26 +237,26 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faStore} />
+                      <FontAwesomeIcon icon={faStore} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
                 <h4 className="text-center">
                   <Link to="/services/shopify-development">
-                  Shopify Development
+                    Shopify Development
                   </Link>
                 </h4>
                 <p className="text-center">
-                We offer top-notch Shopify development services, including
-                custom e-commerce store design, seamless integrations, and
-                scalable solutions for businesses of all sizes.{" "}
+                  We offer top-notch Shopify development services, including
+                  custom e-commerce store design, seamless integrations, and
+                  scalable solutions for businesses of all sizes.{" "}
                 </p>
                 <div className="text-center">
                   <Link
                     to="/services/shopify-development"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -268,27 +271,27 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faPaintBrush} />
+                      <FontAwesomeIcon icon={faPaintBrush} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
                 <h4 className="text-center">
                   <Link to="/services/graphics-design">
-                  Graphic Designing Development
+                    Graphic Designing Development
                   </Link>
                 </h4>
                 <p className="text-center">
-                We specialize in developing visually stunning and responsive
-                designs for websites, mobile apps, and digital platforms. From
-                UI/UX to brand visuals, we craft pixel-perfect graphics that
-                elevate user experience.{" "}
+                  We specialize in developing visually stunning and responsive
+                  designs for websites, mobile apps, and digital platforms. From
+                  UI/UX to brand visuals, we craft pixel-perfect graphics that
+                  elevate user experience.{" "}
                 </p>
                 <div className="text-center">
                   <Link
                     to="/services/graphics-design"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -303,27 +306,27 @@ function ServicePage() {
                 <div className="icon text-center  w-100">
                   <div className="mainicon-div">
                     <i>
-                      <FontAwesomeIcon icon={faServer} />
+                      <FontAwesomeIcon icon={faServer} aria-hidden="true" />
                     </i>
                   </div>
                 </div>
                 <h4 className="text-center">
                   <Link to="/services/server-management">
-                  Server Manage / Support
+                    Server Manage / Support
                   </Link>
                 </h4>
                 <p className="text-center">
-                We provide reliable server management and website maintenance
-                services, including performance monitoring, security updates,
-                backups, and issue resolution to keep your site running smoothly
-                24/7.{" "}
+                  We provide reliable server management and website maintenance
+                  services, including performance monitoring, security updates,
+                  backups, and issue resolution to keep your site running smoothly
+                  24/7.{" "}
                 </p>
                 <div className="text-center">
                   <Link
                     to="/services/server-management"
                     className="btn-learn-more mt-4"
                   >
-                    <button>Read More</button>
+                    Read More
                   </Link>
                 </div>
               </div>
@@ -332,8 +335,10 @@ function ServicePage() {
           </Row>
         </Container>
       </section>
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 }

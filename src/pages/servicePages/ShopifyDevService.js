@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
-import {
-  ChevronDoubleRight,
-  ChevronDown,
-  ChevronUp,
-} from "react-bootstrap-icons";
+import { ChevronDoubleRight, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
 
 const ShopifyDevService = () => {
   const [accordionState, setAccordionState] = useState({
@@ -54,9 +51,9 @@ const ShopifyDevService = () => {
                     >
                       <span></span> Our Expertise:{" "}
                       {accordionState.item1 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -66,13 +63,13 @@ const ShopifyDevService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {""} At <strong>Fablead Developers Technolab</strong>,
                         we specialize in building tailored Shopify stores that
                         not only look stunning but also drive sales.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {""} From custom theme development to seamless payment
                         integrations, we ensure your online store delivers an
                         exceptional shopping experience.
@@ -89,9 +86,9 @@ const ShopifyDevService = () => {
                     >
                       <span></span> Our Shopify Services:{" "}
                       {accordionState.item2 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -100,13 +97,13 @@ const ShopifyDevService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {""} <strong>Custom Shopify Theme Development:</strong>{" "}
                         Design and develop unique themes that align with your
                         brand identity.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>
                           {""} Shopify Store Setup & Configuration:
                         </strong>{" "}
@@ -114,27 +111,27 @@ const ShopifyDevService = () => {
                         integration, shipping configurations, and tax settings.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Responsive Design:</strong> Ensure your
                         store is mobile-friendly and provides a seamless
                         experience across all devices.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} SEO Optimization:</strong> Implement
                         on-page <strong>SEO</strong>
                         strategies to enhance visibility and drive organic
                         traffic.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} App Integrations:</strong> Integrate
                         essential Shopify apps to extend functionality, such as
                         email marketing tools, inventory management, and
                         customer support systems.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>
                           {""} Ongoing Maintenance & Support:
                         </strong>{" "}
@@ -153,9 +150,9 @@ const ShopifyDevService = () => {
                     >
                       <span></span> Technologies/Platforms We Use:{" "}
                       {accordionState.item3 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -164,7 +161,7 @@ const ShopifyDevService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Shopify,
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Shopify,
                         HTML, CSS, XML, JavaScript, PHP
                       </p>
                     </div>
@@ -184,8 +181,10 @@ const ShopifyDevService = () => {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 };

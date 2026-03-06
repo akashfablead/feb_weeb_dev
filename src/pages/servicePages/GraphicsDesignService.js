@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
-import {
-  ChevronDoubleRight,
-  ChevronDown,
-  ChevronUp,
-} from "react-bootstrap-icons";
+import { ChevronDoubleRight, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
-import { Link } from "react-router-dom";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
 
 const GraphicsDesignService = () => {
   const [accordionState, setAccordionState] = useState({
@@ -55,9 +51,9 @@ const GraphicsDesignService = () => {
                     >
                       <span></span> Our Expertise:{" "}
                       {accordionState.item1 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -67,14 +63,14 @@ const GraphicsDesignService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {""} At <strong>Fablead Developers Technolab</strong>,
                         we specialize in delivering innovative and visually
                         compelling graphic design solutions that elevate your
                         brand's identity.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> From
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> From
                         logo creation to marketing collateral, we craft designs
                         that resonate with your audience and drive engagement.
                       </p>
@@ -90,9 +86,9 @@ const GraphicsDesignService = () => {
                     >
                       <span></span> Core Services Offered:{" "}
                       {accordionState.item2 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -101,35 +97,35 @@ const GraphicsDesignService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Logo Design:</strong> Craft unique and
                         memorable logos that encapsulate your brand's essence.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Brand Identity Development:</strong> Create
                         cohesive brand guidelines, including color palettes,
                         typography, and visual elements.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Marketing Collateral:</strong> Design
                         brochures, flyers, posters, and other materials that
                         effectively communicate your message.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Digital Graphics:</strong> Develop engaging
                         visuals for social media, websites, and email campaigns.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Packaging Design:</strong> Design product
                         packaging that stands out on shelves and aligns with
                         your brand's identity.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong>{""} Presentation Design:</strong> Create
                         professional and visually appealing presentations for
                         business meetings and pitches.
@@ -146,9 +142,9 @@ const GraphicsDesignService = () => {
                     >
                       <span></span> Technologies/Platforms We Use:{" "}
                       {accordionState.item3 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -157,7 +153,7 @@ const GraphicsDesignService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />{" "}
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />{" "}
                         <p
                           className="d-inline"
                           onClick={() =>
@@ -228,73 +224,6 @@ const GraphicsDesignService = () => {
                         </p>
                         .
                       </p>
-                      {/* <p>
-                        <ChevronDoubleRight className="service-icon" />{" "}
-                        <a
-                          href="https://www.figma.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          Figma
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.adobe.com/products/xd.html"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          Adobe XD
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.sketch.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          Sketch
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.invisionapp.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          InVision
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.coreldraw.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          CorelDRAW
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.canva.com"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          Canva
-                        </a>
-                        ,{" "}
-                        <a
-                          href="https://www.adobe.com/products/photoshop.html"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="d-inline p-0"
-                        >
-                          Adobe Photoshop
-                        </a>
-                        .
-                      </p> */}
-
                     </div>
                   </li>
                 </ul>
@@ -312,8 +241,10 @@ const GraphicsDesignService = () => {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 };

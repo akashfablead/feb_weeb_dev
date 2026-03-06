@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
 import { ChevronDoubleRight, ChevronDown, ChevronUp } from "react-bootstrap-icons";
-import TopBar from "../../components/topBar"
+import TopBar from "../../components/topBar";
+
+const Footer = lazy(() => import("../../components/footer"));
+const Log = lazy(() => import("../../components/innerCallToLog"));
 
 function WebsiteDesign() {
   const [accordionState, setAccordionState] = useState({
@@ -48,7 +49,7 @@ function WebsiteDesign() {
                       onClick={() => handleAccordionToggle("item1")}
                     >
                       <span></span> Our Expertise:{" "}
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -58,9 +59,10 @@ function WebsiteDesign() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Our design philosophy revolves around understanding your brand identity and translating it into a digital masterpiece that not only looks exceptional but also delivers an intuitive and engaging user experience.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Our design philosophy revolves around understanding your brand identity and translating it into a digital masterpiece that not only looks exceptional but also delivers an intuitive and engaging user experience.
+                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Stay ahead of the curve with our commitment to incorporating the latest design trends and technologies into every project.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Stay ahead of the curve with our commitment to incorporating the latest design trends and technologies into every project.
                       </p>
 
                     </div>
@@ -74,7 +76,7 @@ function WebsiteDesign() {
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       <span></span> Elevate Your Digital Presence:
-                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -84,9 +86,9 @@ function WebsiteDesign() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Partner with <strong>Fablead Developers Technolab</strong> to elevate your digital presence through exceptional website design.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Partner with <strong>Fablead Developers Technolab</strong> to elevate your digital presence through exceptional website design.
                       </p>
-                      <p><ChevronDoubleRight className="service-icon" /> Let us be the architects of your online identity, turning your vision into a visually compelling reality that resonates with your audience.</p>
+                      <p><ChevronDoubleRight className="service-icon" aria-hidden="true" /> Let us be the architects of your online identity, turning your vision into a visually compelling reality that resonates with your audience.</p>
 
                     </div>
                   </li>
@@ -98,7 +100,7 @@ function WebsiteDesign() {
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       <span></span> Technologies/Platforms We Use :
-                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -109,7 +111,7 @@ function WebsiteDesign() {
                     >
                       <p>
 
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {/* HTML5 / CSS3, Bootstrap, JavaScript / jQuery, React.js / AngularJS, WordPress, Squarespace */}
                         {" "}HTML / CSS / Bootstrap , JS/JQUERY , React JS / Angular JS , Wordpress , Squarespace ,React JS , Angular JS, Shopify
                       </p>
@@ -131,8 +133,10 @@ function WebsiteDesign() {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 

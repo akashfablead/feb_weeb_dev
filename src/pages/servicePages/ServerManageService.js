@@ -1,16 +1,13 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
-import {
-  ChevronDoubleRight,
-  ChevronDown,
-  ChevronUp,
-} from "react-bootstrap-icons";
+import { ChevronDoubleRight, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
 import { Link } from "react-router-dom";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
 
 const ServerManageService = () => {
   const [accordionState, setAccordionState] = useState({
@@ -54,16 +51,16 @@ const ServerManageService = () => {
                     >
                       <span></span> Our Expertise:{" "}
                       {accordionState.item1 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
                       className={`collapse ${accordionState.item1 ? "show" : ""}`}
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}At{" "}
                         <strong>
                           Fablead Developers Technolab
@@ -83,32 +80,32 @@ const ServerManageService = () => {
                     >
                       <span></span> Our Services:{" "}
                       {accordionState.item2 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
                       className={`collapse ${accordionState.item2 ? "show" : ""}`}
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                           {" "}<strong>24/7 Server Monitoring:</strong> Continuous
                           monitoring of server performance to detect and resolve
                           issues proactively.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}<strong>Security Management:</strong> Firewalls,
                         intrusion detection, and security audits.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}<strong>Software Updates & Patch Management:</strong>{" "}
                         Regular OS and application updates.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}<strong>Backup & Disaster Recovery:</strong> Automated
                         backups and recovery planning.
                       </p>
@@ -121,16 +118,16 @@ const ServerManageService = () => {
                     >
                       <span></span> Technologies/Platforms We Use:{" "}
                       {accordionState.item4 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
                       className={`collapse ${accordionState.item4 ? "show" : ""}`}
                     >
                       <p>
-                      <ChevronDoubleRight className="service-icon" />
+                      <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}AWS (Amazon Server), Shared Hosting (GoDaddy, Hostinger,
                         Bluehost, Namecheap, One.com, 123reg), WordPress Server,
                         Linux, Windows, and Cloud Servers.
@@ -152,8 +149,10 @@ const ServerManageService = () => {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 };

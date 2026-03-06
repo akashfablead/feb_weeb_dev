@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
-import {
-  ChevronDoubleRight,
-  ChevronDown,
-  ChevronUp,
-} from "react-bootstrap-icons";
+import { ChevronDoubleRight, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
-import { Link } from "react-router-dom";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
 
 const SeoService = () => {
   const [accordionState, setAccordionState] = useState({
@@ -58,9 +54,9 @@ const SeoService = () => {
                     >
                       <span></span> Our Expertise:{" "}
                       {accordionState.item1 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -69,14 +65,14 @@ const SeoService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> At{" "}
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> At{" "}
                         <strong>Fablead Developers Technolabs</strong>, we
                         specialize in delivering comprehensive SEO solutions
                         that enhance your online visibility and drive organic
                         traffic.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Our
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Our
                         data-driven approach ensures measurable result and
                         sustainable growth for your business.
                       </p>
@@ -93,9 +89,9 @@ const SeoService = () => {
                     >
                       <span></span> Our SEO Services:{" "}
                       {accordionState.item2 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -104,31 +100,31 @@ const SeoService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> On-Page SEO:</strong> Optimize website elements
                         such as meta tags, headers, URLs, and content to improve
                         relevance and search engine rankings.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> Off-Page SEO:</strong> Build high-quality
                         backlinks and enhance domain authority through strategic
                         link-building techniques.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> Technical SEO:</strong> Ensure website health
                         by addressing issues like site speed,
                         mobile-friendliness, crawlability, and structured data.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> Local SEO:</strong> Optimize your online
                         presence for local searches, including Google My
                         Business optimization and local citations.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> E-commerce SEO:</strong> Enhance product
                         visibility and sales through optimized product
                         descriptions, images, and category pages.
@@ -146,9 +142,9 @@ const SeoService = () => {
                     >
                       <span></span> Advanced SEO Strategies:{" "}
                       {accordionState.item3 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -157,19 +153,19 @@ const SeoService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> SEO Audits:</strong> Conduct comprehensive
                         audits to identify and rectify SEO issues, providing a
                         roadmap for improvement.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> Content Strategy & Optimization:</strong>{" "}
                         Develop and implement content strategies that align with
                         user intent and target keywords.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         <strong> Analytics & Reporting:</strong> Monitor
                         performance metrics and provide regular reports to track
                         progress and ROI.
@@ -187,9 +183,9 @@ const SeoService = () => {
                     >
                       <span></span> Technologies/Platforms We Use:{" "}
                       {accordionState.item4 ? (
-                        <ChevronUp className="icon-close float-end" />
+                        <ChevronUp className="icon-close float-end" aria-hidden="true" />
                       ) : (
-                        <ChevronDown className="icon-show float-end" />
+                        <ChevronDown className="icon-show float-end" aria-hidden="true" />
                       )}
                     </a>
                     <div
@@ -198,7 +194,7 @@ const SeoService = () => {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> HTML,
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> HTML,
                         CSS, JavaScript, XML, React, Google Analytics, Google
                         Search Console, Meta Tags, Sitemap, Structured Data
                         (Schema.org)
@@ -220,8 +216,10 @@ const SeoService = () => {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 };

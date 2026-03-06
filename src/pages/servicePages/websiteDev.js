@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
 import { ChevronDoubleRight, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
 
 function WebsiteDevelopment() {
   const [accordionState, setAccordionState] = useState({
@@ -47,7 +48,7 @@ function WebsiteDevelopment() {
                       onClick={() => handleAccordionToggle("item1")}
                     >
                       <span></span> Our Expertise:{" "}
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
                     </a>
                     <div
                       id="accordion-list-1"
@@ -56,12 +57,14 @@ function WebsiteDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> As a premier website development company, we are dedicated to delivering innovative and customized solutions that not only meet but exceed the expectations of our clients.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> As a premier website development company, we are dedicated to delivering innovative and customized solutions that not only meet but exceed the expectations of our clients.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> With a team of experienced developers, we bring technical expertise to ensure your website performs at its best.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> With a team of experienced developers, we bring technical expertise to ensure your website performs at its best.
+                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> From interactive web applications to complex functionalities, we turn your ideas into cutting-edge digital solutions.                        </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> From interactive web applications to complex functionalities, we turn your ideas into cutting-edge digital solutions.
+                      </p>
                     </div>
                   </li>
 
@@ -73,7 +76,7 @@ function WebsiteDevelopment() {
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       <span></span> Elevate Your Online Presence:
-                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -83,9 +86,9 @@ function WebsiteDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Partner with <strong>Fablead Developers Technolab</strong> to elevate your online presence and stay ahead in the digital landscape.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Partner with <strong>Fablead Developers Technolab</strong> to elevate your online presence and stay ahead in the digital landscape.
                       </p>
-                      <p><ChevronDoubleRight className="service-icon" /> Let us be the architects of your digital success, turning concepts into captivating websites that leave a lasting impression.</p>
+                      <p><ChevronDoubleRight className="service-icon" aria-hidden="true" /> Let us be the architects of your digital success, turning concepts into captivating websites that leave a lasting impression.</p>
                     </div>
                   </li>
                   <li>
@@ -96,7 +99,7 @@ function WebsiteDevelopment() {
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       <span></span> Technologies/Platforms We Use :
-                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
                     </a>
                     <div
                       // id="accordion-list-2"
@@ -105,7 +108,7 @@ function WebsiteDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {/* PHP (Laravel, CodeIgniter), Node.js, MySQL, WordPress, Python (Django) */}
                         {" "}PHP / MYSQL , LARAVEL , Codeigniter , Wordpress , Node JS , Python / Django, React JS , Angular JS, Shopify
                       </p>
@@ -127,8 +130,10 @@ function WebsiteDevelopment() {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>);
 
 }

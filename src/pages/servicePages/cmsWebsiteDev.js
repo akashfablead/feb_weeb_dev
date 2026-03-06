@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
 import { ChevronUp, ChevronDown, ChevronDoubleRight } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
+
 function CmsWebsiteDevelopment() {
   const [accordionState, setAccordionState] = useState({
     item1: true,
@@ -48,8 +50,7 @@ function CmsWebsiteDevelopment() {
                     >
                       <span></span> Our Expertise:{" "}
 
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
-
+                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
                     </a>
                     <div
                       id="accordion-list-1"
@@ -58,12 +59,12 @@ function CmsWebsiteDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> At <strong>Fablead Developers Technolabs</strong>, we specialize in harnessing the power of CMS platforms to create websites that are not only visually appealing but also easy to manage. Whether you're a small business looking for an intuitive platform or an enterprise seeking advanced content control, our experienced team of developers is here to bring your vision to life.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> At <strong>Fablead Developers Technolabs</strong>, we specialize in harnessing the power of CMS platforms to create websites that are not only visually appealing but also easy to manage. Whether you're a small business looking for an intuitive platform or an enterprise seeking advanced content control, our experienced team of developers is here to bring your vision to life.                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Leverage data-driven insights to optimize your e-commerce strategy, improve user experiences, and drive sales.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Leverage data-driven insights to optimize your e-commerce strategy, improve user experiences, and drive sales.
                       </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Ensure your e-commerce website looks and functions flawlessly on all devices, providing a seamless shopping experience for your customers.                        </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Ensure your e-commerce website looks and functions flawlessly on all devices, providing a seamless shopping experience for your customers.                        </p>
                     </div>
                   </li>
 
@@ -75,7 +76,7 @@ function CmsWebsiteDevelopment() {
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       <span></span> Take Control of Your Content:
-                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -85,10 +86,10 @@ function CmsWebsiteDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Partner with <strong>Fablead Developers Technolab</strong> to take control of your digital content with CMS solutions that blend functionality and ease of use.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Partner with <strong>Fablead Developers Technolab</strong> to take control of your digital content with CMS solutions that blend functionality and ease of use.
 
                       </p>
-                      <p><ChevronDoubleRight className="service-icon" /> Let us be your partner in navigating the world of content management, unlocking the full potential of your online presence.</p>
+                      <p><ChevronDoubleRight className="service-icon" aria-hidden="true" /> Let us be your partner in navigating the world of content management, unlocking the full potential of your online presence.</p>
                     </div>
                   </li>
                   <li>
@@ -99,7 +100,7 @@ function CmsWebsiteDevelopment() {
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       <span></span> Technologies/Platforms We Use :
-                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -110,7 +111,7 @@ function CmsWebsiteDevelopment() {
                     >
                       <p>
 
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}WordPress / WooCommerce, Shopify, Webflow, PHP (Laravel, CodeIgniter), Node.js, Python (Django), MySQL
                         {/* Wordpress/ Woocommerce , PHP / MYSQL , LARAVEL , Codeigniter , Wordpress , Node JS , Python / Django */}
                       </p>
@@ -133,8 +134,10 @@ function CmsWebsiteDevelopment() {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>);
 
 }

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
 import { ChevronDoubleRight, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
+
+const Footer = lazy(() => import("../../components/footer"));
+const Log = lazy(() => import("../../components/innerCallToLog"));
+
 function WebMaintenance() {
   const [accordionState, setAccordionState] = useState({
     item1: true,
@@ -47,7 +49,7 @@ function WebMaintenance() {
                       onClick={() => handleAccordionToggle("item1")}
                     >
                       <span></span> Our Expertise:{" "}
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -57,11 +59,11 @@ function WebMaintenance() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> At <strong>Fablead Developers Technolabs</strong>, we specialize in the fine art of web maintenance and customization. Whether you need regular updates, security patches, or a tailored approach to enhance your website's features, our skilled team is ready to optimize and refine your online presence.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> At <strong>Fablead Developers Technolabs</strong>, we specialize in the fine art of web maintenance and customization. Whether you need regular updates, security patches, or a tailored approach to enhance your website's features, our skilled team is ready to optimize and refine your online presence.                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Our proactive approach ensures your website is always up-to-date, secure, and performing at its best.  Keep your content fresh and engaging with our regular updates and optimization services.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Our proactive approach ensures your website is always up-to-date, secure, and performing at its best.  Keep your content fresh and engaging with our regular updates and optimization services.                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Our support team is always ready to assist you, providing timely responses and solutions to any issues that may arise.                        </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Our support team is always ready to assist you, providing timely responses and solutions to any issues that may arise.                        </p>
                     </div>
                   </li>
 
@@ -73,7 +75,7 @@ function WebMaintenance() {
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       <span></span> Optimize, Customize, Thrive:
-                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -83,10 +85,10 @@ function WebMaintenance() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Partner with <strong>Fablead Developers Technolab</strong> to optimize and customize your web presence for sustained success.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Partner with <strong>Fablead Developers Technolab</strong> to optimize and customize your web presence for sustained success.
 
                       </p>
-                      <p><ChevronDoubleRight className="service-icon" /> Let us be your partner in ensuring your website not only meets but exceeds the expectations of your audience.</p>
+                      <p><ChevronDoubleRight className="service-icon" aria-hidden="true" /> Let us be your partner in ensuring your website not only meets but exceeds the expectations of your audience.</p>
 
                     </div>
                   </li>
@@ -98,7 +100,7 @@ function WebMaintenance() {
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       <span></span> Technologies/Platforms We Use :
-                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -108,7 +110,7 @@ function WebMaintenance() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}WordPress, PHP (Laravel, CodeIgniter), Node.js, Python (Django), MySQL, Shopify
                         {/* PHP / MYSQL , LARAVEL , Codeigniter , Wordpress , Node JS , Python / Django */}
                       </p>
@@ -130,8 +132,10 @@ function WebMaintenance() {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 

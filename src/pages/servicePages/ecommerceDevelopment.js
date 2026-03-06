@@ -1,11 +1,13 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "../../components/headers";
-import Footer from "../../components/footer";
-import Log from "../../components/innerCallToLog";
 import { ChevronDoubleRight, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import TopBar from "../../components/topBar";
+
+const Log = lazy(() => import("../../components/innerCallToLog"));
+const Footer = lazy(() => import("../../components/footer"));
+
 function EcomDevelopment() {
   const [accordionState, setAccordionState] = useState({
     item1: true,
@@ -49,7 +51,7 @@ function EcomDevelopment() {
                       onClick={() => handleAccordionToggle("item1")}
                     >
                       <span></span> Our Expertise:{" "}
-                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item1 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
                     </a>
                     <div
                       id="accordion-list-1"
@@ -58,9 +60,9 @@ function EcomDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> We design and develop customized e-commerce solutions that align with your brand identity and business goals.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> We design and develop customized e-commerce solutions that align with your brand identity and business goals.                      </p>
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Whether you're launching a new online store or seeking to optimize and expand your existing e-commerce platform, our experienced team of developers is here to turn your vision into reality.                      </p>
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Whether you're launching a new online store or seeking to optimize and expand your existing e-commerce platform, our experienced team of developers is here to turn your vision into reality.                      </p>
                     </div>
                   </li>
 
@@ -72,7 +74,7 @@ function EcomDevelopment() {
                       onClick={() => handleAccordionToggle("item2")}
                     >
                       <span></span> Boost Your Online Business:
-                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item2 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -82,9 +84,9 @@ function EcomDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" /> Partner with <strong>Fablead Developers Technolab</strong> to boost your online business with e-commerce solutions that combine innovation and functionality.
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" /> Partner with <strong>Fablead Developers Technolab</strong> to boost your online business with e-commerce solutions that combine innovation and functionality.
                       </p>
-                      <p><ChevronDoubleRight className="service-icon" /> Let us be your catalyst for success in the competitive e-commerce landscape.</p>
+                      <p><ChevronDoubleRight className="service-icon" aria-hidden="true" /> Let us be your catalyst for success in the competitive e-commerce landscape.</p>
                     </div>
                   </li>
                   <li>
@@ -95,7 +97,7 @@ function EcomDevelopment() {
                       onClick={() => handleAccordionToggle("item3")}
                     >
                       <span></span> Technologies/Platforms We Use :
-                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" /> : <ChevronDown className="icon-show float-end" />}
+                      {accordionState.item3 ? <ChevronUp className="icon-close float-end" aria-hidden="true" /> : <ChevronDown className="icon-show float-end" aria-hidden="true" />}
 
                     </a>
                     <div
@@ -105,7 +107,7 @@ function EcomDevelopment() {
                       data-bs-parent=".accordion-list"
                     >
                       <p>
-                        <ChevronDoubleRight className="service-icon" />
+                        <ChevronDoubleRight className="service-icon" aria-hidden="true" />
                         {" "}PHP / MYSQL , LARAVEL , Codeigniter , Wordpress , Node JS , Python / Django, React JS , Angular JS, Shopify
                       </p>
 
@@ -127,8 +129,10 @@ function EcomDevelopment() {
         </Container>
       </section>
 
-      <Log />
-      <Footer />
+      <Suspense fallback={null}>
+        <Log />
+        <Footer />
+      </Suspense>
     </>
   );
 }
