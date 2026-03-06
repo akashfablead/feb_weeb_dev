@@ -49,8 +49,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Fablead Developers Technolab | Web Development & Design
-                           Company
+                           Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -196,8 +195,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Services | Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Services | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -208,6 +206,29 @@ function RoutesPage() {
                         <meta
                            name="description"
                            content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                        />
+                        <meta
+                           name="keywords"
+                           content="IT services, web development, mobile app development, ecommerce solutions, CMS development, UI/UX design, Fablead Developers Technolab"
+                        />
+                        <meta
+                           property="og:title"
+                           content="Top-Tier IT Services | Web & Mobile App Development | Fablead Developers Technolab"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Explore top-tier IT services at Fablead Developers Technolab. We offer expert Website Development, Mobile App Development, Ecommerce Solutions, and more."
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="Top-Tier IT Services | Fablead Developers Technolab"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Explore expert IT services at Fablead Developers Technolab. We offer Website Development, Mobile App Development, and Ecommerce Solutions."
                         />
                      </MetaTags>
                      <ServicePage />
@@ -221,8 +242,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Portfolio | Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Portfolio | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -233,6 +253,30 @@ function RoutesPage() {
                         <meta
                            name="description"
                            content="Fablead Developers Technolab build and develop web applications & mobile applications to improve your business & take your Service to new heights."
+                        />
+                        <meta
+                           name="keywords"
+                           content="Portfolio, Web Development Projects, Mobile App Development Portfolio, Ecommerce Website Examples, UI/UX Design Showcase, Fablead Developers Technolab Projects, Software Development Case Studies"
+                        />
+                        <meta
+                           property="og:title"
+                           content="Portfolio | Fablead Developers Technolab | Web Development & Design Company"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Explore our portfolio of cutting-edge web development, mobile app development, and UI/UX design projects. Fablead Developers Technolab delivers high-quality software solutions tailored to elevate your business."
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <link rel="canonical" href={window.location.origin + "/portfolio"} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="Portfolio | Fablead Developers Technolab"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Explore our portfolio of cutting-edge web development, mobile app development, and UI/UX design projects."
                         />
                      </MetaTags>
                      <PortfolioPage />
@@ -247,8 +291,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Training & Courses | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Training & Courses | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -259,6 +302,30 @@ function RoutesPage() {
                         <meta
                            name="description"
                            content="Fablead Developers Technolab build and develop web applications & mobile applications to improve your business & take your Service to new heights."
+                        />
+                        <meta
+                           name="keywords"
+                           content="IT Training, Software Development Courses, Web Development Training, Mobile App Development Training, React JS Course, Node JS Course, PHP Development Training, Fablead Developers Technolab Training"
+                        />
+                        <meta
+                           property="og:title"
+                           content="Training & Courses | Fablead Developers Technolab | Web Development & Design Company"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Fablead Developers Technolab build and develop web applications & mobile applications to improve your business & take your Service to new heights."
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <link rel="canonical" href={window.location.origin + "/training-and-courses"} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="Training & Courses | Fablead Developers Technolab"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Empower your career with professional IT training and courses at Fablead Developers Technolab."
                         />
                      </MetaTags>
                      <Trainingdevelopment />
@@ -274,8 +341,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           Career at Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Career at Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -286,6 +352,30 @@ function RoutesPage() {
                         <meta
                            name="description"
                            content="Fablead Developers Technolab is hiring skilled PHP developers, Wordpress developers, React and Node JS developers and Mobile App developers. Contact us on info@fableadtechnolabs.com."
+                        />
+                        <meta
+                           name="keywords"
+                           content="IT Careers, PHP Developer Jobs, WordPress Developer Hiring, React JS Jobs, Node JS Developer Vacancy, Mobile App Developer Jobs, Career at Fablead Developers Technolab, IT Jobs in Surat"
+                        />
+                        <meta
+                           property="og:title"
+                           content="Career at Fablead Developers Technolab | Web Development & Design Company"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Fablead Developers Technolab is hiring skilled PHP developers, Wordpress developers, React and Node JS developers and Mobile App developers. Join our team!"
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <link rel="canonical" href={window.location.origin + "/careers"} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="Careers | Fablead Developers Technolab"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Join our team of skilled developers and take your career to the next level at Fablead Developers Technolab."
                         />
                      </MetaTags>
                      <CareerPage />
@@ -300,8 +390,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design
-                           Company
+                           CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -312,6 +401,30 @@ function RoutesPage() {
                         <meta
                            name="description"
                            content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                        />
+                        <meta
+                           name="keywords"
+                           content="CRM Software, Mobile CRM App, Customer Relationship Management, Business Automation, CRM Development, Web CRM Solution, Fablead CRM, Enterprise CRM Systems"
+                        />
+                        <meta
+                           property="og:title"
+                           content="CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design Company"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <link rel="canonical" href={window.location.origin + "/products/crm-web-mobile-app-crm"} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="CRM Web & Mobile APP (CRM) | Fablead Developers Technolab"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Streamline your business with our advanced CRM Web & Mobile applications."
                         />
                      </MetaTags>
                      <Crm />
@@ -327,8 +440,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           Ecommerce Web & Mobile APP | Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Ecommerce Web & Mobile APP | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -352,8 +464,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Hospital & Clinic Management System (HMS) | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Hospital & Clinic Management System (HMS) | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -445,8 +556,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           WhatsApp Bulk Messaging Platform | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           WhatsApp Bulk Messaging Platform | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -495,8 +605,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           Real Estate | Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Real Estate | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -522,8 +631,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           HR Management System | Fablead Developers Technolab | Web Development
-                           & Design Company
+                           HR Management System | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -549,8 +657,7 @@ function RoutesPage() {
                      <MetaTags>
                         <title>
                            {" "}
-                           Inventory & Billing Software (ERP) | Fablead Developers Technolab | Web Development
-                           & Design Company
+                           Inventory & Billing Software (ERP) | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -575,8 +682,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Contact | Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Contact | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -600,8 +706,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Cms-Website-development | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Cms-Website-development | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -625,8 +730,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Web-Maintenance | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Web-Maintenance | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -650,8 +754,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Website-Design | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Website-Design | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -676,8 +779,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Website-Development | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Website-Development | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -702,8 +804,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Mobile-Apps Fablead Developers Technolab | Web Development &
-                           Design Company
+                           Mobile-Apps Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -728,8 +829,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           E-Commerce-Development | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           E-Commerce-Development | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -754,8 +854,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Shopify-Development | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Shopify-Development | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -779,8 +878,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Graphics-Design | Fablead Developers Technolab | Web
-                           Development & Design Company
+                           Graphics-Design | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -804,8 +902,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Search-Engine-Optimization-Development | Fablead Developers
-                           Technolab | Web Development & Design Company
+                           Search-Engine-Optimization-Development | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -829,8 +926,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Server-Management & Support | Fablead Developers Technolab |
-                           Web Development & Design Company
+                           Server-Management & Support | Fablead Developers Technolab | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -856,8 +952,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Frontend Development | React JS | Angular JS | Fablead
-                           Developers Technolab{" "}
+                           Frontend Development | React JS | Angular JS | Fablead Developers Technolab{" "}
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -881,8 +976,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Backend Development | Node JS | Python | Codeigniter | Laravel
-                           | Fablead Developers Technolab
+                           Backend Development | Node JS | Python | Codeigniter | Laravel | Fablead Developers Technolab
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -907,9 +1001,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Full Stack Development | Wordpress | React JS | Angular JS |
-                           Node JS | Python | Codeigniter | Laravel | Fablead Developers
-                           Technolab{" "}
+                           Full Stack Development | Wordpress | React JS | Angular JS | Node JS | Python | Codeigniter | Laravel | Fablead Developers Technolab{" "}
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -934,8 +1026,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Mobile Application Development | Flutter | React Native |
-                           Fablead Developers Technolab
+                           Mobile Application Development | Flutter | React Native | Fablead Developers Technolab
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -960,8 +1051,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           CMS Development | Wordpress Development | Squarespace
-                           Development | Fablead Developers Technolab
+                           CMS Development | Wordpress Development | Squarespace Development | Fablead Developers Technolab
                         </title>
                         <meta charSet="utf-8" />
                         <meta
