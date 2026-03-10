@@ -18,7 +18,8 @@ const ChatBot = () => {
     const [leadData, setLeadData] = useState({
         service: '',
         technology: '',
-        resume: '',
+        resume_file: '',
+        resume_name: '',
         name: '',
         phone: '',
         email: '',
@@ -131,7 +132,8 @@ const ChatBot = () => {
         setLeadData({
             service: '',
             technology: '',
-            resume: '',
+            resume_file: '',
+            resume_name: '',
             name: '',
             phone: '',
             email: '',
@@ -219,15 +221,17 @@ const ChatBot = () => {
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            // Check file size (e.g., limit to 5MB)
-            if (file.size > 5 * 1024 * 1024) {
-                addMessage('File is too large. Please upload a file smaller than 5MB.');
-                return;
-            }
-            setLeadData(prev => ({
-                ...prev,
-                resume: file
-            }));
+            const reader = new FileReader();
+            reader.onloadend = () => {
+                const base64String = reader.result.split(',')[1];
+                const fullDataUri = `data:application/pdf;base64,${base64String}`;
+                setLeadData(prev => ({
+                    ...prev,
+                    resume_name: file.name,
+                    resume_file: fullDataUri
+                }));
+            };
+            reader.readAsDataURL(file);
         }
     };
 
@@ -236,11 +240,11 @@ const ChatBot = () => {
 
         // Special handling for file upload step
         if (currentStep === 5 && selectionType === 'job') {
-            if (!(leadData.resume instanceof File)) {
+            if (!leadData.resume_name) {
                 // If no file uploaded, show skipped and move on
                 addMessage('Resume: Skipped', true);
             } else {
-                addMessage(`Uploaded: ${leadData.resume.name}`, true);
+                addMessage(`Uploaded: ${leadData.resume_name}`, true);
             }
             setTimeout(() => {
                 proceedToNextStep();
@@ -292,7 +296,7 @@ const ChatBot = () => {
                 break;
             case 5: // Budget OR Resume
                 if (selectionType === 'job') {
-                    setLeadData(prev => ({ ...prev, resume: currentInput }));
+                    // Resume is handled by special case at the beginning of handleSubmit
                     setLeadScore(prev => prev + 20);
                 } else {
                     // For non-job, step 5 is handled by handleOptionSelect
@@ -372,7 +376,7 @@ const ChatBot = () => {
                     break;
                 case 5:
                     if (selectionType === 'job') {
-                        addMessage('Please upload your resume (PDF or DOC) (optional).');
+                        addMessage('Please upload your resume in PDF format (optional).');
                     } else {
                         addMessage('What is your approximate budget?');
                     }
@@ -413,12 +417,10 @@ const ChatBot = () => {
             console.log('Requirement value:', requirementValue); // Log the requirement value
             const leadSubmission = {
                 ...leadData,
-                resume: leadData.resume instanceof File ? leadData.resume.name : (leadData.resume || 'resume not provided'),
                 message: requirementValue, // Map requirement to message field
                 selection_type: selectionType, // products, services, or job
-                // score: leadScore,
                 timestamp: new Date().toISOString(),
-                type: 'chat_bot'
+                type: selectionType === 'products' ? 'product' : selectionType === 'services' ? 'service' : selectionType === 'job' ? 'job' : 'chat_bot'
             };
 
             // Remove the original requirement field since it's now mapped to message
@@ -439,29 +441,13 @@ const ChatBot = () => {
 
             // Send to backend API
             try {
-                let body;
-                let headers = {
-                    'Authorization': 'hXuRUGsEGuhGf6KGeereSSas'
-                };
-
-                if (leadData.resume instanceof File) {
-                    body = new FormData();
-                    Object.keys(leadSubmission).forEach(key => {
-                        if (key !== 'resume') {
-                            body.append(key, leadSubmission[key]);
-                        }
-                    });
-                    // Append the actual file object
-                    body.append('resume', leadData.resume);
-                } else {
-                    headers['Content-Type'] = 'application/json';
-                    body = JSON.stringify(leadSubmission);
-                }
-
                 const response = await fetch(`${BASE_URL}`, {
                     method: 'POST',
-                    headers: headers,
-                    body: body
+                    headers: {
+                        'Authorization': 'hXuRUGsEGuhGf6KGeereSSas',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(leadSubmission)
                 });
 
                 if (!response.ok) {
@@ -655,7 +641,7 @@ const ChatBot = () => {
                         ref={inputRef}
                         type="file"
                         onChange={handleFileChange}
-                        accept=".pdf,.doc,.docx"
+                        accept=".pdf"
                         className="chatbot-file-input"
                         id="resume-upload"
                         style={{ display: 'none' }}
@@ -675,7 +661,7 @@ const ChatBot = () => {
                             fontSize: '13px'
                         }}
                     >
-                        {leadData.resume instanceof File ? leadData.resume.name : 'Choose Resume File'}
+                        {leadData.resume_name || 'Choose Resume File'}
                     </label>
                     <button onClick={handleSubmit} className="chatbot-send-btn">
                         <FontAwesomeIcon icon={faPaperPlane} />
