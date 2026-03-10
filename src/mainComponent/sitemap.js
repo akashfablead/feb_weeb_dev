@@ -13,23 +13,26 @@ const routes = [
   "/products/cms-sites",
   "/products/ecommerce-web-mobile-app",
   "/products/real-estate",
+  "/products/hospital-clinic-management-system-hms",
+  "/products/hr-management-system",
+  "/products/whatsapp-bulk-messaging-platform",
   "/services/cms-website",
   "/services/web-maintenance",
   "/services/website-design",
   "/services/website-development",
   "/services/mobile-apps",
   "/services/e-commerce",
-  // add new routes here
   "/services/shopify-development",
   "/services/graphics-design",
   "/services/server-management",
   "/services/seo-service",
-  // add new routes here
   "/training-and-courses",
   "/training-and-courses/front-end-development",
   "/training-and-courses/back-end-development",
   "/training-and-courses/full-stack-development",
   "/training-and-courses/mobile-app-development",
+  "/training-and-courses/cms-development",
+  "/support",
 ];
 
 const baseUrl = "https://www.fableadtechnolabs.com";

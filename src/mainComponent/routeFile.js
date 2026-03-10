@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import AboutUsPage from "../pages/aboutUsPage";
 import ServicePage from "../pages/servicePage";
@@ -61,6 +61,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
                         />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/" />
                         <meta
                            property="og:title"
                            content="Fablead Developers Technolab | Web Development &amp; Design Company"
@@ -183,6 +184,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab provides Web Development, Web Designing, Mobile App Development, Ecommerce Development, CMS Based Website Development and Web Maintenance & Customization. "
                         />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/about" />
                      </MetaTags>
                      <AboutUsPage />
                   </>
@@ -207,6 +209,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
                         />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services" />
                         <meta
                            name="keywords"
                            content="IT services, web development, mobile app development, ecommerce solutions, CMS development, UI/UX design, Fablead Developers Technolab"
@@ -406,26 +409,14 @@ function RoutesPage() {
                            name="keywords"
                            content="CRM Software, Mobile CRM App, Customer Relationship Management, Business Automation, CRM Development, Web CRM Solution, Fablead CRM, Enterprise CRM Systems"
                         />
-                        <meta
-                           property="og:title"
-                           content="CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design Company"
-                        />
-                        <meta
-                           property="og:description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
-                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/crm-web-mobile-app-crm" />
+                        <meta property="og:title" content="CRM Software with Mobile App | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Boost your sales with our advanced CRM system. Track leads, manage customer relationships, and grow your business." />
                         <meta property="og:url" content={window.location.href} />
-                        <link rel="canonical" href={window.location.origin + "/products/crm-web-mobile-app-crm"} />
                         <meta property="og:type" content="website" />
                         <meta name="twitter:card" content="summary_large_image" />
-                        <meta
-                           name="twitter:title"
-                           content="CRM Web & Mobile APP (CRM) | Fablead Developers Technolab"
-                        />
-                        <meta
-                           name="twitter:description"
-                           content="Streamline your business with our advanced CRM Web & Mobile applications."
-                        />
+                        <meta name="twitter:title" content="CRM Software with Mobile App | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Complete CRM solution with web and mobile access for modern businesses." />
                      </MetaTags>
                      <Crm />
                   </>
@@ -450,8 +441,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                           content="Custom Ecommerce Website & Mobile App Development. Build your online store with payment gateway integration, inventory management, and multi-vendor support."
                         />
+                        <meta
+                           name="keywords"
+                           content="Ecommerce Development, Online Store Builder, Shopping Cart Development, Mobile Ecommerce App, Payment Gateway Integration, Multi-vendor Marketplace, Surat Ecommerce Solutions"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/ecommerce-web-mobile-app" />
+                        <meta property="og:title" content="Ecommerce Website & Mobile App Development | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Launch your online store with our complete ecommerce solutions. Web and mobile apps with advanced features." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Ecommerce Web & Mobile App Solutions | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Full-featured ecommerce platforms for retail and B2B businesses." />
                      </MetaTags>
                      <EcommerceAndMobileApp />
                   </>
@@ -474,8 +477,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                           content="Complete Hospital & Clinic Management System (HMS) for healthcare providers. Patient management, appointments, billing, EMR, pharmacy, and lab integration."
                         />
+                        <meta
+                           name="keywords"
+                           content="Hospital Management System, Clinic Software, HMS Software, Patient Management, EMR Software, Healthcare IT, Medical Practice Software, Surat HMS Solution"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/hospital-clinic-management-system-hms" />
+                        <meta property="og:title" content="Hospital & Clinic Management System (HMS) | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Comprehensive healthcare management software for hospitals and clinics. Digitize patient records and streamline operations." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Hospital & Clinic HMS Software | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Modern healthcare management solution for efficient hospital and clinic operations." />
                      </MetaTags>
                      <HospitalManagement />
                   </>
@@ -566,8 +581,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides WhatsApp Bulk Messaging Platform service to send bulk messages to your customers and clients."
+                           content="WhatsApp Bulk Messaging Platform for business marketing. Send bulk messages, automated campaigns, broadcast lists, and customer engagement tools. API integration available."
                         />
+                        <meta
+                           name="keywords"
+                           content="WhatsApp Bulk Messaging, Bulk SMS India, WhatsApp Marketing, Business Messaging API, Automated Messages, Customer Engagement, Surat Digital Marketing Tools"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/whatsapp-bulk-messaging-platform" />
+                        <meta property="og:title" content="WhatsApp Bulk Messaging Platform | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Reach thousands of customers instantly with our WhatsApp bulk messaging and marketing automation platform." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="WhatsApp Bulk Messaging Platform | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Powerful WhatsApp marketing automation for businesses of all sizes." />
                      </MetaTags>
                      <WhatsAppbulk />
                   </>
@@ -630,8 +657,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           {" "}
-                           HR Management System | Fablead Developers Technolab | Web Development & Design Company
+                           HR Management System Software | Complete HRMS Solution in Surat
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -641,8 +667,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                           content="Complete HR Management System (HRMS) for businesses. Payroll management, attendance tracking, leave management, recruitment, and employee self-service portal."
                         />
+                        <meta
+                           name="keywords"
+                           content="HR Management System, HRMS Software, Payroll Software, Attendance Tracking, Leave Management, Recruitment Software, Employee Portal, Surat HR Solutions"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/hr-management-system" />
+                        <meta property="og:title" content="HR Management System Software | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Streamline HR operations with our comprehensive HRMS software. Automate payroll, attendance, and employee management." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="HR Management System (HRMS) | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Modern HR software for efficient workforce management." />
                      </MetaTags>
                      <Hrmanagement />
                   </>
@@ -667,8 +705,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                           content="Advanced Inventory & Billing Software (ERP) for businesses in Surat. Streamline inventory management, billing, GST invoicing, and reporting. Web & Mobile app available."
                         />
+                        <meta
+                           name="keywords"
+                           content="Inventory Software, Billing Software, ERP System, GST Billing, Stock Management, Inventory Tracking, Business Management Software, Surat ERP Solution"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/inventory-billing-software-erp" />
+                        <meta property="og:title" content="Inventory & Billing Software (ERP) | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Complete inventory management and billing solution with GST compliance for retail, wholesale, and manufacturing businesses." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Inventory & Billing ERP Software | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Automate your business operations with our advanced Inventory & Billing ERP software." />
                      </MetaTags>
                      <Inventorbilling />
                   </>
@@ -694,6 +744,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
                         />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/contact" />
                      </MetaTags>
                      <ContactPage />
                   </>
@@ -716,8 +767,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="CMS Website Development Services in Surat. WordPress, Joomla, Drupal development. Custom themes, plugins, migration. Easy-to-manage content management systems."
                         />
+                        <meta
+                           name="keywords"
+                           content="CMS Development, WordPress Development, Joomla Development, Drupal, Custom CMS, Theme Development, Plugin Development, Website Migration, Surat CMS Experts"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/cms-website" />
+                        <meta property="og:title" content="CMS Website Development | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Professional CMS development services for easy website management. WordPress experts and custom solutions." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="CMS Website Development Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Powerful content management systems for dynamic websites." />
                      </MetaTags>
                      <CmsWebsiteDevelopment />
                   </>
@@ -730,7 +793,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Web-Maintenance | Fablead Developers Technolab | Web Development & Design Company
+                           Website Maintenance Services | Web Support & Updates Company Surat
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -742,6 +805,18 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
                         />
+                        <meta
+                           name="keywords"
+                           content="Website Maintenance, Web Support, Website Updates, Security Patches, Bug Fixes, Website Backup, Performance Optimization, Monthly Maintenance, Surat IT Support"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/web-maintenance" />
+                        <meta property="og:title" content="Website Maintenance Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Reliable website maintenance services to keep your site running smoothly. 24/7 support available." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Website Maintenance Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Expert web support and maintenance for business continuity." />
                      </MetaTags>
                      <WebMaintenance />
                   </>
@@ -764,8 +839,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Creative Website Design Services in Surat. Modern, responsive, user-friendly web design. UI/UX design, landing pages, redesign services. Get stunning website designs."
                         />
+                        <meta
+                           name="keywords"
+                           content="Website Design, Web Design Company, Responsive Web Design, UI UX Design, Creative Website, Landing Page Design, Website Redesign, Surat Web Designers"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/website-design" />
+                        <meta property="og:title" content="Professional Website Design Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Beautiful, modern website designs that convert visitors into customers. Professional web design services." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Website Design Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Creative web design solutions for modern businesses." />
                      </MetaTags>
                      <WebsiteDesign />
                   </>
@@ -789,8 +876,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional Website Development Services in Surat. Custom web development, responsive design, e-commerce solutions, CMS development. Build your business website with experts."
                         />
+                        <meta
+                           name="keywords"
+                           content="Website Development, Web Development Company, Custom Website Design, Responsive Web Development, Business Website, Professional Web Developers, Surat IT Services"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/website-development" />
+                        <meta property="og:title" content="Professional Website Development Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Custom website development services for businesses. Responsive, fast, and SEO-friendly websites built with latest technologies." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Website Development Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Expert web developers creating custom websites for your business success." />
                      </MetaTags>
                      <WebsiteDevelopment />
                   </>
@@ -804,7 +903,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Mobile-Apps Fablead Developers Technolab | Web Development & Design Company
+                           Mobile App Development Company | iOS & Android App Developers Surat
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -814,8 +913,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional Mobile App Development Services in Surat. Native iOS, Android, and hybrid apps. React Native, Flutter development. Build your dream mobile app."
                         />
+                        <meta
+                           name="keywords"
+                           content="Mobile App Development, iOS App Development, Android App Development, React Native, Flutter, Hybrid Apps, Mobile App Developers, Surat App Company"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/mobile-apps" />
+                        <meta property="og:title" content="Mobile App Development Company | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Expert mobile app developers creating innovative iOS and Android applications for businesses." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Mobile App Development Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Transform your ideas into powerful mobile applications." />
                      </MetaTags>
                      <MobileApps />
                   </>
@@ -839,8 +950,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Ecommerce Development Services in Surat. Custom online stores, shopping cart development, payment gateway integration, multi-vendor marketplaces. Sell online successfully."
                         />
+                        <meta
+                           name="keywords"
+                           content="Ecommerce Development, Online Store Development, Shopping Cart Development, WooCommerce, Magento, Shopify, Payment Integration, Multi-vendor Marketplace, Surat Ecommerce"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/e-commerce" />
+                        <meta property="og:title" content="Ecommerce Development Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Build successful online stores with our ecommerce development services. Feature-rich and conversion-optimized." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Ecommerce Development Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Complete ecommerce solutions for online retail success." />
                      </MetaTags>
                      <EcomDevelopment />
                   </>
@@ -864,8 +987,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Shopify Development Services in Surat. Custom Shopify stores, theme development, app integration, migration to Shopify. Build your online store on world's best platform."
                         />
+                        <meta
+                           name="keywords"
+                           content="Shopify Development, Shopify Store Design, Shopify Theme Development, Shopify Apps, Shopify Migration, Ecommerce Platform, Shopify Experts, Surat Shopify Developers"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/shopify-development" />
+                        <meta property="og:title" content="Shopify Development Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Expert Shopify developers creating high-converting online stores. Complete Shopify solutions." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Shopify Development Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Launch successful Shopify stores with expert development support." />
                      </MetaTags>
                      <ShopifyDevService />
                   </>
@@ -888,8 +1023,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional Graphic Design Services in Surat. Logo design, branding, marketing materials, social media graphics, UI design. Creative designs that stand out."
                         />
+                        <meta
+                           name="keywords"
+                           content="Graphic Design, Logo Design, Branding Services, Creative Design, Marketing Materials, Social Media Graphics, UI Design, Surat Graphic Designers"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/graphics-design" />
+                        <meta property="og:title" content="Graphic Design Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Creative graphic design services for brand identity and marketing. Professional designers team." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Graphic Design Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Stunning visual designs that elevate your brand." />
                      </MetaTags>
                      <GraphicsDesignService />
                   </>
@@ -936,8 +1083,20 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional Server Management Services in Surat. AWS, Azure, Google Cloud management. Server setup, monitoring, security, backups. 24/7 DevOps support."
                         />
+                        <meta
+                           name="keywords"
+                           content="Server Management, Cloud Management, AWS Services, Azure Cloud, Google Cloud, DevOps Support, Server Security, Cloud Migration, Surat IT Infrastructure"
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/server-management" />
+                        <meta property="og:title" content="Server Management Services | Fablead Developers Technolab" />
+                        <meta property="og:description" content="Expert server management and cloud infrastructure services. Reliable 24/7 monitoring and support." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta name="twitter:title" content="Server Management Services | Fablead Technolabs" />
+                        <meta name="twitter:description" content="Secure and scalable cloud server management solutions." />
                      </MetaTags>
                      <ServerManageService />
                   </>

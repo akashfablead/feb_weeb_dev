@@ -96,7 +96,7 @@ function ContactPage() {
       interest_type: formData.interest_type
     };
 
-    console.log("Form Data:", submissionData);
+    // console.log("Form Data:", submissionData);
 
     try {
       const response = await fetch(`${BASE_URL}`, {

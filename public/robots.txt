@@ -1,3 +1,12 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow:
+
+# Sitemap
+Sitemap: https://www.fableadtechnolabs.com/sitemap.xml
+
+# Allow all bots to crawl
+Allow: /
+
+# Crawl-delay for polite crawling (optional)
+Crawl-delay: 1

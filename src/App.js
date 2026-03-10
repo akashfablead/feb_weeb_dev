@@ -1,7 +1,9 @@
 import "./App.css";
 import "../src/assets/js/main.js";
-import RoutesPage from "./mainComponent/routeFile.js";
+
 import ChatBot from "./components/ChatBot";
+import { lazy } from "react";
+const RoutesPage = lazy(() => import("./mainComponent/routeFile.js"));
 function App() {
   return (
     <>
