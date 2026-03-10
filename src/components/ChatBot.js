@@ -237,10 +237,11 @@ const ChatBot = () => {
         // Special handling for file upload step
         if (currentStep === 5 && selectionType === 'job') {
             if (!(leadData.resume instanceof File)) {
-                addMessage('Please select a file to upload.');
-                return;
+                // If no file uploaded, show skipped and move on
+                addMessage('Resume: Skipped', true);
+            } else {
+                addMessage(`Uploaded: ${leadData.resume.name}`, true);
             }
-            addMessage(`Uploaded: ${leadData.resume.name}`, true);
             setTimeout(() => {
                 proceedToNextStep();
             }, 500);
@@ -371,7 +372,7 @@ const ChatBot = () => {
                     break;
                 case 5:
                     if (selectionType === 'job') {
-                        addMessage('Please upload your resume (PDF or DOC).');
+                        addMessage('Please upload your resume (PDF or DOC) (optional).');
                     } else {
                         addMessage('What is your approximate budget?');
                     }
@@ -412,7 +413,7 @@ const ChatBot = () => {
             console.log('Requirement value:', requirementValue); // Log the requirement value
             const leadSubmission = {
                 ...leadData,
-                resume: leadData.resume instanceof File ? leadData.resume.name : leadData.resume,
+                resume: leadData.resume instanceof File ? leadData.resume.name : (leadData.resume || 'resume not provided'),
                 message: requirementValue, // Map requirement to message field
                 selection_type: selectionType, // products, services, or job
                 // score: leadScore,
@@ -541,7 +542,7 @@ const ChatBot = () => {
                             className="chatbot-option-btn"
                             onClick={() => handleOptionSelect('Job')}
                         >
-                            Finding a Job
+                            Finding Jobs
                         </button>
                     </div>
                 );
@@ -676,11 +677,9 @@ const ChatBot = () => {
                     >
                         {leadData.resume instanceof File ? leadData.resume.name : 'Choose Resume File'}
                     </label>
-                    {leadData.resume instanceof File && (
-                        <button onClick={handleSubmit} className="chatbot-send-btn">
-                            <FontAwesomeIcon icon={faPaperPlane} />
-                        </button>
-                    )}
+                    <button onClick={handleSubmit} className="chatbot-send-btn">
+                        <FontAwesomeIcon icon={faPaperPlane} />
+                    </button>
                 </div>
             );
         }
