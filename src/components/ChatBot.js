@@ -17,6 +17,8 @@ const ChatBot = () => {
     // Lead data storage
     const [leadData, setLeadData] = useState({
         service: '',
+        technology: '',
+        resume: '',
         name: '',
         phone: '',
         email: '',
@@ -56,6 +58,17 @@ const ChatBot = () => {
         'WhatsApp Bulk Messaging Platform'
     ];
 
+    // Technology options for Job
+    const technologyOptions = [
+        'React.js',
+        'Node.js',
+        'PHP / Laravel',
+        "WordPress",
+        'Python / Django',
+        'Full Stack Development',
+        'Mobile App (React Native / Flutter)',
+    ];
+
     // Budget options
     const budgetOptions = [
         'Under ₹50,000',
@@ -74,6 +87,15 @@ const ChatBot = () => {
         '3-6 months',
         '6+ months',
         'Not Decided'
+    ];
+
+    // Start Timeline options for Job
+    const startTimelineOptions = [
+        'Immediately',
+        'Within 15 days',
+        'Within 1 month',
+        'After 1 month',
+        'Currently on Notice Period'
     ];
 
     const scrollToBottom = () => {
@@ -108,6 +130,8 @@ const ChatBot = () => {
         delete window.currentRequirement;
         setLeadData({
             service: '',
+            technology: '',
+            resume: '',
             name: '',
             phone: '',
             email: '',
@@ -125,7 +149,7 @@ const ChatBot = () => {
         }, 300);
 
         setTimeout(() => {
-            addMessage('Are you interested in our products or services?');
+            addMessage('Are you interested in our products, services, or joining our team (Job)?');
         }, 1000);
     };
 
@@ -144,31 +168,41 @@ const ChatBot = () => {
 
         // Update lead data based on current step
         switch (currentStep) {
-            case 0: // Product or Service selection
+            case 0: // Product, Service or Job selection
                 setSelectionType(option.toLowerCase());
                 // Move to next step after setting selection type
                 setTimeout(() => {
                     proceedToNextStep();
                 }, 600);
                 break;
-            case 1: // Product or Service detail selection
-                setLeadData(prev => ({ ...prev, service: option }));
+            case 1: // Detail selection (Product, Service or Technology)
+                if (selectionType === 'job') {
+                    setLeadData(prev => ({ ...prev, technology: option }));
+                } else {
+                    setLeadData(prev => ({ ...prev, service: option }));
+                }
                 setLeadScore(prev => prev + 20);
                 // Move to next step
                 setTimeout(() => {
                     proceedToNextStep();
                 }, 600);
                 break;
-            case 5: // Budget selection
-                setLeadData(prev => ({ ...prev, budget: option }));
-                setLeadScore(prev => prev + 15);
-                // Move to next step
-                setTimeout(() => {
-                    proceedToNextStep();
-                }, 600);
+            case 5: // Budget selection OR Resume (resume is handled via input usually, but we'll see)
+                if (selectionType !== 'job') {
+                    setLeadData(prev => ({ ...prev, budget: option }));
+                    setLeadScore(prev => prev + 15);
+                    // Move to next step
+                    setTimeout(() => {
+                        proceedToNextStep();
+                    }, 600);
+                }
                 break;
-            case 6: // Timeline selection
-                setLeadData(prev => ({ ...prev, timeline: option }));
+            case 6: // Timeline selection OR Start Date
+                if (selectionType === 'job') {
+                    setLeadData(prev => ({ ...prev, timeline: option })); // Reusing timeline field for "When can you start"
+                } else {
+                    setLeadData(prev => ({ ...prev, timeline: option }));
+                }
                 setLeadScore(prev => prev + 10);
                 // Move to next step
                 setTimeout(() => {
@@ -182,8 +216,37 @@ const ChatBot = () => {
         setUserInput(e.target.value);
     };
 
+    const handleFileChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            // Check file size (e.g., limit to 5MB)
+            if (file.size > 5 * 1024 * 1024) {
+                addMessage('File is too large. Please upload a file smaller than 5MB.');
+                return;
+            }
+            setLeadData(prev => ({
+                ...prev,
+                resume: file
+            }));
+        }
+    };
+
     const handleSubmit = (e) => {
-        e.preventDefault();
+        if (e) e.preventDefault();
+
+        // Special handling for file upload step
+        if (currentStep === 5 && selectionType === 'job') {
+            if (!(leadData.resume instanceof File)) {
+                addMessage('Please select a file to upload.');
+                return;
+            }
+            addMessage(`Uploaded: ${leadData.resume.name}`, true);
+            setTimeout(() => {
+                proceedToNextStep();
+            }, 500);
+            return;
+        }
+
         if (!userInput.trim()) return;
 
         addMessage(userInput, true);
@@ -223,6 +286,15 @@ const ChatBot = () => {
                 } else {
                     addMessage('Please enter a valid email address.');
                     setUserInput('');
+                    return;
+                }
+                break;
+            case 5: // Budget OR Resume
+                if (selectionType === 'job') {
+                    setLeadData(prev => ({ ...prev, resume: currentInput }));
+                    setLeadScore(prev => prev + 20);
+                } else {
+                    // For non-job, step 5 is handled by handleOptionSelect
                     return;
                 }
                 break;
@@ -279,11 +351,13 @@ const ChatBot = () => {
                 case 1:
                     // Debug: log the selection type
                     console.log('Selection type:', selectionType);
-                    // Show product or service options based on selection
+                    // Show options based on selection
                     if (selectionType === 'products' || selectionType === 'product') {
                         addMessage('Which product are you interested in?');
                     } else if (selectionType === 'services' || selectionType === 'service') {
                         addMessage('Which service are you interested in?');
+                    } else if (selectionType === 'job') {
+                        addMessage('Which technology are you specialized in?');
                     }
                     break;
                 case 2:
@@ -296,10 +370,18 @@ const ChatBot = () => {
                     addMessage('What is your email address?');
                     break;
                 case 5:
-                    addMessage('What is your approximate budget?');
+                    if (selectionType === 'job') {
+                        addMessage('Please upload your resume (PDF or DOC).');
+                    } else {
+                        addMessage('What is your approximate budget?');
+                    }
                     break;
                 case 6:
-                    addMessage('When are you planning to start?');
+                    if (selectionType === 'job') {
+                        addMessage('When can you start?');
+                    } else {
+                        addMessage('When are you planning to start?');
+                    }
                     break;
                 case 7:
                     addMessage('Which city are you located in?');
@@ -330,7 +412,9 @@ const ChatBot = () => {
             console.log('Requirement value:', requirementValue); // Log the requirement value
             const leadSubmission = {
                 ...leadData,
+                resume: leadData.resume instanceof File ? leadData.resume.name : leadData.resume,
                 message: requirementValue, // Map requirement to message field
+                selection_type: selectionType, // products, services, or job
                 // score: leadScore,
                 timestamp: new Date().toISOString(),
                 type: 'chat_bot'
@@ -354,13 +438,29 @@ const ChatBot = () => {
 
             // Send to backend API
             try {
+                let body;
+                let headers = {
+                    'Authorization': 'hXuRUGsEGuhGf6KGeereSSas'
+                };
+
+                if (leadData.resume instanceof File) {
+                    body = new FormData();
+                    Object.keys(leadSubmission).forEach(key => {
+                        if (key !== 'resume') {
+                            body.append(key, leadSubmission[key]);
+                        }
+                    });
+                    // Append the actual file object
+                    body.append('resume', leadData.resume);
+                } else {
+                    headers['Content-Type'] = 'application/json';
+                    body = JSON.stringify(leadSubmission);
+                }
+
                 const response = await fetch(`${BASE_URL}`, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Authorization': 'hXuRUGsEGuhGf6KGeereSSas' // Add authorization header like contact form
-                    },
-                    body: JSON.stringify(leadSubmission)
+                    headers: headers,
+                    body: body
                 });
 
                 if (!response.ok) {
@@ -422,7 +522,7 @@ const ChatBot = () => {
 
     const renderOptions = () => {
         switch (currentStep) {
-            case 0: // Product or Service selection
+            case 0: // Product, Service or Job selection
                 return (
                     <div className="chatbot-options">
                         <button
@@ -437,9 +537,15 @@ const ChatBot = () => {
                         >
                             Services
                         </button>
+                        <button
+                            className="chatbot-option-btn"
+                            onClick={() => handleOptionSelect('Job')}
+                        >
+                            Finding a Job
+                        </button>
                     </div>
                 );
-            case 1: // Show either products or services based on selection
+            case 1: // Show options based on selection
                 if (selectionType === 'products' || selectionType === 'product') {
                     return (
                         <div className="chatbot-options">
@@ -454,7 +560,7 @@ const ChatBot = () => {
                             ))}
                         </div>
                     );
-                } else {
+                } else if (selectionType === 'services' || selectionType === 'service') {
                     return (
                         <div className="chatbot-options">
                             {services.map((service, index) => (
@@ -468,8 +574,24 @@ const ChatBot = () => {
                             ))}
                         </div>
                     );
+                } else if (selectionType === 'job') {
+                    return (
+                        <div className="chatbot-options">
+                            {technologyOptions.map((tech, index) => (
+                                <button
+                                    key={index}
+                                    className="chatbot-option-btn"
+                                    onClick={() => handleOptionSelect(tech)}
+                                >
+                                    {tech}
+                                </button>
+                            ))}
+                        </div>
+                    );
                 }
-            case 5: // Budget
+                return null;
+            case 5: // Budget (skip for Job as it uses input for resume)
+                if (selectionType === 'job') return null;
                 return (
                     <div className="chatbot-options">
                         {budgetOptions.map((budget, index) => (
@@ -486,13 +608,13 @@ const ChatBot = () => {
             case 6: // Timeline
                 return (
                     <div className="chatbot-options">
-                        {timelineOptions.map((timeline, index) => (
+                        {(selectionType === 'job' ? startTimelineOptions : timelineOptions).map((option, index) => (
                             <button
                                 key={index}
                                 className="chatbot-option-btn"
-                                onClick={() => handleOptionSelect(timeline)}
+                                onClick={() => handleOptionSelect(option)}
                             >
-                                {timeline}
+                                {option}
                             </button>
                         ))}
                     </div>
@@ -503,7 +625,10 @@ const ChatBot = () => {
     };
 
     const renderInput = () => {
-        if (currentStep === 0 || currentStep === 1 || currentStep === 5 || currentStep === 6) {
+        // Step 5 is options for non-job, but input for job (resume)
+        const isStep5WithInput = currentStep === 5 && selectionType === 'job';
+
+        if ((currentStep === 0 || currentStep === 1 || currentStep === 5 || currentStep === 6) && !isStep5WithInput) {
             return null; // Show options instead
         }
 
@@ -518,6 +643,44 @@ const ChatBot = () => {
                         <FontAwesomeIcon icon={faRobot} />
                         Start New Conversation
                     </button>
+                </div>
+            );
+        }
+
+        if (isStep5WithInput) {
+            return (
+                <div className="chatbot-input-form file-input-container">
+                    <input
+                        ref={inputRef}
+                        type="file"
+                        onChange={handleFileChange}
+                        accept=".pdf,.doc,.docx"
+                        className="chatbot-file-input"
+                        id="resume-upload"
+                        style={{ display: 'none' }}
+                    />
+                    <label
+                        htmlFor="resume-upload"
+                        className="chatbot-file-label"
+                        style={{
+                            flex: 1,
+                            background: '#fff',
+                            border: '1px solid #F05A28',
+                            color: '#F05A28',
+                            padding: '10px',
+                            borderRadius: '8px',
+                            cursor: 'pointer',
+                            textAlign: 'center',
+                            fontSize: '13px'
+                        }}
+                    >
+                        {leadData.resume instanceof File ? leadData.resume.name : 'Choose Resume File'}
+                    </label>
+                    {leadData.resume instanceof File && (
+                        <button onClick={handleSubmit} className="chatbot-send-btn">
+                            <FontAwesomeIcon icon={faPaperPlane} />
+                        </button>
+                    )}
                 </div>
             );
         }
