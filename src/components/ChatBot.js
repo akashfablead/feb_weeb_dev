@@ -658,7 +658,12 @@ const ChatBot = () => {
                             borderRadius: '8px',
                             cursor: 'pointer',
                             textAlign: 'center',
-                            fontSize: '13px'
+                            fontSize: '13px',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis',
+                            maxWidth: '100%',
+                            display: 'block'
                         }}
                     >
                         {leadData.resume_name || 'Choose Resume File'}
