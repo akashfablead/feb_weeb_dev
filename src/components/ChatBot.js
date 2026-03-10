@@ -438,7 +438,6 @@ const ChatBot = () => {
             } catch (storageError) {
                 console.warn('Could not save to localStorage:', storageError);
             }
-
             // Send to backend API
             try {
                 const response = await fetch(`${BASE_URL}`, {
