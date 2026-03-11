@@ -49,7 +49,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Fablead Developers Technolab | Web Development & Design Company
+                           Fablead Technolabs | Web Development & Design Company
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -64,7 +64,7 @@ function RoutesPage() {
                         <link rel="canonical" href="https://www.fableadtechnolabs.com/" />
                         <meta
                            property="og:title"
-                           content="Fablead Developers Technolab | Web Development &amp; Design Company"
+                           content="Fablead Technolabs | Web Development &amp; Design Company"
                         />
                         <meta
                            property="og:description"
@@ -110,8 +110,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Fablead Developers Technolab | Web Development & Design
-                           Company
+                           CRM Software with Mobile App | Customer Relationship Management | Fablead Technolabs
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -121,43 +120,28 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Complete CRM software solution with web and mobile access. Manage customer relationships, track leads, and automate sales processes."
                         />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/crm" />
                         <meta
                            property="og:title"
-                           content="Fablead Developers Technolab | Web Development &amp; Design Company"
+                           content="CRM Software with Mobile App | Fablead Technolabs"
                         />
                         <meta
                            property="og:description"
-                           content="Fablead Developers Technolab is the best IT company in surat for Website Development ,Website Designing ,Ecommerce Solutions ,SEO."
+                           content="Boost your sales with our advanced CRM system. Track leads, manage customer relationships, and grow your business."
                         />
                         <meta property="og:url" content={window.location.href} />
                         <meta name="twitter:card" content="summary_large_image" />
                         <meta
                            name="twitter:title"
-                           content="Fablead Developers Technolab Twitter Handle"
+                           content="CRM Software with Mobile App | Fablead Technolabs"
                         />
                         <meta
                            name="twitter:description"
-                           content=" Fablead Developers Technolab is the best IT company in surat for Website Development ,Website Designing ,Ecommerce Solutions ,SEO."
+                           content="Complete CRM solution with web and mobile access for modern businesses."
                         />
                         <meta property="og:type" content="website" />
-                        <meta
-                           property="og:title"
-                           content="Fablead Developers Technolab Facebook Handle"
-                        />
-                        <meta
-                           property="og:description"
-                           content=" Fablead Developers Technolab is the best IT company in surat for Website Development ,Website Designing ,Ecommerce Solutions ,SEO."
-                        />
-                        <meta
-                           property="og:title"
-                           content="Fablead Developers Technolab Linkdean Handle"
-                        />
-                        <meta
-                           property="og:description"
-                           content="Fablead Developers Technolab is the best IT company in surat for Website Development ,Website Designing ,Ecommerce Solutions ,SEO."
-                        />
                      </MetaTags>
 
                      <CrmIndexPage />
@@ -171,8 +155,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           About Fablead Developers Technolab | Web Development & Design
-                           Company
+                           About Fablead Technolabs | Web Development & Design
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -245,7 +228,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Portfolio | Fablead Developers Technolab | Web Development & Design Company
+                           Portfolio | Fablead Technolabs | Web Projects
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -392,8 +375,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           {" "}
-                           CRM Web & Mobile APP (CRM) | Fablead Developers Technolab | Web Development & Design Company
+                           CRM Software with Mobile App | Customer Relationship Management | Fablead Technolabs
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -403,7 +385,7 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
+                           content="Complete CRM software with web and mobile app. Manage leads, deals, follow-ups, and sales pipeline efficiently."
                         />
                         <meta
                            name="keywords"
@@ -732,7 +714,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Contact | Fablead Developers Technolab | Web Development & Design Company
+                           Contact Us | Get in Touch | Fablead Developers Technolab
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -742,7 +724,7 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Get in touch with Fablead Developers Technolab for web development, design, and digital marketing services. Request a quote or consultation."
                         />
                         <link rel="canonical" href="https://www.fableadtechnolabs.com/contact" />
                      </MetaTags>
@@ -793,7 +775,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Website Maintenance Services | Web Support & Updates Company Surat
+                           Website Maintenance Services | Web Support & Updates | Fablead Technolabs
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -803,7 +785,7 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional website maintenance services including security updates, bug fixes, backups, and performance optimization. 24/7 support available."
                         />
                         <meta
                            name="keywords"
@@ -1049,7 +1031,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Search-Engine-Optimization-Development | Fablead Developers Technolab | Web Development & Design Company
+                           SEO Services | Search Engine Optimization Company Surat | Fablead Technolabs
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -1059,7 +1041,27 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
+                           content="Professional SEO services to improve your website ranking. On-page, off-page optimization, keyword research, and link building strategies."
+                        />
+                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/seo-service" />
+                        <meta
+                           property="og:title"
+                           content="SEO Services | Search Engine Optimization | Fablead Technolabs"
+                        />
+                        <meta
+                           property="og:description"
+                           content="Boost your online presence with expert SEO services. Increase organic traffic and improve search rankings."
+                        />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="SEO Services | Fablead Technolabs"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="Expert SEO strategies to grow your business online visibility."
                         />
                      </MetaTags>
                      <SeoService />
@@ -1073,7 +1075,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           Server-Management & Support | Fablead Developers Technolab | Web Development & Design Company
+                           Server Management & Support | Cloud Infrastructure
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -1210,7 +1212,7 @@ function RoutesPage() {
                   <>
                      <MetaTags>
                         <title>
-                           CMS Development | Wordpress Development | Squarespace Development | Fablead Developers Technolab
+                           CMS Development Course | WordPress & Squarespace Training | Fablead Technolabs
                         </title>
                         <meta charSet="utf-8" />
                         <meta
@@ -1220,7 +1222,7 @@ function RoutesPage() {
                         <meta name="theme-color" content="#000000" />
                         <meta
                            name="description"
-                           content="Empower Your Future with Premier Mobile Application Development Course at Fablead Developers Technolab."
+                           content="Learn CMS development with WordPress and Squarespace. Build custom themes, plugins, and manage content effectively."
                         />
                      </MetaTags>
                      <CmsDevelopment />

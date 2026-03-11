@@ -11,8 +11,8 @@ function Services() {
   return (
     <section id="services" className="services section-bg1">
       <Container className="" data-aos="fade-up">
-        <div className="section-title">
-          <div role="heading" aria-level="2">Services</div>
+        <div className="section-heading">
+          <h2>Services</h2>
         </div>
 
         <Row className="">

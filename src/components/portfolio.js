@@ -480,8 +480,7 @@
 
 // export default React.memo(Portfolio);
 
-//  
-
+//
 
 import React, { useEffect, useState } from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
@@ -536,7 +535,6 @@ import parkpal from "../assets/images/portfolioImages/parkpal.png";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import whatsappbluk from "../assets/images/portfolioImages/react/whatsappBulk.png";
 import tanishphysiofitness from "../assets/images/portfolioImages/react/tanishphysiofitness.png";
-
 
 function Portfolio() {
   const { width } = useWindowDimensions();
@@ -813,10 +811,10 @@ function Portfolio() {
     },
     {
       id: 35,
-      image:Jackeames,   
+      image: Jackeames,
       title: "Jackeame ",
-      category:"filter-squarespace",
-      description:"Squarespace",
+      category: "filter-squarespace",
+      description: "Squarespace",
     },
     {
       id: 36,
@@ -895,7 +893,7 @@ function Portfolio() {
       category: "filter-react",
       description: "React JS",
     },
-  {
+    {
       id: 47,
       image: newIcon,
       title: "ToDo-App",
@@ -927,8 +925,8 @@ function Portfolio() {
   return (
     <section id="portfolio" className="portfolio section-bg">
       <Container data-aos="fade-up">
-        <div className="section-title">
-          <div role="heading" aria-level="2">Our Works</div>
+        <div className="section-heading"> 
+          <h2>Our Works</h2>
         </div>
 
         <ul
@@ -953,21 +951,27 @@ function Portfolio() {
           </li>
           <li
             data-filter=".filter-wordpress"
-            className={activeFilter === ".filter-wordpress" ? "filter-active" : ""}
+            className={
+              activeFilter === ".filter-wordpress" ? "filter-active" : ""
+            }
             onClick={() => setActiveFilter(".filter-wordpress")}
           >
             <span>WORDPRESS</span>
           </li>
           <li
             data-filter=".filter-squarespace"
-            className={activeFilter === ".filter-squarespace" ? "filter-active" : ""}
+            className={
+              activeFilter === ".filter-squarespace" ? "filter-active" : ""
+            }
             onClick={() => setActiveFilter(".filter-squarespace")}
           >
             <span>SQUARESPACE</span>
           </li>
           <li
             data-filter=".filter-mobile-app"
-            className={activeFilter === ".filter-mobile-app" ? "filter-active" : ""}
+            className={
+              activeFilter === ".filter-mobile-app" ? "filter-active" : ""
+            }
             onClick={() => setActiveFilter(".filter-mobile-app")}
           >
             <span>MOBILE APP</span>

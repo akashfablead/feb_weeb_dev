@@ -1,8 +1,17 @@
 import React, { useEffect, useRef } from "react";
 import { useState } from "react";
-import { Row, Col, Form, FormGroup, FormLabel, FormControl, Button, Container } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Form,
+  FormGroup,
+  FormLabel,
+  FormControl,
+  Button,
+  Container,
+} from "react-bootstrap";
 import ReCAPTCHA from "react-google-recaptcha";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { BASE_URL } from "../utils";
 
 function Contact() {
@@ -33,17 +42,17 @@ function Contact() {
     const { name, value } = e.target;
 
     // Reset dependent fields when interest type changes
-    if (name === 'interest_type') {
-      setFormData(prevData => ({
+    if (name === "interest_type") {
+      setFormData((prevData) => ({
         ...prevData,
         [name]: value,
         product_interest: "",
-        service_interest: ""
+        service_interest: "",
       }));
     } else {
-      setFormData(prevData => ({
+      setFormData((prevData) => ({
         ...prevData,
-        [name]: value
+        [name]: value,
       }));
     }
   };
@@ -51,7 +60,7 @@ function Contact() {
   const isValidPhoneNumber = (phone) => {
     // Basic phone number validation - allows digits, spaces, hyphens, parentheses, plus signs
     const phoneRegex = /^[\+]?[\d\s\-\(\)]{7,15}$/;
-    return phoneRegex.test(phone.replace(/[^\d\+]/g, ''));
+    return phoneRegex.test(phone.replace(/[^\d\+]/g, ""));
   };
 
   const handleSubmit = async (e) => {
@@ -71,7 +80,9 @@ function Contact() {
     // }
 
     if (!isVerified) {
-      setErrorMessage("Please verify that you're not a robot by clicking the ReCAPTCHA checkbox.");
+      setErrorMessage(
+        "Please verify that you're not a robot by clicking the ReCAPTCHA checkbox."
+      );
       setTimeout(() => {
         setErrorMessage("");
       }, 3000); // Clear error message after 5 seconds
@@ -94,9 +105,13 @@ function Contact() {
       subject: formData.subject,
       message: formData.message,
       // Include the selected interest (either product or service)
-      interest: formData.interest_type === 'product' ? formData.product_interest :
-        formData.interest_type === 'service' ? formData.service_interest : '',
-      interest_type: formData.interest_type
+      interest:
+        formData.interest_type === "product"
+          ? formData.product_interest
+          : formData.interest_type === "service"
+          ? formData.service_interest
+          : "",
+      interest_type: formData.interest_type,
     };
 
     console.log("Form Data:", submissionData);
@@ -107,7 +122,7 @@ function Contact() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "hXuRUGsEGuhGf6KGeereSSas",
+          Authorization: "hXuRUGsEGuhGf6KGeereSSas",
         },
         body: JSON.stringify(submissionData),
       });
@@ -129,21 +144,20 @@ function Contact() {
             message: "",
           });
 
-
           setTimeout(() => {
             setSuccessMessage("");
           }, 5000);
-
         } else {
           console.error("Error sending message");
         }
       } else {
-        console.error("Error sending message. Server returned status:", response.status);
-
+        console.error(
+          "Error sending message. Server returned status:",
+          response.status
+        );
       }
     } catch (error) {
       console.error("Error sending message:", error.message);
-
     }
   };
 
@@ -151,8 +165,8 @@ function Contact() {
     <section>
       <div id="contact" className="contact">
         <Container data-aos="fade-up">
-          <div className="section-title">
-            <div role="heading" aria-level="2">Contact Us</div>
+          <div className="section-heading">
+            <h2>Contact Us</h2>
           </div>
           <Row>
             <Col lg={5} className="d-flex align-items-stretch ">
@@ -160,10 +174,11 @@ function Contact() {
                 <div className="address">
                   <i className="bi bi-geo-alt"></i>
                   <h4>Location:</h4>
-                  <p>A-5001, Ascon Plaza,
-                    Adajan, Surat,
+                  <p>
+                    A-5001, Ascon Plaza, Adajan, Surat,
                     <br />
-                    Gujarat 395009 – India</p>
+                    Gujarat 395009 – India
+                  </p>
                 </div>
 
                 <div className="email">
@@ -172,7 +187,8 @@ function Contact() {
                   <p>
                     <Link to="mailto:info@fableadtechnolabs.com">
                       <label>info@fableadtechnolabs.com</label>
-                    </Link><br />
+                    </Link>
+                    <br />
                     <small>We will respond within 24 hours.</small>
                   </p>
                 </div>
@@ -180,7 +196,11 @@ function Contact() {
                   <i className="bi bi-globe"></i>
                   <h4>Website:</h4>
                   <p>
-                    <Link to="https://www.fableadtechnolabs.com" target="_blank" rel="noopener noreferrer">
+                    <Link
+                      to="https://www.fableadtechnolabs.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <label> www.fableadtechnolabs.com </label>
                     </Link>
                   </p>
@@ -198,8 +218,7 @@ function Contact() {
                   allowFullScreen
                   className="google_map"
                   loading="lazy"
-                >
-                </iframe>
+                ></iframe>
               </div>
             </Col>
             <Col lg={7} className="mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -209,9 +228,17 @@ function Contact() {
                 className="php-email-form"
               >
                 <Row className="mb-2">
-                  {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
-                  {successMessage && <div className="alert alert-success">{successMessage}</div>}
-                  {isVerified && <div className="alert alert-info">You've clicked the ReCAPTCHA!</div>}
+                  {errorMessage && (
+                    <div className="alert alert-danger">{errorMessage}</div>
+                  )}
+                  {successMessage && (
+                    <div className="alert alert-success">{successMessage}</div>
+                  )}
+                  {isVerified && (
+                    <div className="alert alert-info">
+                      You've clicked the ReCAPTCHA!
+                    </div>
+                  )}
                   {/* {successMessage && <div className="alert alert-success">{successMessage}</div>} */}
                   <Col md={6}>
                     <FormGroup>
@@ -268,7 +295,6 @@ function Contact() {
                   </Col>
                 </Row>
                 <Row className="mb-2">
-
                   <Col md={6}>
                     <FormGroup>
                       <FormLabel htmlFor="interest_type">
@@ -290,7 +316,7 @@ function Contact() {
                   </Col>
 
                   {/* Conditional Service Selection */}
-                  {formData.interest_type === 'service' && (
+                  {formData.interest_type === "service" && (
                     <Col md={6}>
                       <FormGroup>
                         <FormLabel htmlFor="service_interest">
@@ -305,16 +331,30 @@ function Contact() {
                           required
                         >
                           <option value="">Select Service</option>
-                          <option value="Website Development">Website Development</option>
+                          <option value="Website Development">
+                            Website Development
+                          </option>
                           <option value="Web Design">Web Design</option>
-                          <option value="E-commerce Development">E-commerce Development</option>
-                          <option value="Mobile App Development">Mobile App Development</option>
-                          <option value="CMS Development">CMS Development</option>
+                          <option value="E-commerce Development">
+                            E-commerce Development
+                          </option>
+                          <option value="Mobile App Development">
+                            Mobile App Development
+                          </option>
+                          <option value="CMS Development">
+                            CMS Development
+                          </option>
                           <option value="SEO Services">SEO Services</option>
-                          <option value="Digital Marketing">Digital Marketing</option>
-                          <option value="Software Development">Software Development</option>
+                          <option value="Digital Marketing">
+                            Digital Marketing
+                          </option>
+                          <option value="Software Development">
+                            Software Development
+                          </option>
                           <option value="UI/UX Design">UI/UX Design</option>
-                          <option value="Cloud Solutions">Cloud Solutions</option>
+                          <option value="Cloud Solutions">
+                            Cloud Solutions
+                          </option>
                           <option value="Other">Other Services</option>
                         </Form.Select>
                       </FormGroup>
@@ -322,7 +362,7 @@ function Contact() {
                   )}
 
                   {/* Conditional Product Selection */}
-                  {formData.interest_type === 'product' && (
+                  {formData.interest_type === "product" && (
                     <Col md={6}>
                       <FormGroup>
                         <FormLabel htmlFor="product_interest">
@@ -343,18 +383,22 @@ function Contact() {
                           <option value="Hospital Management">
                             Hospital Management
                           </option>
-                          <option value="HR Management System">HR Management System</option>
+                          <option value="HR Management System">
+                            HR Management System
+                          </option>
                           <option value="Inventory & Billing Software">
                             Inventory & Billing Software (ERP)
                           </option>
                           <option value="Ecommerce Web & Mobile App">
                             E-commerce Web & Mobile App
                           </option>
-                          <option value="WhatsApp Bulk Messaging">WhatsApp Bulk Messaging Platform</option>
-                          <option value="Real Estate Management">Real Estate Management System</option>
-                          <option value="Other">
-                            Other
+                          <option value="WhatsApp Bulk Messaging">
+                            WhatsApp Bulk Messaging Platform
                           </option>
+                          <option value="Real Estate Management">
+                            Real Estate Management System
+                          </option>
+                          <option value="Other">Other</option>
                         </Form.Select>
                       </FormGroup>
                     </Col>
@@ -391,7 +435,7 @@ function Contact() {
                   </div>
                 </div>
                 <Row className="re-captcha">
-                  <Col lg={6} >
+                  <Col lg={6}>
                     <ReCAPTCHA
                       ref={recaptchaRef}
                       sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
@@ -399,7 +443,7 @@ function Contact() {
                     />
                   </Col>
                   <Col lg={6} className="mt-3 ">
-                    <button type="submit" className="send-message-btn" >
+                    <button type="submit" className="send-message-btn">
                       Send Message
                     </button>
                   </Col>
@@ -413,4 +457,4 @@ function Contact() {
   );
 }
 
-export default React.memo(Contact)
+export default React.memo(Contact);

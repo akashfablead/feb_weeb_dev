@@ -71,13 +71,9 @@ function Clients() {
       style={{ padding: "40px 0" }}
     >
       <Container>
-        <div className="section-title">
-          {" "}
-          <div role="heading" aria-level="2">
-            Our Technologies
-          </div>
-          {" "}
-        </div>
+      <div class="section-heading">
+  <h2>Our Technologies</h2>
+</div>
         {isMobile ? (
           // Mobile: Show slider with 2 logos per slide
           <Slider {...sliderSettings} className="">

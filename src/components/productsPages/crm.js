@@ -108,7 +108,7 @@ function CRM() {
       <Header />
       <section className="services section-bg fade-up">
         <div className="section-title1">
-          <div className="pt-5" role="heading" aria-level="1">
+          <div className="pt-5">
             CRM Web & Mobile APP (CRM)
           </div>
           <p className="header-content prodectpage-ecommerce-subheading">

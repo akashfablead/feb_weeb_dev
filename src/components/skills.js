@@ -44,8 +44,8 @@ function Skills() {
   return (
     <section id="skills" className="skills ps-3 pe-3">
       <Container className="" data-aos="fade-up">
-        <div className="section-title">
-          <div role="heading" aria-level="2">What we Provide</div>
+               <div className="section-heading">
+          <h2>What we Provide</h2>
         </div>
         <Row>
           <Col

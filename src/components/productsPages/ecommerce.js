@@ -113,7 +113,7 @@ function EcommerceAndMobileApp() {
         </div> */}
 
         <div className="section-title1">
-          <div className="pt-5" role="heading" aria-level="1">Ecommerce Web & Mobile APP</div>
+          <div className="pt-5">Ecommerce Web & Mobile APP</div>
           <p className="header-content prodectpage-ecommerce-subheading">
             eCommerce ready web & mobile app that is suitable for those of you who want to sell or promote products online. The web & mobiile has been well designed with a clean and modern design and an easy-to-use with admin panel.
           </p>

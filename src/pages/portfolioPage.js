@@ -456,6 +456,7 @@ function PortfolioPage() {
           className="text-center justify-content-center p-0 pt-5"
           data-aos="fade-up"
           data-aos-delay="100"
+          aria-label="Filter portfolio by technology"
         >
           <li data-filter="*" className="filter-active">
             <span>All</span>

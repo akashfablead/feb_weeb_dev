@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+  import React, { useEffect, useState } from "react";
 import { Col, Image, Row } from "react-bootstrap";
 import { faBolt, faCaretDown, faChartLine, faDesktop, faEarthAmericas, faMobileScreenButton, faShield, faTv, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -118,7 +118,7 @@ function HospitalManagement() {
       <section className="services section-bg fade-up">
 
         <div className="section-title1">
-          <div className="pt-5" role="heading" aria-level="1">Hospital & Clinic Management System (HMS)</div>
+          <div className="pt-5">Hospital & Clinic Management System (HMS)</div>
           <p className="header-content prodectpage-ecommerce-subheading">
             Manage Hospitals and Clinic operations efficiently
           </p>

@@ -113,7 +113,7 @@ function HRManagement() {
             <Header />
             <section className="services section-bg fade-up">
                 <div className="section-title1">
-                    <div className="pt-5" role="heading" aria-level="1">HR Management System</div>
+                    <div className="pt-5">HR Management System</div>
                     <p className="header-content prodectpage-ecommerce-subheading">
                         Manage employee and people operations efficiently.
                     </p>

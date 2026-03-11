@@ -14,7 +14,7 @@ function Testimonial() {
     {
       name: "GABRIEL O. - Manchester, GB",
       testimonial:
-        "Company’s work is timely and of the highest standard. Company’s professionalism is exemplary and his patience with clients is excellent. It is very clear that they understands his chosen field very well. I would definitely recommend their services to others. ",
+        "Company's work is timely and of the highest standard. Company's professionalism is exemplary and his patience with clients is excellent. It is very clear that they understands his chosen field very well. I would definitely recommend their services to others. ",
     },
     {
       name: "Ryan S.",
@@ -58,13 +58,15 @@ function Testimonial() {
   return (
     <section id="testimonials" className="testimonials section-bg p-1">
       <Container className="" data-aos="fade-up">
-        <div className="section-title">
+        {/* <div className="section-title">
           <i className="bi bi-quote testimonial_icon"></i>
-          <div >Testimonials</div>
-          {/* <h1 role="heading" aria-level="1">
-            <div>Testimonials</div>
-          </h1> */}
-        </div>
+          <h1>Testimonials</h1>
+        </div> */}  
+        <div className="section-heading">
+             <i className="bi bi-quote testimonial_icon"></i>
+  <h2>Testimonials</h2>
+</div>
+
         <Slider {...sliderSettings} className="text-center">
           {testimonialData.map((testimonial, index) => (
             <div key={index} className="testimonial-item">

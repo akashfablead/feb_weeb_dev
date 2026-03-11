@@ -18,6 +18,8 @@ function Log() {
               <Link
                 className="cta-btn m-0 align-middle d-flex align-items-center justify-content-center gap-2"
                 to="/contact"
+                title="Contact Fablead for a free consultation"
+                aria-label="Contact Fablead Developers Technolab"
                 style={{ padding: '10px 20px', fontSize: '16px', width: '180px' }}
               >
                 Contact Us
@@ -27,6 +29,8 @@ function Log() {
                 className="cta-btn m-0 align-middle d-flex align-items-center justify-content-center gap-2"
                 href="mailto:info@fableadtechnolabs.com"
                 rel="noopener noreferrer"
+                title="Send email to Fablead team"
+                aria-label="Email info@fableadtechnolabs.com"
                 style={{ padding: '10px 20px', fontSize: '16px', width: '180px' }}
               >
                 Email Us

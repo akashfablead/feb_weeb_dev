@@ -10,8 +10,8 @@ function AboutUs() {
   return (
     <section id="why-us" className="why-us section-bg">
       <Container data-aos="fade-up">
-        <div className="section-title">
-          <div role="heading" aria-level="2">About Us</div>
+        <div className="section-heading">
+          <h2>About Us</h2>
         </div>
         <Row>
           <Col
