@@ -17,11 +17,9 @@ import Contact from "../components/contact";
 import Testimonial from "../components/testimonial";
 import TopBar from "../components/topBar";
 import ReactGA from "react-ga4";
-import { reportWebVitals } from "web-vitals";
 
 function IndexPage() {
   useEffect(() => {
-    // Initialize AOS on load for better scroll animations
     window.addEventListener("load", () => {
       AOS.init({
         duration: 1000,
@@ -30,27 +28,8 @@ function IndexPage() {
         mirror: false,
       });
 
-      // Initialize Google Analytics
       ReactGA.initialize("UA-111706629-1");
       ReactGA.send({ hitType: "pageview", page: window.location.pathname });
-      
-      // Performance monitoring
-      if (typeof reportWebVitals === 'function') {
-        reportWebVitals((metric) => {
-          // Log performance metrics for optimization
-          console.log('Performance Metric:', metric);
-          
-          // Send to analytics
-          ReactGA.send({
-            hitType: "event",
-            eventCategory: "Web Vitals",
-            eventAction: metric.name,
-            eventValue: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-            eventLabel: metric.id,
-            nonInteraction: true,
-          });
-        });
-      }
     });
   }, []);
   return (

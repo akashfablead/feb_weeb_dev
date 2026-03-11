@@ -46,13 +46,7 @@ function Hero() {
       <Carousel>
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>
-            <Image 
-              className="d-block w-100" 
-              src={slide.image} 
-              alt={slide.alt}
-              loading={index === 0 ? "eager" : "lazy"}
-              decoding="async"
-            />
+            <Image className="d-block w-100" src={slide.image} alt={slide.alt} />
             <Carousel.Caption>
               {index === 0 ? (
                 <h1 role="heading" aria-level="1">{slide.title}</h1>
