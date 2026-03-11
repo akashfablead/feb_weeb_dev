@@ -18,23 +18,6 @@ function Header() {
     setLogoUrl(dynamicLogoUrl);
   }, [location.pathname]);
 
-  // useEffect(() => {
-  //   const handleClickOutside = (event) => {
-  //     const nav = document.getElementById("navbar");
-
-  //     // If menu is open AND click is outside the nav element
-  //     if (mobileMenuOpen && nav && !nav.contains(event.target)) {
-  //       setMobileMenuOpen(false);
-  //     }
-  //   };
-
-  //   document.addEventListener("mousedown", handleClickOutside);
-
-  //   return () => {
-  //     document.removeEventListener("mousedown", handleClickOutside);
-  //   };
-  // }, [mobileMenuOpen]);
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };

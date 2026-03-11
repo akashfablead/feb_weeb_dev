@@ -49,4 +49,4 @@ function IndexPage() {
     </>
   );
 }
-export default IndexPage;
+export default React.memo(IndexPage)
