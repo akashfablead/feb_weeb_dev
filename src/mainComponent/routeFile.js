@@ -61,7 +61,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO."
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/" />
                         <meta
                            property="og:title"
                            content="Fablead Technolabs | Web Development &amp; Design Company"
@@ -122,7 +122,7 @@ function RoutesPage() {
                            name="description"
                            content="Complete CRM software solution with web and mobile access. Manage customer relationships, track leads, and automate sales processes."
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/crm" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/crm" />
                         <meta
                            property="og:title"
                            content="CRM Software with Mobile App | Fablead Technolabs"
@@ -167,7 +167,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab provides Web Development, Web Designing, Mobile App Development, Ecommerce Development, CMS Based Website Development and Web Maintenance & Customization. "
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/about" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/about" />
                      </MetaTags>
                      <AboutUsPage />
                   </>
@@ -192,7 +192,7 @@ function RoutesPage() {
                            name="description"
                            content="Fablead Developers Technolab provides Accelerate internal process to Develop and Design Web Applications & Mobile Applications as per requirements."
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services" />
                         <meta
                            name="keywords"
                            content="IT services, web development, mobile app development, ecommerce solutions, CMS development, UI/UX design, Fablead Developers Technolab"
@@ -391,7 +391,7 @@ function RoutesPage() {
                            name="keywords"
                            content="CRM Software, Mobile CRM App, Customer Relationship Management, Business Automation, CRM Development, Web CRM Solution, Fablead CRM, Enterprise CRM Systems"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/crm-web-mobile-app-crm" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/crm-web-mobile-app-crm" />
                         <meta property="og:title" content="CRM Software with Mobile App | Fablead Developers Technolab" />
                         <meta property="og:description" content="Boost your sales with our advanced CRM system. Track leads, manage customer relationships, and grow your business." />
                         <meta property="og:url" content={window.location.href} />
@@ -429,7 +429,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Ecommerce Development, Online Store Builder, Shopping Cart Development, Mobile Ecommerce App, Payment Gateway Integration, Multi-vendor Marketplace, Surat Ecommerce Solutions"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/ecommerce-web-mobile-app" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/ecommerce-web-mobile-app" />
                         <meta property="og:title" content="Ecommerce Website & Mobile App Development | Fablead Developers Technolab" />
                         <meta property="og:description" content="Launch your online store with our complete ecommerce solutions. Web and mobile apps with advanced features." />
                         <meta property="og:url" content={window.location.href} />
@@ -465,7 +465,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Hospital Management System, Clinic Software, HMS Software, Patient Management, EMR Software, Healthcare IT, Medical Practice Software, Surat HMS Solution"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/hospital-clinic-management-system-hms" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/hospital-clinic-management-system-hms" />
                         <meta property="og:title" content="Hospital & Clinic Management System (HMS) | Fablead Developers Technolab" />
                         <meta property="og:description" content="Comprehensive healthcare management software for hospitals and clinics. Digitize patient records and streamline operations." />
                         <meta property="og:url" content={window.location.href} />
@@ -569,7 +569,7 @@ function RoutesPage() {
                            name="keywords"
                            content="WhatsApp Bulk Messaging, Bulk SMS India, WhatsApp Marketing, Business Messaging API, Automated Messages, Customer Engagement, Surat Digital Marketing Tools"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/whatsapp-bulk-messaging-platform" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/whatsapp-bulk-messaging-platform" />
                         <meta property="og:title" content="WhatsApp Bulk Messaging Platform | Fablead Developers Technolab" />
                         <meta property="og:description" content="Reach thousands of customers instantly with our WhatsApp bulk messaging and marketing automation platform." />
                         <meta property="og:url" content={window.location.href} />
@@ -655,7 +655,7 @@ function RoutesPage() {
                            name="keywords"
                            content="HR Management System, HRMS Software, Payroll Software, Attendance Tracking, Leave Management, Recruitment Software, Employee Portal, Surat HR Solutions"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/hr-management-system" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/hr-management-system" />
                         <meta property="og:title" content="HR Management System Software | Fablead Developers Technolab" />
                         <meta property="og:description" content="Streamline HR operations with our comprehensive HRMS software. Automate payroll, attendance, and employee management." />
                         <meta property="og:url" content={window.location.href} />
@@ -693,7 +693,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Inventory Software, Billing Software, ERP System, GST Billing, Stock Management, Inventory Tracking, Business Management Software, Surat ERP Solution"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/products/inventory-billing-software-erp" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/products/inventory-billing-software-erp" />
                         <meta property="og:title" content="Inventory & Billing Software (ERP) | Fablead Developers Technolab" />
                         <meta property="og:description" content="Complete inventory management and billing solution with GST compliance for retail, wholesale, and manufacturing businesses." />
                         <meta property="og:url" content={window.location.href} />
@@ -726,7 +726,7 @@ function RoutesPage() {
                            name="description"
                            content="Get in touch with Fablead Developers Technolab for web development, design, and digital marketing services. Request a quote or consultation."
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/contact" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/contact" />
                      </MetaTags>
                      <ContactPage />
                   </>
@@ -755,7 +755,7 @@ function RoutesPage() {
                            name="keywords"
                            content="CMS Development, WordPress Development, Joomla Development, Drupal, Custom CMS, Theme Development, Plugin Development, Website Migration, Surat CMS Experts"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/cms-website" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/cms-website" />
                         <meta property="og:title" content="CMS Website Development | Fablead Developers Technolab" />
                         <meta property="og:description" content="Professional CMS development services for easy website management. WordPress experts and custom solutions." />
                         <meta property="og:url" content={window.location.href} />
@@ -791,7 +791,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Website Maintenance, Web Support, Website Updates, Security Patches, Bug Fixes, Website Backup, Performance Optimization, Monthly Maintenance, Surat IT Support"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/web-maintenance" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/web-maintenance" />
                         <meta property="og:title" content="Website Maintenance Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Reliable website maintenance services to keep your site running smoothly. 24/7 support available." />
                         <meta property="og:url" content={window.location.href} />
@@ -827,7 +827,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Website Design, Web Design Company, Responsive Web Design, UI UX Design, Creative Website, Landing Page Design, Website Redesign, Surat Web Designers"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/website-design" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/website-design" />
                         <meta property="og:title" content="Professional Website Design Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Beautiful, modern website designs that convert visitors into customers. Professional web design services." />
                         <meta property="og:url" content={window.location.href} />
@@ -864,7 +864,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Website Development, Web Development Company, Custom Website Design, Responsive Web Development, Business Website, Professional Web Developers, Surat IT Services"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/website-development" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/website-development" />
                         <meta property="og:title" content="Professional Website Development Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Custom website development services for businesses. Responsive, fast, and SEO-friendly websites built with latest technologies." />
                         <meta property="og:url" content={window.location.href} />
@@ -901,7 +901,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Mobile App Development, iOS App Development, Android App Development, React Native, Flutter, Hybrid Apps, Mobile App Developers, Surat App Company"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/mobile-apps" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/mobile-apps" />
                         <meta property="og:title" content="Mobile App Development Company | Fablead Developers Technolab" />
                         <meta property="og:description" content="Expert mobile app developers creating innovative iOS and Android applications for businesses." />
                         <meta property="og:url" content={window.location.href} />
@@ -938,7 +938,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Ecommerce Development, Online Store Development, Shopping Cart Development, WooCommerce, Magento, Shopify, Payment Integration, Multi-vendor Marketplace, Surat Ecommerce"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/e-commerce" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/e-commerce" />
                         <meta property="og:title" content="Ecommerce Development Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Build successful online stores with our ecommerce development services. Feature-rich and conversion-optimized." />
                         <meta property="og:url" content={window.location.href} />
@@ -975,7 +975,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Shopify Development, Shopify Store Design, Shopify Theme Development, Shopify Apps, Shopify Migration, Ecommerce Platform, Shopify Experts, Surat Shopify Developers"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/shopify-development" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/shopify-development" />
                         <meta property="og:title" content="Shopify Development Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Expert Shopify developers creating high-converting online stores. Complete Shopify solutions." />
                         <meta property="og:url" content={window.location.href} />
@@ -1011,7 +1011,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Graphic Design, Logo Design, Branding Services, Creative Design, Marketing Materials, Social Media Graphics, UI Design, Surat Graphic Designers"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/graphics-design" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/graphics-design" />
                         <meta property="og:title" content="Graphic Design Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Creative graphic design services for brand identity and marketing. Professional designers team." />
                         <meta property="og:url" content={window.location.href} />
@@ -1043,7 +1043,7 @@ function RoutesPage() {
                            name="description"
                            content="Professional SEO services to improve your website ranking. On-page, off-page optimization, keyword research, and link building strategies."
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/seo-service" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/seo-service" />
                         <meta
                            property="og:title"
                            content="SEO Services | Search Engine Optimization | Fablead Technolabs"
@@ -1091,7 +1091,7 @@ function RoutesPage() {
                            name="keywords"
                            content="Server Management, Cloud Management, AWS Services, Azure Cloud, Google Cloud, DevOps Support, Server Security, Cloud Migration, Surat IT Infrastructure"
                         />
-                        <link rel="canonical" href="https://www.fableadtechnolabs.com/services/server-management" />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/server-management" />
                         <meta property="og:title" content="Server Management Services | Fablead Developers Technolab" />
                         <meta property="og:description" content="Expert server management and cloud infrastructure services. Reliable 24/7 monitoring and support." />
                         <meta property="og:url" content={window.location.href} />

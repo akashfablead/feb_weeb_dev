@@ -197,11 +197,11 @@ function Contact() {
                   <h4>Website:</h4>
                   <p>
                     <Link
-                      to="https://www.fableadtechnolabs.com"
+                      to="https://fableadtechnolabs.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <label> www.fableadtechnolabs.com </label>
+                      <label> fableadtechnolabs.com </label>
                     </Link>
                   </p>
                 </div>

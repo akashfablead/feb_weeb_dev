@@ -46,7 +46,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-sitemap": "node ./src/mainComponent/sitemap.js"
+    "generate-sitemap": "node ./src/mainComponent/sitemap.js",
+    "analyze": "source-map-explorer 'build/static/js/*.js'"
   },
   "reactSnap": {
     "port": 3001

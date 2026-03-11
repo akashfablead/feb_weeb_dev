@@ -77,6 +77,8 @@ function AboutUs() {
                 src={AboutUsImage}
                 className="about_image"
                 alt="Fablead Developers Technolab"
+                loading="lazy"
+                decoding="async"
               />
               <a
                 target="_blank"
@@ -87,6 +89,8 @@ function AboutUs() {
                   src="https://www.techjockey.com/tjapi/reviews_on_techjockey_badge?type=reviews-on-techjockey&oem-brand=fablead-technolab&badge=Badge_Review4"
                   className="about_badge"
                   alt="Reviews on TechJockey"
+                  loading="lazy"
+                  decoding="async"
                 />
               </a>
             </div>

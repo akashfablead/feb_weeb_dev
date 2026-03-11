@@ -26,8 +26,8 @@ export const StructuredData = ({ type = "Organization", data }) => {
 export const organizationSchema = {
   "@type": "Organization",
   name: "Fablead Developers Technolab",
-  url: "https://www.fableadtechnolabs.com",
-  logo: "https://www.fableadtechnolabs.com/logo.webp",
+  url: "https://fableadtechnolabs.com",
+  logo: "https://fableadtechnolabs.com/logo.webp",
   description:
     "Fablead Developers Technolab is the best IT company in Surat for Website Development, Website Designing, Ecommerce Solutions, SEO, and Digital Marketing Services.",
   foundingDate: "2017",
@@ -75,10 +75,10 @@ export const webSiteSchema = {
   "@type": "WebSite",
   name: "Fablead Developers Technolab",
   alternateName: "Fablead Technolabs",
-  url: "https://www.fableadtechnolabs.com",
+  url: "https://fableadtechnolabs.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://www.fableadtechnolabs.com/?s={search_term_string}",
+    target: "https://fableadtechnolabs.com/?s={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -92,7 +92,7 @@ export const serviceSchema = (serviceName, description) => ({
   provider: {
     "@type": "Organization",
     name: "Fablead Developers Technolab",
-    url: "https://www.fableadtechnolabs.com",
+    url: "https://fableadtechnolabs.com",
   },
   areaServed: {
     "@type": "Country",

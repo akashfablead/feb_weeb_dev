@@ -12,35 +12,25 @@ function TopBar() {
   return (
     <>
       <Helmet>
-        {/* Canonical URL */}
-        <link rel="canonical" href={currentUrl} />
-
-        {/* Basic SEO */}
+        {/* Basic SEO - No canonical here, it will be in routeFile */}
         <title>{siteName}</title>
-        <meta name="title" content={siteName} />
-        <meta name="description" content={siteDescription} />
         <meta name="keywords" content="Website Development, Website Designing, Ecommerce Solutions, SEO, Digital Marketing, IT Company Surat, Web Development Surat, Mobile Apps" />
         <meta name="author" content={siteName} />
         <meta name="robots" content="index, follow" />
 
-        {/* Open Graph / Facebook */}
+        {/* Open Graph / Facebook - Removed duplicate og:title and og:description */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:title" content={siteName} />
-        <meta property="og:description" content={siteDescription} />
         <meta property="og:image" content="%PUBLIC_URL%/favicon-192x192.webp" />
         <meta property="og:site_name" content={siteName} />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={currentUrl} />
-        <meta name="twitter:title" content={siteName} />
-        <meta name="twitter:description" content={siteDescription} />
         <meta name="twitter:image" content="%PUBLIC_URL%/favicon-192x192.webp" />
 
-        {/* LinkedIn */}
-        <meta property="og:title" content={siteName} />
-        <meta property="og:description" content={siteDescription} />
+        {/* LinkedIn - Removed duplicate title and description */}
+        <meta property="og:site_name" content={siteName} />
 
         {/* Schema.org structured data */}
         <script type="application/ld+json">
@@ -48,8 +38,8 @@ function TopBar() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": siteName,
-            "url": "https://www.fableadtechnolabs.com",
-            "logo": "https://www.fableadtechnolabs.com/logo.webp",
+            "url": "https://fableadtechnolabs.com",
+            "logo": "https://fableadtechnolabs.com/logo.webp",
             "description": siteDescription,
             "foundingDate": "2017",
             "address": {

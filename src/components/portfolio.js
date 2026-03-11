@@ -1000,6 +1000,8 @@ function Portfolio() {
                     src={item.image}
                     className="portfolio-img"
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     style={{ marginLeft: "1.5px" }}
                   />
                 </div>

@@ -99,7 +99,7 @@ const SupportPage = () => {
                                 <ul className="support-list">
                                     <li >📧 Email:<a href="mailto:info@fableadtechnolabs.com?subject=Support%20Request&body=Hi%20Fablead%20Support" className="text-primary-policy"> info@fableadtechnolabs.com</a></li>
                                     <li>⏱ Response Time: Within 24 business hours</li>
-                                    <li>🌐 Website: <a className="text-primary-policy" href="https://www.fableadtechnolabs.com" target="_blank" rel="noreferrer"> www.fableadtechnolabs.com</a></li>
+                                    <li>🌐 Website: <a className="text-primary-policy" href="https://fableadtechnolabs.com" target="_blank" rel="noreferrer"> fableadtechnolabs.com</a></li>
                                     <li>🕒 Support Hours: Monday – Friday, 10:00 AM – 6:00 PM IST</li>
                                 </ul>
                             </div>
