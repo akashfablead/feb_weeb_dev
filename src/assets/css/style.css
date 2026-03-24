@@ -4775,3 +4775,143 @@ input.form-call-to.action.form-control {
     /* Adjust other styles for mobile as needed */
   }
 }
+
+/* Our Team cards */
+.team-members-row {
+  align-items: stretch;
+  
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #ebedf3;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.07);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(17, 24, 39, 0.14);
+}
+
+.team-img-wrap {
+  flex-shrink: 0;
+  margin-bottom: 2px;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 4px solid #f3f5fb;
+}
+
+.team-content {
+  text-align: center;
+  width: 100%;
+  max-width: 96%;
+}
+
+.team-name {
+  font-size: 32px;
+  margin-bottom: 6px;
+  color: #1b1f27;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+}
+
+.team-role {
+  font-size: 13px;
+  color: #d94f30;
+  font-weight: 800;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+}
+
+.team-bio {
+  font-size: 14px;
+  color: #4f5663;
+  font-weight: 600;
+  line-height: 1.75;
+  min-height: 74px;
+  margin-bottom: 5px;
+  font-style: normal;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team-details {
+  margin: 0 0 14px;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.team-details li {
+  font-size: 13px;
+  color: #4f5663;
+  font-weight: 600;
+  line-height: 1.65;
+  margin-bottom: 7px;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.team-social a {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #e66136;
+  background: #e66136;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.team-social a:hover {
+  color: #ffffff;
+  background: #cf522d;
+  border-color: #cf522d;
+}
+
+@media (max-width: 767.98px) {
+  .team-card {
+    padding: 22px 16px;
+  }
+
+  .team-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .team-img-wrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .team-name {
+    font-size: 28px;
+  }
+}

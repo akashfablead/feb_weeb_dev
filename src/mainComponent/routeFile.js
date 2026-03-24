@@ -4,6 +4,7 @@ import AboutUsPage from "../pages/aboutUsPage";
 import ServicePage from "../pages/servicePage";
 import PortfolioPage from "../pages/portfolioPage";
 import CareerPage from "../pages/carrerPage";
+import OurTeamPage from "../pages/ourTeamPage";
 import ContactPage from "../pages/contactPage";
 import WebMaintenance from "../pages/servicePages/webMaintenance";
 import CmsWebsiteDevelopment from "../pages/servicePages/cmsWebsiteDev";
@@ -170,6 +171,29 @@ function RoutesPage() {
                         <link rel="canonical" href="https://fableadtechnolabs.com/about" />
                      </MetaTags>
                      <AboutUsPage />
+                  </>
+               }
+            />
+            <Route
+               exact
+               path="/team"
+               element={
+                  <>
+                     <MetaTags>
+                        <title>Our Team | Fablead Developers Technolab</title>
+                        <meta charSet="utf-8" />
+                        <meta
+                           name="viewport"
+                           content="width=device-width, initial-scale=1"
+                        />
+                        <meta name="theme-color" content="#000000" />
+                        <meta
+                           name="description"
+                           content="Meet the expert team at Fablead Developers Technolab. We build high-quality web, mobile, and software solutions."
+                        />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/team" />
+                     </MetaTags>
+                     <OurTeamPage />
                   </>
                }
             />

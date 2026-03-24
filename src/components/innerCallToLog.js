@@ -10,7 +10,8 @@ function Log() {
         <Row className="">
           <Col lg={9} className="text-center text-lg-start">
             <h3 className="cta-heading">Grow Your Business With Us.</h3>
-            <p>Don't To Miss Our Special Offers! Flexible and cost-effective solutions.</p>
+            <p>We are here to help you with any queries and questions you may have.
+            Get familiar with us and kick-start Your Journey with Us</p>
           </Col>
 
           <Col lg={3} className="text-center align-content-center">

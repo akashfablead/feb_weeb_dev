@@ -34,7 +34,7 @@ function AboutUsPage() {
       <Header />
       <section id="about" className="about section-bg fade-up">
         <div className="section-title1">
-          <div className="about_us">About Us</div>
+          <div className="about_us">Why Choose Us</div>
         </div>
         <Container className="aos-init aos-animate" data-aos="fade-up">
           <Row className="content1">
@@ -196,7 +196,7 @@ function AboutUsPage() {
                       </i>
                     </div>
                   </div>
-                  <h2 className="unify_about text-center">Advantages</h2>
+                  <h2 className="unify_about text-center">Why Choose Us</h2>
                   <p className="left-tabs-text-2">
                     <span>
                       {" "}
@@ -204,7 +204,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    High Quality Development
+                    Premium Quality Delivery
                   </p>
                   <p className="left-tabs-text-2">
                     <span>
@@ -213,7 +213,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    Team of Development Leaders
+                    Expert-Led Team
                   </p>
                   <p className="left-tabs-text-2">
                     <span>
@@ -222,7 +222,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    Quick Support and Deliver on Time
+                    On-Time Execution 
                   </p>
                   <p className="left-tabs-text-2">
                     <span>
@@ -231,7 +231,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    Always exceeding client expectations.
+                    Client-Centric Approach
                   </p>
                   <p className="left-tabs-text-2">
                     <span>
@@ -240,7 +240,16 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    Highly flexible and creative teams.
+                    Innovation & Creativity 
+                  </p>
+                  <p className="left-tabs-text-2">
+                    <span>
+                      {" "}
+                      <i>
+                        <FontAwesomeIcon icon={faCheckCircle} />
+                      </i>
+                    </span>
+                    Long-Term Partnership
                   </p>
                   <div className="d-flex justify-content-end btn-div">
                     <Button

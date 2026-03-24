@@ -27,69 +27,69 @@ function CareerPage() {
       experience: "6+ months of relevant experience",
       qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
     },
-    {
-      id: 3,
-      title: "UI/UX Designer",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Design",
-      experience: "1+ years of relevant experience",
-      qualification: "Graduate in Design or equivalent",
-    },
-    {
-      id: 4,
-      title: "Frontend Developer (React)",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Development",
-      experience: "1+ years of relevant experience",
-      qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
-    },
-    {
-      id: 5,
-      title: "Backend Developer (Node.js)",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Development",
-      experience: "1+ years of relevant experience",
-      qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
-    },
-    {
-      id: 6,
-      title: "Digital Marketing Executive",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Marketing",
-      experience: "1+ years of relevant experience",
-      qualification: "Graduate in Marketing or equivalent",
-    },
-    {
-      id: 7,
-      title: "SEO Specialist",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Part Time",
-      department: "Marketing",
-      experience: "6+ months of relevant experience",
-      qualification: "Graduate in Marketing or equivalent",
-    },
-    {
-      id: 8,
-      title: "HR Executive",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Human Resource",
-      experience: "1+ years of relevant experience",
-      qualification: "Graduate in HR or equivalent",
-    },
-    {
-      id: 9,
-      title: "Business Development Executive",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
-      department: "Sales",
-      experience: "6+ months of relevant experience",
-      qualification: "Graduate in Business or equivalent",
-    },
+    // {
+    //   id: 3,
+    //   title: "UI/UX Designer",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Design",
+    //   experience: "1+ years of relevant experience",
+    //   qualification: "Graduate in Design or equivalent",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Frontend Developer (React)",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Development",
+    //   experience: "1+ years of relevant experience",
+    //   qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Backend Developer (Node.js)",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Development",
+    //   experience: "1+ years of relevant experience",
+    //   qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Digital Marketing Executive",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Marketing",
+    //   experience: "1+ years of relevant experience",
+    //   qualification: "Graduate in Marketing or equivalent",
+    // },
+    // {
+    //   id: 7,
+    //   title: "SEO Specialist",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Part Time",
+    //   department: "Marketing",
+    //   experience: "6+ months of relevant experience",
+    //   qualification: "Graduate in Marketing or equivalent",
+    // },
+    // {
+    //   id: 8,
+    //   title: "HR Executive",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Human Resource",
+    //   experience: "1+ years of relevant experience",
+    //   qualification: "Graduate in HR or equivalent",
+    // },
+    // {
+    //   id: 9,
+    //   title: "Business Development Executive",
+    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    //   type: "Full Time",
+    //   department: "Sales",
+    //   experience: "6+ months of relevant experience",
+    //   qualification: "Graduate in Business or equivalent",
+    // },
   ];
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -105,6 +105,7 @@ function CareerPage() {
   });
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
 
   // Filter states
   const [locationFilter, setLocationFilter] = useState("");
@@ -158,53 +159,46 @@ function CareerPage() {
     setSelectedJob(null);
   };
 const validateForm = () => {
-  // Name
+  const errors = {};
+
   if (!formData.name.trim()) {
-    return "Full Name is required";
+    errors.name = "Full Name is required";
   }
 
-  // Email
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!formData.email || !emailRegex.test(formData.email)) {
-    return "Enter a valid email address";
+    errors.email = "Enter a valid email address";
   }
 
-  // Phone
   const phoneRegex = /^[0-9]{10}$/;
   if (!formData.phone_no || !phoneRegex.test(formData.phone_no)) {
-    return "Enter a valid 10-digit phone number";
+    errors.phone_no = "Enter a valid 10-digit phone number";
   }
 
-  // City
   if (!formData.city.trim()) {
-    return "City is required";
+    errors.city = "City is required";
   }
 
-  // Resume
   if (!formData.resume) {
-    return "Please upload your resume";
+    errors.resume = "Please upload your resume";
+  } else {
+    const allowedTypes = ["application/pdf"];
+    if (!allowedTypes.includes(formData.resume.type)) {
+      errors.resume = "Only PDF files are allowed";
+    } else if (formData.resume.size > 2 * 1024 * 1024) {
+      errors.resume = "File size should be less than 2MB";
+    }
   }
 
-  // File type check
-  const allowedTypes = ["application/pdf"];
-  if (!allowedTypes.includes(formData.resume.type)) {
-    return "Only PDF files are allowed";
-  }
-
-  // File size (max 2MB)
-  if (formData.resume.size > 2 * 1024 * 1024) {
-    return "File size should be less than 2MB";
-  }
-
-  return null;
+  return errors;
 };
   const handleSubmitApplication = async (e) => {
    e.preventDefault();
 
-  const validationError = validateForm();
+  const validationErrors = validateForm();
+  setFieldErrors(validationErrors);
 
-  if (validationError) {
-    setErrorMessage(validationError);
+  if (Object.keys(validationErrors).length > 0) {
     setTimeout(() => setErrorMessage(""), 3000);
     return;
   }
@@ -243,14 +237,15 @@ const validateForm = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: "hXuRUGsEGuhGf6KGeereSSas",
+          "Authorization": "hXuRUGsEGuhGf6KGeereSSas",
         },
         body: JSON.stringify(submissionData),
       });
 
-      if (response) {
+      if (response.ok) {
         const data = await response.json();
         if (data.status === "success") {
+          setFieldErrors({});
           setSuccessMessage("Application submitted successfully!");
           setFormData({
             name: "",
@@ -258,6 +253,8 @@ const validateForm = () => {
             phone_no: "",
             resume: null,
             cover_letter: "",
+            city: "",
+            timeline: "Immediately",
           });
           handleCloseModal();
           setTimeout(() => {
@@ -268,7 +265,7 @@ const validateForm = () => {
           console.error("Error sending application:", data.message);
           setTimeout(() => {
             setErrorMessage("");
-          }, 3000);
+          }, 1000);
         }
       } else {
         setErrorMessage("Failed to submit application. Server error.");
@@ -278,14 +275,14 @@ const validateForm = () => {
         );
         setTimeout(() => {
           setErrorMessage("");
-        }, 3000);
+        }, 1000);
       }
     } catch (error) {
       setErrorMessage("An error occurred. Please try again later.");
       console.error("Error sending application:", error.message);
       setTimeout(() => {
         setErrorMessage("");
-      }, 3000);
+      }, 1000);
     }
   };
 
@@ -295,6 +292,7 @@ const validateForm = () => {
       ...prev,
       [name]: value,
     }));
+    setFieldErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const handleFileChange = (e) => {
@@ -302,6 +300,7 @@ const validateForm = () => {
       ...prev,
       resume: e.target.files[0],
     }));
+    setFieldErrors((prev) => ({ ...prev, resume: "" }));
   };
 
   useEffect(() => {
@@ -509,12 +508,7 @@ const validateForm = () => {
                 </div>
               )}
 
-              {/* Error Message */}
-              {errorMessage && (
-                <div className="alert alert-danger mb-3" role="alert">
-                  {errorMessage}
-                </div>
-              )}
+           
 
               {/* 🔥 2 Column Row */}
               <Row>
@@ -530,9 +524,12 @@ const validateForm = () => {
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      required
+                     
                       className="career-form-control"
                     />
+                    {fieldErrors.name && (
+                     <p className="text-danger">{fieldErrors.name}</p>
+                    )}
                   </Form.Group>
 
                   <Form.Group className="mb-3">
@@ -545,9 +542,12 @@ const validateForm = () => {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      required
+                    
                       className="career-form-control"
                     />
+                      {fieldErrors.email && (
+                     <p className="text-danger">{fieldErrors.email}</p>
+                    )}
                   </Form.Group>
 
                   <Form.Group className="mb-3">
@@ -560,9 +560,12 @@ const validateForm = () => {
                       placeholder="Enter your city"
                       value={formData.city}
                       onChange={handleInputChange}
-                      required
+                  
                       className="career-form-control"
                     />
+                      {fieldErrors.city && (
+                     <p className="text-danger">{fieldErrors.city}</p>
+                    )}
                   </Form.Group>
                 </Col>
 
@@ -578,9 +581,12 @@ const validateForm = () => {
                       placeholder="Enter your phone number"
                       value={formData.phone_no}
                       onChange={handleInputChange}
-                      required
+                    
                       className="career-form-control"
                     />
+                      {fieldErrors.phone_no && (
+                     <p className="text-danger">{fieldErrors.phone_no}</p>
+                    )}
                   </Form.Group>
 
                   <Form.Group className="mb-3">
@@ -591,7 +597,7 @@ const validateForm = () => {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleInputChange}
-                      required
+                
                       className="career-form-control"
                     >
                       <option value="Immediately">Immediately</option>
@@ -611,9 +617,12 @@ const validateForm = () => {
                       name="resume"
                       accept=".pdf,.doc,.docx"
                       onChange={handleFileChange}
-                      required
+                  
                       className="career-form-control"
                     />
+                      {fieldErrors.resume && (
+                     <p className="text-danger">{fieldErrors.resume}</p>
+                    )}
                     <Form.Text className="career-form-text">
                       Accepted formats: PDF
                     </Form.Text>
@@ -642,7 +651,7 @@ const validateForm = () => {
                   type="button"
                   onClick={handleCloseModal}
                   className="career-cancel-btn"
-                  disabled={!formData.resume}
+                  disabled={!formData.name || !formData.email || !formData.phone_no || !formData.city || !formData.resume}
                 >
                   Cancel
                 </button>

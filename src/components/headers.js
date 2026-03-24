@@ -6,7 +6,8 @@ import { useState } from "react";
 
 function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownActive, setDropdownActive] = useState(false);
+  const [productsDropdownActive, setProductsDropdownActive] = useState(false);
+  const [aboutDropdownActive, setAboutDropdownActive] = useState(false);
   const location = useLocation();
   const [logoUrl, setLogoUrl] = useState("");
 
@@ -26,8 +27,12 @@ function Header() {
     return location.pathname === to;
   };
 
-  const toggleDropdown = () => {
-    setDropdownActive(!dropdownActive); // Toggle dropdown state
+  const toggleProductsDropdown = () => {
+    setProductsDropdownActive(!productsDropdownActive);
+  };
+
+  const toggleAboutDropdown = () => {
+    setAboutDropdownActive(!aboutDropdownActive);
   };
   return (
     <header id="header" className="fixed-top">
@@ -68,15 +73,35 @@ function Header() {
                 Product
               </Link>
             </li>
-            <li>
-              <Link
-                to="/about"
-                rel="noopener noreferrer"
-                className={`nav-link scrollto ${isNavLinkActive("/about") ? "active" : ""
-                  }`}
-              >
-                About
+            <li className="dropdown">
+              <Link to="#" onClick={toggleAboutDropdown}>
+                <span
+                  className={`nav-link scrollto ${isNavLinkActive("/about") ? "active" : ""}`}
+                >
+                  About
+                </span>{" "}
+                <i className="bi bi-chevron-down pt-1"></i>
               </Link>
+              <ul className={aboutDropdownActive ? "dropdown-active" : ""}>
+                <li>
+                  <Link
+                    to="/about"
+                    rel="noopener noreferrer"
+                    className="product-dropdown"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/team"
+                    rel="noopener noreferrer"
+                    className="product-dropdown"
+                  >
+                    Team
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li>
               <Link
@@ -135,11 +160,11 @@ function Header() {
             </li>
 
             <li className="dropdown">
-              <Link to="#" onClick={toggleDropdown}>
+              <Link to="#" onClick={toggleProductsDropdown}>
                 <span className="nav-link scrollto">Products</span>{" "}
                 <i className="bi bi-chevron-down pt-1"></i>
               </Link>
-              <ul className={dropdownActive ? "dropdown-active" : ""}>
+              <ul className={productsDropdownActive ? "dropdown-active" : ""}>
                 <li>
                   <Link
                     to="/products/inventory-billing-software-erp"
