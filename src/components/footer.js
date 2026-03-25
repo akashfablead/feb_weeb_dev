@@ -225,7 +225,7 @@ function Footer() {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://www.techjockey.com/detail/fablead-hr?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                      href="https://www.techjockey.com/brand/fablead-technolab?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
                     >
                       <img
                         src="https://cdn.techjockey.com/web/assets/new-assets/images/badges_img/available_3.png"

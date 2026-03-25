@@ -1569,6 +1569,17 @@ div#herocrmfeatures {
   color: #666;
 }
 
+.stat-image {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ebedf3;
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+  display: block;
+  margin: 0 auto 10px;
+}
+
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/

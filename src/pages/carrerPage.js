@@ -716,9 +716,9 @@ const validateForm = () => {
                 <div className="career-details-grid">
                   <div className="career-details-item">
                     <div className="career-details-label">
-                      <GeoAltFill className="career-details-icon" /> Location
+                      <BriefcaseFill className="career-details-icon" /> Job Name
                     </div>
-                    <div className="career-details-value">{jobDetails.location}</div>
+                    <div className="career-details-value">{jobDetails.title}</div>
                   </div>
                   <div className="career-details-item">
                     <div className="career-details-label">
