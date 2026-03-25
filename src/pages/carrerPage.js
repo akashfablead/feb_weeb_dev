@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Modal, Button, Form } from "react-bootstrap";
+import { GeoAltFill, BriefcaseFill, PeopleFill, AwardFill, CardText } from "react-bootstrap-icons";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import Log from "../components/innerCallToLog";
@@ -714,25 +715,35 @@ const validateForm = () => {
               <div className="career-details-wrap">
                 <div className="career-details-grid">
                   <div className="career-details-item">
-                    <div className="career-details-label">Location</div>
+                    <div className="career-details-label">
+                      <GeoAltFill className="career-details-icon" /> Location
+                    </div>
                     <div className="career-details-value">{jobDetails.location}</div>
                   </div>
                   <div className="career-details-item">
-                    <div className="career-details-label">Department</div>
+                    <div className="career-details-label">
+                      <PeopleFill className="career-details-icon" /> Department
+                    </div>
                     <div className="career-details-value">{jobDetails.department}</div>
                   </div>
                   <div className="career-details-item">
-                    <div className="career-details-label">Job Type</div>
+                    <div className="career-details-label">
+                      <BriefcaseFill className="career-details-icon" /> Job Type
+                    </div>
                     <div className="career-details-value">{jobDetails.type}</div>
                   </div>
                   <div className="career-details-item">
-                    <div className="career-details-label">Qualification</div>
+                    <div className="career-details-label">
+                      <AwardFill className="career-details-icon" /> Qualification
+                    </div>
                     <div className="career-details-value">{jobDetails.qualification}</div>
                   </div>
                 </div>
 
                 <div className="career-details-desc">
-                  <div className="career-details-label">Description</div>
+                  <div className="career-details-label">
+                    <CardText className="career-details-icon" /> Description
+                  </div>
                   <p className="career-details-paragraph">
                     {jobDetails.fullDescription || jobDetails.shortDescription}
                   </p>

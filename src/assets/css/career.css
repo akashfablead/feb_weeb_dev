@@ -325,6 +325,16 @@
   text-transform: uppercase;
   letter-spacing: 0.8px;
   margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.career-details-icon {
+  color: #e66136;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
 }
 
 .career-details-value {
