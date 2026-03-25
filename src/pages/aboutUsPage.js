@@ -34,7 +34,7 @@ function AboutUsPage() {
       <Header />
       <section id="about" className="about section-bg fade-up">
         <div className="section-title1">
-          <div className="about_us">Why Choose Us</div>
+          <div className="about_us">About Us</div>
         </div>
         <Container className="aos-init aos-animate" data-aos="fade-up">
           <Row className="content1">

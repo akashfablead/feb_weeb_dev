@@ -24,7 +24,7 @@ function Testimonial() {
     {
       name: "SACHIN K. - Lowell, MA, US",
       testimonial:
-        "Appreciate their quality work and speed in which they completed the project. It was good working with them and will definitely contact them for any future work.",
+        "Appreciate their quality work and speed in which they completed the project. It was good working with them and will definitely contact them for any future work ..",
     },
     {
       name: "Issa T. - Dakar, SN",
@@ -91,6 +91,16 @@ export default React.memo(Testimonial);
 // import "../assets/css/testmonal.css";
 
 // function Testimonial() {
+//   const isYouTubeUrl = (url = "") =>
+//     /youtu\.be|youtube\.com/i.test(url);
+
+//   const getMediaKind = (item) => {
+//     if (item.mediaType === "video") return "video";
+//     if (item.mediaType === "image") return "image";
+//     if (item.mediaType === "youtube" || isYouTubeUrl(item.mediaUrl)) return "youtube";
+//     return "image";
+//   };
+
 //   const testimonialData = [
 //     {
 //       name: "STEFANO S. - Zurich, CH",
@@ -166,58 +176,35 @@ export default React.memo(Testimonial);
 //     responsive: [
 //       { breakpoint: 992, settings: { slidesToShow: 2 } },
 //       { breakpoint: 768, settings: { slidesToShow: 1, dots: false } },
-//     ],
-//   };
+//              tar="_blank"
+//                  rel="noopener noreferrer"
+//                     className="playn"
+//                     aria-label={`O ${item.mediaType} review`}
+//                   >                  <i className={item.mediaType === "image" ?i bi-image-fill" : "bi bi-play-fi} />
+//                </a>
+// //                 </div>
 
-//   return (
-//     <section id="testimonials" className="testimonials modern-testimonials">
-//       <Container data-aos="fade-up">
-//             {/* <div className="section-title">
-//           <i className="bi bi-quote testimonial_icon"></i>
-//           <h1>Testimonials</h1>
-//         </div>  */}
-//         <div className="section-heading">
-//              <i className="bi bi-quote testimonial_icon"></i>
-//   <h1>Testimonials</h1>
-// </div>
+// //              <div className="testimonial-body">
+// //                 p>{item.text}</p>
+// //              iv>
 
-//         <Slider {...sliderSettings} className="testimonial-slider">
-//           {testimonialData.map((item, index) => (
-//             <div key={index} className="testimonial-slide">
-//               <article className="testimonial-card-v2">
-//                 <div className="testimonial-media">
-//                   <img src={item.mediaThumb} alt={item.name} />
-//                   <a
-//                     href={item.mediaUrl}
-//                     target="_blank"
-//                     rel="noopener noreferrer"
-//                     className="play-btn"
-//                     aria-label={`Open ${item.mediaType} review`}
-//                   >
-//                     <i className={item.mediaType === "image" ? "bi bi-image-fill" : "bi bi-play-fill"} />
-//                   </a>
-//                 </div>
-
-//                 <div className="testimonial-body">
-//                   <p>{item.text}</p>
-//                 </div>
-
-//                 <div className="testimonial-foot">
-//                   <img src={item.profile} alt={item.name} className="profile-mini" />
-//                   <div>
-//                     <h4>{item.name}</h4>
-//                     <span>{item.timeAgo} ago</span>
-//                   </div>
-//                 </div>
+// //                 <div className="testimonial-foot">
+// //                <img src={item.profile} alt={item.name} ssName="profile-mini" />
+// //                   <div>
+// //                  <h4>{item.name}</h4>
+// //                    pan>{item.timeAgo} ago</span>
+// //                   <v>
+// //                 </div>
 
             
-//               </article>
-//             </div>
-//           ))}
-//         </Slider>
-//       </Container>
-//     </section>
-//   );
-// }
+// //            </article>
+// //          </div>
+// //           ))}
+// //         </Slider>
+// //    </Container>
+// //     </sectio/
+// //   );
+// // }
 
-// export default React.memo(Testimonial);
+// // export default React.o(Testimonial);
+// // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // 

@@ -100,7 +100,7 @@ function TopBar() {
                 target="_blank"
                 className="topbar-icons2"
               >
-                <Twitter />
+             <i className="bi bi-twitter-x" style={{ fontSize: "14px" }}></i>
               </a>
               <a
                 href="https://www.facebook.com/fableaddevelopers"

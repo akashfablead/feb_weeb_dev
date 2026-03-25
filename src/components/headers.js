@@ -89,7 +89,7 @@ function Header() {
                     rel="noopener noreferrer"
                     className="product-dropdown"
                   >
-                    About
+                    About Us
                   </Link>
                 </li>
                 <li>
@@ -98,7 +98,7 @@ function Header() {
                     rel="noopener noreferrer"
                     className="product-dropdown"
                   >
-                    Team
+                    Our Team
                   </Link>
                 </li>
               </ul>

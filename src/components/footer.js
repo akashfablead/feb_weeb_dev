@@ -44,7 +44,7 @@ function Footer() {
                     rel="=noopener"
                     className="twitter mx-4"
                   >
-                    <Twitter />
+                               <i className="bi bi-twitter-x" style={{ fontSize: "14px" }}></i>
                   </a>
                   <a
                     href="https://www.facebook.com/fableaddevelopers"

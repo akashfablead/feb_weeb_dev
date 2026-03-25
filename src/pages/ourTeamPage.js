@@ -1,12 +1,27 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Facebook, Twitter, Linkedin } from "react-bootstrap-icons";
+import { Linkedin } from "react-bootstrap-icons";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import TopBar from "../components/topBar";
 import Log from "../components/innerCallToLog";
-import Raj_Singh from "../assets/images/aboutnewImg/raj_singh.png";
-import Hetal_Singh from "../assets/images/aboutnewImg/hetal_singh.png";
+import Raj_Singh from "../assets/images/aboutnewImg/raj_singh.jpg";
+import Hetal_Singh from "../assets/images/aboutnewImg/hetal_singh.jpg";
+
+
+
+const TEAM_TECH_SKILLS = [
+  "PHP / MySQL",
+  "WordPress",
+  "CodeIgniter",
+  "Laravel",
+  "Magento",
+  "HTML / CSS3 / Bootstrap",
+  "JavaScript / jQuery / Ajax",
+  "React JS",
+  "Angular JS",
+  "Node JS",
+];
 
 function OurTeamPage() {
   const highlightExperience = (bioText) => {
@@ -34,25 +49,46 @@ function OurTeamPage() {
   const teamMembers = [
     {
       name: "Hetal Singh",
-      role: "Founder and Owner",
-      image:
-        Hetal_Singh,
-      bio: "An experienced Senior Software Engineer with 14+ years of experience in the IT industry. Skilled in SQL, PHP, web applications, and modern technologies, with a solid foundation in Information Technology from CGPIT.",
+      role: "Founder & Owner",
+      image: Hetal_Singh,
+      linkedinUrl: "https://www.linkedin.com/in/hetal-raj-singh-02ab4065/",
+      bio: "An experienced Senior Software Engineer with 14+ years of experience in the IT industry, delivering high-quality, scalable, and robust software solutions with a strong focus on performance, reliability, and innovation.",
       details: [
         "She leads a dynamic team of talented developers and designers, delivering high-quality web and software solutions tailored to client needs.",
 
       ],
+      skills: [
+        "ASP.NET",
+        "React.js",
+        "Angular",
+        "Node.js",
+        "Next.js",
+        "PHP / MySQL",
+        "Laravel",
+        "WordPress",
+        "Product Management",
+      ],
+      skillsHeader:"Technology Specialist & Expertise in"
     },
     {
       name: "Raj Singh",
-      role: "Co-Founder CEO-CTO",
-      image:
-        Raj_Singh,
-        bio: "A passionate technology leader with 14+ years of experience in the IT industry. Leading the company with a focus on innovation, quality, and client satisfaction.",
-        details: [
-          "Experienced in web and mobile development, he has successfully delivered multiple projects across industries like e-commerce, real estate, and corporate solutions"
-        ],
-     
+      role: "Co-Founder & CEO-CTO",
+      image: Raj_Singh,
+      linkedinUrl: "https://www.linkedin.com/in/raj-singh-4ba95465/",
+      bio: "He is a technology leader with 14+ years of experience in the IT industry, driving innovation and delivering high-quality solutions. Leading the company with a strong focus on performance, scalability, and client satisfaction.",
+      details: [
+        "Experienced in web and mobile development, he has successfully delivered multiple projects across industries like e-commerce, real estate, and corporate solutions.",
+      ],
+      skills: [
+        "PHP / MySQL",
+        "Laravel",
+        "CodeIgniter",
+        "WordPress",
+        "Magento",
+        "Server & Cloud Management",
+        "Product Management",
+      ],
+      skillsHeader:"IT Evangelist & Expertise in"
     },
   ];
 
@@ -64,11 +100,15 @@ function OurTeamPage() {
     <>
       <TopBar />
       <Header />
-      <section className="about section-bg fade-up">
-        <div className="section-title1">
-          <div className="about_us">Team</div>
+      <section className="about section-bg fade-up our-team-page">
+       
+    <div className="section-title1">
+          <div className="pt-5">Our Team</div>
+          <p className="header-content contact-us-page">
+          Meet the experts driving innovation with strong technical leadership. <br />
+          Backed by years of hands-on development experience.
+          </p>
         </div>
-
         <Container className="py-5" data-aos="fade-up">
           <Row className="g-4 team-members-row">
             {teamMembers.map((member, index) => (
@@ -86,36 +126,34 @@ function OurTeamPage() {
                         <li key={pointIndex}>{point}</li>
                       ))}
                     </ul>
-                    <div className="team-social social-links mt-3">
-                      <a
-                        href="https://twitter.com/fablead_tech"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="twitter mx-4"
-                        aria-label="Twitter"
-                      >
-                        <Twitter />
-                      </a>
-                      <a
-                        href="https://www.facebook.com/fableaddevelopers"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="facebook"
-                        aria-label="Facebook"
-                      >
-                        <Facebook />
-                      </a>
-                      <a
-                        href="https://in.linkedin.com/in/fablead-developers-technolab-0b8a07143"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="linkedin mx-4"
-                        aria-label="LinkedIn"
-                      >
-                        <Linkedin />
-                      </a>
-                    </div>
+                    {member.skills?.length > 0 && (
+                      <div className="team-skills">
+                        <p className="team-skills-label">{member.skillsHeader}</p>
+                        <div className="team-skills-tags" role="list">
+                          {member.skills.map((skill, skillIndex) => (
+                            <span
+                              key={skillIndex}
+                              className="team-skill-tag"
+                              role="listitem"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
+                <div className="team-linkedin-bottom">
+                  <a
+                    href={member.linkedinUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="linkedin-card-icon"
+                    aria-label={`LinkedIn — ${member.name}`}
+                  >
+                    <Linkedin />
+                  </a>
+                </div>
                 </div>
               </Col>
             ))}

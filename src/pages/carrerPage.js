@@ -8,88 +8,94 @@ import "../assets/css/career.css";
 import { BASE_URL } from "../utils";
 
 function CareerPage() {
+  const commonFields = {
+    location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
+    type: "Full Time",
+    qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
+  };
+  
   const jobsData = [
     {
       id: 1,
       title: "React and Node JS Developer",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
       department: "Development",
-      experience: "1+ years of relevant experience",
-      qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
+      experience: "1+ years",
+      shortDescription: "Build scalable web apps using React and Node.js.",
+      fullDescription:
+        "We are looking for a skilled React and Node.js Developer to develop high-performance and scalable web applications. The candidate should have experience with REST APIs, modern JavaScript frameworks, and backend integration.",
+      ...commonFields,
     },
     {
       id: 2,
-      title: "PHP / Wordpress Web Developer",
-      location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-      type: "Full Time",
+      title: "WordPress Web Developer",
       department: "Development",
-      experience: "6+ months of relevant experience",
-      qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
+      experience: "6+ months",
+      shortDescription: "Develop and customize WordPress websites.",
+      fullDescription:
+        "Seeking a WordPress Developer who can build, customize, and maintain responsive websites. Experience with themes, plugins, and basic PHP is required.",
+      ...commonFields,
     },
-    // {
-    //   id: 3,
-    //   title: "UI/UX Designer",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Design",
-    //   experience: "1+ years of relevant experience",
-    //   qualification: "Graduate in Design or equivalent",
-    // },
-    // {
-    //   id: 4,
-    //   title: "Frontend Developer (React)",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Development",
-    //   experience: "1+ years of relevant experience",
-    //   qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
-    // },
-    // {
-    //   id: 5,
-    //   title: "Backend Developer (Node.js)",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Development",
-    //   experience: "1+ years of relevant experience",
-    //   qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
-    // },
-    // {
-    //   id: 6,
-    //   title: "Digital Marketing Executive",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Marketing",
-    //   experience: "1+ years of relevant experience",
-    //   qualification: "Graduate in Marketing or equivalent",
-    // },
-    // {
-    //   id: 7,
-    //   title: "SEO Specialist",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Part Time",
-    //   department: "Marketing",
-    //   experience: "6+ months of relevant experience",
-    //   qualification: "Graduate in Marketing or equivalent",
-    // },
-    // {
-    //   id: 8,
-    //   title: "HR Executive",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Human Resource",
-    //   experience: "1+ years of relevant experience",
-    //   qualification: "Graduate in HR or equivalent",
-    // },
-    // {
-    //   id: 9,
-    //   title: "Business Development Executive",
-    //   location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
-    //   type: "Full Time",
-    //   department: "Sales",
-    //   experience: "6+ months of relevant experience",
-    //   qualification: "Graduate in Business or equivalent",
-    // },
+    {
+      id: 3,
+      title: "Frontend Developer (React JS)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Create modern UI using React.js.",
+      fullDescription:
+        "Looking for a Frontend Developer with strong knowledge of React.js, HTML, CSS, and JavaScript to build responsive and user-friendly interfaces.",
+      ...commonFields,
+    },
+    {
+      id: 4,
+      title: "Flutter Developer (Android / iOS)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Develop cross-platform mobile apps using Flutter.",
+      fullDescription:
+        "We are hiring a Flutter Developer to build high-quality mobile applications for Android and iOS using Flutter and Dart. Experience with APIs and Firebase is a plus.",
+      ...commonFields,
+    },
+    {
+      id: 5,
+      title: "Shopify Developer",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Build and manage Shopify stores.",
+      fullDescription:
+        "Looking for a Shopify Developer who can design, develop, and maintain eCommerce stores. Experience with themes, apps, and liquid templating is required.",
+      ...commonFields,
+    },
+    {
+      id: 6,
+      title: "Product Manager",
+      department: "Management",
+      experience: "2+ years",
+      shortDescription: "Lead product planning and execution.",
+      fullDescription:
+        "We are seeking a Product Manager to manage product lifecycle, coordinate with teams, and deliver high-quality products aligned with business goals.",
+      qualification: "MBA / B.Tech or equivalent",
+      ...commonFields,
+    },
+    {
+      id: 7,
+      title: "Full Stack Developer (MERN)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Work on full stack using MERN stack.",
+      fullDescription:
+        "Hiring a Full Stack Developer with experience in MongoDB, Express, React, and Node.js to develop scalable web applications end-to-end.",
+      ...commonFields,
+    },
+    {
+      id: 8,
+      title: "Backend Developer (Node.js / PHP)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Develop server-side logic and APIs.",
+      fullDescription:
+        "Looking for a Backend Developer with experience in Node.js or PHP to build secure, scalable APIs and handle server-side logic efficiently.",
+      ...commonFields,
+    },
   ];
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -106,6 +112,8 @@ function CareerPage() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
+  const [jobDetails, setJobDetails] = useState(null);
 
   // Filter states
   const [locationFilter, setLocationFilter] = useState("");
@@ -157,6 +165,16 @@ function CareerPage() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedJob(null);
+  };
+
+  const handleViewClick = (job) => {
+    setJobDetails(job);
+    setShowDetailsModal(true);
+  };
+
+  const handleCloseDetailsModal = () => {
+    setShowDetailsModal(false);
+    setJobDetails(null);
   };
 const validateForm = () => {
   const errors = {};
@@ -237,7 +255,7 @@ const validateForm = () => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": "hXuRUGsEGuhGf6KGeereSSas",
+          Authorization: "hXuRUGsEGuhGf6KGeereSSas",
         },
         body: JSON.stringify(submissionData),
       });
@@ -311,13 +329,13 @@ const validateForm = () => {
     <>
       <TopBar />
       <Header />
-      <section id="why-us" className="why-us section-bg fade-up">
+      <section id="why-us" className="why-us section-bg fade-up career-page">
         <div className="section-title1">
           <div className="contact_us" role="heading" aria-level="1">
             Career
           </div>
         </div>
-        <Container className="mt-5 mb-5" data-aos="fade-up">
+        <Container className="mt-5 pb-5" data-aos="fade-up">
           {/* Search Bar and Filters */}
           <div className="career-search-filter-wrapper">
             {/* 🔍 Search Section */}
@@ -403,17 +421,17 @@ const validateForm = () => {
                 Qualification
               </div>
               <div
-                style={{ fontWeight: "bold", fontSize: "16px", color: "black" }}
+                style={{ fontWeight: "bold", fontSize: "16px", color: "black", marginLeft: "10px" }}
               >
                 Job Type
               </div>
               <div
                 style={{ fontWeight: "bold", fontSize: "16px", color: "black" }}
               >
-                Department
+                Description
               </div>
               <div
-                style={{ fontWeight: "bold", fontSize: "16px", color: "black" }}
+                style={{ fontWeight: "bold", fontSize: "16px", color: "black", marginLeft: "10px" }}
               >
                 Experience
               </div>
@@ -435,10 +453,16 @@ const validateForm = () => {
                 <div>
                   <span className="career-job-type-badge">{job.type}</span>
                 </div>
-                <div className="career-job-department">{job.department}</div>
+                <div className="career-job-department">{job.shortDescription}</div>
                 <div className="career-job-experience">{job.experience}</div>
                 <div className="career-job-actions">
-                  {/* <button className="career-view-btn">View</button> */}
+                  <button
+                    type="button"
+                    className="career-view-btn"
+                    onClick={() => handleViewClick(job)}
+                  >
+                    View
+                  </button>
                   <button
                     onClick={() => handleApplyClick(job)}
                     className="career-apply-btn"
@@ -651,7 +675,6 @@ const validateForm = () => {
                   type="button"
                   onClick={handleCloseModal}
                   className="career-cancel-btn"
-                  disabled={!formData.name || !formData.email || !formData.phone_no || !formData.city || !formData.resume}
                 >
                   Cancel
                 </button>
@@ -661,6 +684,82 @@ const validateForm = () => {
               </div>
             </Form>
           </Modal.Body>
+        </Modal>
+
+        {/* Job Details Modal */}
+        <Modal
+          show={showDetailsModal}
+          onHide={handleCloseDetailsModal}
+          centered
+          size="lg"
+          className="career-modal career-details-modal"
+        >
+          <Modal.Header closeButton>
+            <div className="career-details-head">
+              <Modal.Title className="career-modal-title career-details-modal-title">
+                {jobDetails?.title || "Job Details"}
+              </Modal.Title>
+              {jobDetails && (
+                <div className="career-details-badges">
+                  <span className="career-details-badge">{jobDetails.type}</span>
+                  <span className="career-details-badge muted">
+                    {jobDetails.experience}
+                  </span>
+                </div>
+              )}
+            </div>
+          </Modal.Header>
+          <Modal.Body>
+            {jobDetails && (
+              <div className="career-details-wrap">
+                <div className="career-details-grid">
+                  <div className="career-details-item">
+                    <div className="career-details-label">Location</div>
+                    <div className="career-details-value">{jobDetails.location}</div>
+                  </div>
+                  <div className="career-details-item">
+                    <div className="career-details-label">Department</div>
+                    <div className="career-details-value">{jobDetails.department}</div>
+                  </div>
+                  <div className="career-details-item">
+                    <div className="career-details-label">Job Type</div>
+                    <div className="career-details-value">{jobDetails.type}</div>
+                  </div>
+                  <div className="career-details-item">
+                    <div className="career-details-label">Qualification</div>
+                    <div className="career-details-value">{jobDetails.qualification}</div>
+                  </div>
+                </div>
+
+                <div className="career-details-desc">
+                  <div className="career-details-label">Description</div>
+                  <p className="career-details-paragraph">
+                    {jobDetails.fullDescription || jobDetails.shortDescription}
+                  </p>
+                </div>
+              </div>
+            )}
+          </Modal.Body>
+          <Modal.Footer className="career-details-footer">
+            <button
+              type="button"
+              className="career-view-btn"
+              onClick={handleCloseDetailsModal}
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              className="career-apply-btn"
+              onClick={() => {
+                if (!jobDetails) return;
+                handleCloseDetailsModal();
+                handleApplyClick(jobDetails);
+              }}
+            >
+              Apply Now
+            </button>
+          </Modal.Footer>
         </Modal>
       </section>
       <Log />
