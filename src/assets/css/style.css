@@ -3947,8 +3947,8 @@ div#herocrmfeatures {
   }
 
   .contact-us-page {
-    margin-left: 15% !important;
-    margin-right: 15% !important;
+    margin-left: 10% !important;
+    margin-right: 10% !important;
   }
 }
 
@@ -4952,8 +4952,8 @@ input.form-call-to.action.form-control {
 
 .our-team-page .team-linkedin-bottom {
   position: absolute;
-  bottom: 18px;
-  right: 18px;
+  bottom: 10px;
+  right: 10px;
   z-index: 2;
 }
 

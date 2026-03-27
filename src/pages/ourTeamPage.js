@@ -87,10 +87,19 @@ function OurTeamPage() {
       <Header />
       <section className="about section-bg fade-up our-team-page">
        
-    <div className="section-title1">
-          <div className="pt-5">Our Team</div>
+    {/* <div className="section-title1">
+          <div className="pt-4">Our Team</div>
           <p className="header-content contact-us-page">
-          Meet the experts driving innovation with strong technical leadership. <br />
+            Meet the experts driving innovation with strong technical leadership.<br />
+          Backed by years of hands-on development experience.
+          </p>
+        </div> */}
+        <div className="section-title1 d-flex justify-content-center align-items-center flex-column">
+          <div className="text-center" role="heading" aria-level="1">
+           Our Team
+          </div>
+          <p className="header-content contact-us-page">
+             Meet the experts driving innovation with strong technical leadership.<br />
           Backed by years of hands-on development experience.
           </p>
         </div>

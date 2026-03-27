@@ -1,21 +1,52 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Modal, Form } from "react-bootstrap";
-import {  BriefcaseFill, PeopleFill, AwardFill, CardText } from "react-bootstrap-icons";
+import { Col, Container, Row, Modal, Button, Form } from "react-bootstrap";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import Log from "../components/innerCallToLog";
 import TopBar from "../components/topBar";
 import "../assets/css/career.css";
 import { BASE_URL } from "../utils";
+import { Link } from "react-router-dom";
 
 function CareerPage() {
+  const [showDetailsModal, setShowDetailsModal] = useState(false);
+  const [jobDetails, setJobDetails] = useState(null);
+
+  const toggleJobDescription = (jobId) => {
+    const job = jobsData.find(j => j.id === jobId);
+    if (job && job.fullDescription) {
+      setJobDetails(job);
+      setShowDetailsModal(true);
+    }
+  };
+
   const commonFields = {
     location: "A-5001, Ascon Plaza, Adajan, Surat, Gujarat 395009 – India",
     type: "Full Time",
     qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
   };
-
+  
   const jobsData = [
+    {
+      id: 7,
+      title: "Full Stack Developer (MERN)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Work on full stack using MERN stack.",
+      fullDescription:
+        "Hiring a Full Stack Developer with experience in MongoDB, Express, React, and Node.js to develop scalable web applications end-to-end.",
+      ...commonFields,
+    },
+    {
+      id: 8,
+      title: "Backend Developer (Node.js / PHP)",
+      department: "Development",
+      experience: "1+ years",
+      shortDescription: "Develop server-side logic and APIs.",
+      fullDescription:
+        "Looking for a Backend Developer with experience in Node.js or PHP to build secure, scalable APIs and handle server-side logic efficiently.",
+      ...commonFields,
+    },
     {
       id: 1,
       title: "React and Node JS Developer",
@@ -87,16 +118,7 @@ function CareerPage() {
         "Hiring a Full Stack Developer with experience in MongoDB, Express, React, and Node.js to develop scalable web applications end-to-end.",
       ...commonFields,
     },
-    {
-      id: 8,
-      title: "Backend Developer (Node.js / PHP)",
-      department: "Development",
-      experience: "1+ years",
-      shortDescription: "Develop server-side logic and APIs.",
-      fullDescription:
-        "Looking for a Backend Developer with experience in Node.js or PHP to build secure, scalable APIs and handle server-side logic efficiently.",
-      ...commonFields,
-    },
+
   ];
   const [search, setSearch] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -113,8 +135,6 @@ function CareerPage() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
-  const [showDetailsModal, setShowDetailsModal] = useState(false);
-  const [jobDetails, setJobDetails] = useState(null);
 
   // Filter states
   const [locationFilter, setLocationFilter] = useState("");
@@ -125,7 +145,8 @@ function CareerPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const jobsPerPage = 10;
 
-
+  // Get unique values for filters
+  const locations = [...new Set(jobsData.map((job) => job.location))];
   const departments = [...new Set(jobsData.map((job) => job.department))];
   const jobTypes = [...new Set(jobsData.map((job) => job.type))];
 
@@ -167,59 +188,54 @@ function CareerPage() {
     setSelectedJob(null);
   };
 
-  const handleViewClick = (job) => {
-    setJobDetails(job);
-    setShowDetailsModal(true);
-  };
-
   const handleCloseDetailsModal = () => {
     setShowDetailsModal(false);
     setJobDetails(null);
   };
-  const validateForm = () => {
-    const errors = {};
+const validateForm = () => {
+  const errors = {};
 
-    if (!formData.name.trim()) {
-      errors.name = "Full Name is required";
+  if (!formData.name.trim()) {
+    errors.name = "Full Name is required";
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!formData.email || !emailRegex.test(formData.email)) {
+    errors.email = "Enter a valid email address";
+  }
+
+  const phoneRegex = /^[0-9]{10}$/;
+  if (!formData.phone_no || !phoneRegex.test(formData.phone_no)) {
+    errors.phone_no = "Enter a valid 10-digit phone number";
+  }
+
+  if (!formData.city.trim()) {
+    errors.city = "City is required";
+  }
+
+  if (!formData.resume) {
+    errors.resume = "Please upload your resume";
+  } else {
+    const allowedTypes = ["application/pdf"];
+    if (!allowedTypes.includes(formData.resume.type)) {
+      errors.resume = "Only PDF files are allowed";
+    } else if (formData.resume.size > 2 * 1024 * 1024) {
+      errors.resume = "File size should be less than 2MB";
     }
+  }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !emailRegex.test(formData.email)) {
-      errors.email = "Enter a valid email address";
-    }
-
-    const phoneRegex = /^[0-9]{10}$/;
-    if (!formData.phone_no || !phoneRegex.test(formData.phone_no)) {
-      errors.phone_no = "Enter a valid 10-digit phone number";
-    }
-
-    if (!formData.city.trim()) {
-      errors.city = "City is required";
-    }
-
-    if (!formData.resume) {
-      errors.resume = "Please upload your resume";
-    } else {
-      const allowedTypes = ["application/pdf"];
-      if (!allowedTypes.includes(formData.resume.type)) {
-        errors.resume = "Only PDF files are allowed";
-      } else if (formData.resume.size > 2 * 1024 * 1024) {
-        errors.resume = "File size should be less than 2MB";
-      }
-    }
-
-    return errors;
-  };
+  return errors;
+};
   const handleSubmitApplication = async (e) => {
-    e.preventDefault();
+   e.preventDefault();
 
-    const validationErrors = validateForm();
-    setFieldErrors(validationErrors);
+  const validationErrors = validateForm();
+  setFieldErrors(validationErrors);
 
-    if (Object.keys(validationErrors).length > 0) {
-      setTimeout(() => setErrorMessage(""), 3000);
-      return;
-    }
+  if (Object.keys(validationErrors).length > 0) {
+    setTimeout(() => setErrorMessage(""), 3000);
+    return;
+  }
 
     // Convert resume file to base64
     const resumeBase64 = await new Promise((resolve) => {
@@ -330,10 +346,14 @@ function CareerPage() {
       <TopBar />
       <Header />
       <section id="why-us" className="why-us section-bg fade-up career-page">
-        <div className="section-title1">
-          <div className="contact_us" role="heading" aria-level="1">
+        <div className="section-title1 d-flex justify-content-center align-items-center flex-column">
+          <div className="text-center" role="heading" aria-level="1">
             Career
           </div>
+          <p className="header-content contact-us-page">
+            Join our team to grow your career in a dynamic environment focused on innovation, <br />
+            continuous learning, and real-world impact.
+          </p>
         </div>
         <Container className="mt-5 pb-5" data-aos="fade-up">
           {/* Search Bar and Filters */}
@@ -348,24 +368,19 @@ function CareerPage() {
                 className="career-search-input"
               />
 
+              {/* <Link
+                to="/contact"
+                className="get-quote-btn d-none d-lg-inline-flex align-items-center"
+                rel="noopener noreferrer"
+              >
+                Search <i className="bi bi-arrow-right ms-2"></i>
+              </Link> */}
               <button className="career-search-button">Search</button>
             </div>
 
             {/* 🔽 Filter Section */}
             <div className="career-filter-section">
-              {/* <select 
-                className="career-filter-select"
-                value={locationFilter}
-                onChange={(e) => {
-                  setLocationFilter(e.target.value);
-                  setCurrentPage(1);
-                }}
-              >
-                <option value="">All Locations</option>
-                {locations.map((loc, index) => (
-                  <option key={index} value={loc}>{loc.substring(0, 30)}...</option>
-                ))}
-              </select> */}
+
 
               <select
                 className="career-filter-select"
@@ -426,52 +441,58 @@ function CareerPage() {
                 Job Type
               </div>
               <div
-                style={{ fontWeight: "bold", fontSize: "16px", color: "black" }}
-              >
-                Description
-              </div>
-              <div
                 style={{ fontWeight: "bold", fontSize: "16px", color: "black", marginLeft: "10px" }}
               >
                 Experience
               </div>
+              <div
+                style={{ fontWeight: "bold", fontSize: "16px", color: "black" }}
+              >
+                Job Description
+              </div>
+
               <div></div>
             </div>
 
             {/* Job Rows */}
-            {currentJobs.map((job) => (
-              <div
-                key={job.id}
-                className="career-job-row"
-                style={{ fontSize: "15px" }}
-              >
-                <div className="career-job-title">{job.title}</div>
+            {currentJobs.length > 0 ? (
+              currentJobs.map((job) => (
+                <div
+                  key={job.id}
+                  className="career-job-row"
+                  style={{ fontSize: "15px" }}
+                >
+                  <div className="career-job-title">{job.title}</div>
 
-                <div className="career-job-qualification">
-                  {job.qualification}
+                  <div className="career-job-qualification">
+                    {job.qualification}
+                  </div>
+                  <div>
+                    <span className="career-job-type-badge">{job.type}</span>
+                  </div>
+
+                  <div className="career-job-experience">{job.experience}</div>
+                  <div className="career-job-department">
+
+                    {job.fullDescription}
+
+                  </div>
+                  <div className="career-job-actions">
+                    <button
+                      onClick={() => handleApplyClick(job)}
+                      className="career-apply-btn"
+                    >
+                      Apply
+                    </button>
+                  </div>
                 </div>
-                <div>
-                  <span className="career-job-type-badge">{job.type}</span>
-                </div>
-                <div className="career-job-department">{job.shortDescription}</div>
-                <div className="career-job-experience">{job.experience}</div>
-                <div className="career-job-actions">
-                  <button
-                    type="button"
-                    className="career-view-btn"
-                    onClick={() => handleViewClick(job)}
-                  >
-                    View
-                  </button>
-                  <button
-                    onClick={() => handleApplyClick(job)}
-                    className="career-apply-btn"
-                  >
-                    Apply
-                  </button>
-                </div>
+              ))
+            ) : (
+              <div style={{ padding: '40px 20px', textAlign: 'center', color: '#6c757d' }}>
+                <h3 style={{ fontSize: '18px', marginBottom: '10px', color: '#333' }}>No Jobs Found</h3>
+                <p style={{ fontSize: '15px' }}>We currently don't have any positions matching your search criteria.</p>
               </div>
-            ))}
+            )}
           </div>
 
           {/* Pagination */}
@@ -532,7 +553,7 @@ function CareerPage() {
                 </div>
               )}
 
-
+           
 
               {/* 🔥 2 Column Row */}
               <Row>
@@ -548,11 +569,11 @@ function CareerPage() {
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={handleInputChange}
-
+                     
                       className="career-form-control"
                     />
                     {fieldErrors.name && (
-                      <p className="text-danger">{fieldErrors.name}</p>
+                     <p className="text-danger">{fieldErrors.name}</p>
                     )}
                   </Form.Group>
 
@@ -566,11 +587,11 @@ function CareerPage() {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleInputChange}
-
+                    
                       className="career-form-control"
                     />
-                    {fieldErrors.email && (
-                      <p className="text-danger">{fieldErrors.email}</p>
+                      {fieldErrors.email && (
+                     <p className="text-danger">{fieldErrors.email}</p>
                     )}
                   </Form.Group>
 
@@ -584,11 +605,11 @@ function CareerPage() {
                       placeholder="Enter your city"
                       value={formData.city}
                       onChange={handleInputChange}
-
+                  
                       className="career-form-control"
                     />
-                    {fieldErrors.city && (
-                      <p className="text-danger">{fieldErrors.city}</p>
+                      {fieldErrors.city && (
+                     <p className="text-danger">{fieldErrors.city}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -605,11 +626,11 @@ function CareerPage() {
                       placeholder="Enter your phone number"
                       value={formData.phone_no}
                       onChange={handleInputChange}
-
+                    
                       className="career-form-control"
                     />
-                    {fieldErrors.phone_no && (
-                      <p className="text-danger">{fieldErrors.phone_no}</p>
+                      {fieldErrors.phone_no && (
+                     <p className="text-danger">{fieldErrors.phone_no}</p>
                     )}
                   </Form.Group>
 
@@ -621,7 +642,7 @@ function CareerPage() {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleInputChange}
-
+                
                       className="career-form-control"
                     >
                       <option value="Immediately">Immediately</option>
@@ -641,11 +662,11 @@ function CareerPage() {
                       name="resume"
                       accept=".pdf,.doc,.docx"
                       onChange={handleFileChange}
-
+                  
                       className="career-form-control"
                     />
-                    {fieldErrors.resume && (
-                      <p className="text-danger">{fieldErrors.resume}</p>
+                      {fieldErrors.resume && (
+                     <p className="text-danger">{fieldErrors.resume}</p>
                     )}
                     <Form.Text className="career-form-text">
                       Accepted formats: PDF
@@ -699,52 +720,14 @@ function CareerPage() {
               <Modal.Title className="career-modal-title career-details-modal-title">
                 {jobDetails?.title || "Job Details"}
               </Modal.Title>
-              {jobDetails && (
-                <div className="career-details-badges">
-                  <span className="career-details-badge">{jobDetails.type}</span>
-                  <span className="career-details-badge muted">
-                    {jobDetails.experience}
-                  </span>
-                </div>
-              )}
             </div>
           </Modal.Header>
           <Modal.Body>
             {jobDetails && (
               <div className="career-details-wrap">
-                <div className="career-details-grid">
-                  <div className="career-details-item">
-                    <div className="career-details-label">
-                      <BriefcaseFill className="career-details-icon" /> Job Name
-                    </div>
-                    <div className="career-details-value">{jobDetails.title}</div>
-                  </div>
-                  <div className="career-details-item">
-                    <div className="career-details-label">
-                      <PeopleFill className="career-details-icon" /> Department
-                    </div>
-                    <div className="career-details-value">{jobDetails.department}</div>
-                  </div>
-                  <div className="career-details-item">
-                    <div className="career-details-label">
-                      <BriefcaseFill className="career-details-icon" /> Job Type
-                    </div>
-                    <div className="career-details-value">{jobDetails.type}</div>
-                  </div>
-                  <div className="career-details-item">
-                    <div className="career-details-label">
-                      <AwardFill className="career-details-icon" /> Qualification
-                    </div>
-                    <div className="career-details-value">{jobDetails.qualification}</div>
-                  </div>
-                </div>
-
                 <div className="career-details-desc">
-                  <div className="career-details-label">
-                    <CardText className="career-details-icon" /> Description
-                  </div>
                   <p className="career-details-paragraph">
-                    {jobDetails.fullDescription || jobDetails.shortDescription}
+                    {jobDetails.fullDescription}
                   </p>
                 </div>
               </div>

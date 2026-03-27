@@ -25,7 +25,7 @@
   flex: 1;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 10px 16px;
   font-size: 15px;
   outline: none;
 }
@@ -39,13 +39,13 @@
   background-color: #e66136;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 10px 24px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 500;
   white-space: nowrap;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; 
 }
 
 .career-search-button:hover {
@@ -138,7 +138,7 @@
 
 .career-jobs-header {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1.2fr 1fr 0.8fr 0.8fr 2.2fr 0.6fr;
   column-gap: 12px;
   background-color: #f8f9fa;
   padding: 14px 18px;
@@ -154,7 +154,7 @@
 
 .career-job-row {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1.2fr 1fr 0.8fr 0.8fr 2.2fr 0.6fr;
   column-gap: 12px;
   padding: 16px 18px;
   border-top: 1px solid #e0e0e0;
@@ -212,14 +212,23 @@
 
 .career-job-department {
   color: #333;
-  text-align: center;
+  text-align: left;
   font-size: 14px;
+  width: 100%;
+  flex: 1;
+  max-width: 2500px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.career-job-department button:hover {
+  color: #d1522c;
 }
 
 .career-job-actions {
   display: flex;
-  gap: 10px;
-  justify-content: flex-end;
+  gap: 8px;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -348,6 +357,7 @@
   margin: 0;
   color: #4f5663;
   line-height: 1.75;
+  transition: all 0.3s ease;
 }
 
 .career-details-footer {
