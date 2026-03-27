@@ -1,88 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Col, Container, Row, Form, FormGroup, FormLabel, FormControl, Image } from "react-bootstrap";
-import backend from "../../assets/images/TrainingDevelopment/ProfessionBackend-Developer.png"
+import { Col, Container, Row, } from "react-bootstrap";
 import { ChevronUp, ChevronDown, ChevronDoubleRight, FastForwardBtnFill, UniversalAccessCircle, HandIndex, Check2 } from "react-bootstrap-icons";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../../components/footer";
 import Headers from "../../components/headers";
-import TopBar from "../../components/topBar";
-import ReCAPTCHA from "react-google-recaptcha";
+import TopBar from "../../components/topBar"; 
 import DevelopmentCTA from "../../components/caoursesCta";
-import { BASE_URL } from "../../utils";
 import Counsellingform from "../../components/counsellingform";
 
 function BackendDevelopment() {
-  const [successMessage, setSuccessMessage] = useState("");
+ 
 
   const location = useLocation();
 
-  const [logoUrl, setLogoUrl] = useState("");
+  // const [logoUrl, setLogoUrl] = useState("");
   useEffect(() => {
     const currentDomain = window.location.origin;
 
     const dynamicLogoUrl = `${currentDomain}/`;
 
-    setLogoUrl(dynamicLogoUrl);
+    // setLogoUrl(dynamicLogoUrl);
   }, [location.pathname]);
 
-  const [isVerified, setVerified] = useState(true);
-  const handleVerification = () => {
 
-    setVerified(!isVerified);
-  };
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-
-    try {
-      const response = await fetch(`${BASE_URL}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": "hXuRUGsEGuhGf6KGeereSSas",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response) {
-        const data = await response.json();
-        if (data.status === "success") {
-          setSuccessMessage("Message sent successfully!");
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-
-          setTimeout(() => {
-            setSuccessMessage("");
-          }, 5000);
-        } else {
-          console.error("Error sending message");
-        }
-      } else {
-        console.error("Error sending message. Server returned status:", response.status);
-      }
-    } catch (error) {
-      console.error("Error sending message:", error.message);
-    }
-  };
+  
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -8,21 +8,6 @@ import Log from "../components/innerCallToLog";
 import Raj_Singh from "../assets/images/aboutnewImg/raj_singh.jpg";
 import Hetal_Singh from "../assets/images/aboutnewImg/hetal_singh.jpg";
 
-
-
-const TEAM_TECH_SKILLS = [
-  "PHP / MySQL",
-  "WordPress",
-  "CodeIgniter",
-  "Laravel",
-  "Magento",
-  "HTML / CSS3 / Bootstrap",
-  "JavaScript / jQuery / Ajax",
-  "React JS",
-  "Angular JS",
-  "Node JS",
-];
-
 function OurTeamPage() {
   const highlightExperience = (bioText) => {
     const experienceText = "14+ years of experience in the IT industry";

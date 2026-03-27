@@ -1,6 +1,5 @@
-import { useRef, useState } from "react";
+import {  useState } from "react";
 import { Container, Row, Col, } from "react-bootstrap";
-import { BASE_URL } from "../utils";
 import TopBar from "./topBar";
 import Headers from "./headers";
 import InnerCallToLog from "./innerCallToLog";

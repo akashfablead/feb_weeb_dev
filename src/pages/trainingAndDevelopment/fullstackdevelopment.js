@@ -1,87 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, } from "react-bootstrap";
-import fullstackimg from "../../assets/images/TrainingDevelopment/fullstack.png";
 import { ChevronUp, ChevronDown, ChevronDoubleRight, Check2, HandIndex, UniversalAccessCircle, FastForwardBtnFill, } from "react-bootstrap-icons";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../../components/footer";
 import Headers from "../../components/headers";
 import TopBar from "../../components/topBar";
-import ReCAPTCHA from "react-google-recaptcha";
 import DevelopmentCTA from "../../components/caoursesCta";
-import { BASE_URL } from "../../utils";
 import Counsellingform from "../../components/counsellingform";
 
 function FullStackDevelopment() {
-  const [successMessage, setSuccessMessage] = useState("");
 
   const location = useLocation();
 
-  const [logoUrl, setLogoUrl] = useState("");
   useEffect(() => {
     const currentDomain = window.location.origin;
 
     const dynamicLogoUrl = `${currentDomain}/`;
 
-    setLogoUrl(dynamicLogoUrl);
+    // setLogoUrl(dynamicLogoUrl);
   }, [location.pathname]);
 
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("Form Data:", formData);
-
-    try {
-      const response = await fetch(`${BASE_URL}`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: "hXuRUGsEGuhGf6KGeereSSas",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response) {
-        const data = await response.json();
-        if (data.status === "success") {
-          setSuccessMessage("Message sent successfully!");
-
-          setFormData({
-            name: "",
-            email: "",
-            subject: "",
-            message: "",
-          });
-
-          setTimeout(() => {
-            setSuccessMessage("");
-          }, 5000);
-        } else {
-          console.error("Error sending message");
-        }
-      } else {
-        console.error(
-          "Error sending message. Server returned status:",
-          response.status
-        );
-      }
-    } catch (error) {
-      console.error("Error sending message:", error.message);
-    }
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -95,8 +35,6 @@ function FullStackDevelopment() {
   const [innerAccordionState, setInnerAccordionState] = useState({
     items1: true,
     items2: false,
-    items3: false,
-    items3: false,
     items3: false,
     items4: false,
   });
