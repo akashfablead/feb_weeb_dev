@@ -149,8 +149,17 @@ function ContactPage() {
       <TopBar />
       <Header />
       <section id="contact" className=" contact section-bg fade-up">
-        <div className="section-title1">
-          <div className="pt-5">Contact Us</div>
+        {/* <div className="section-title1">
+          <div className="pt-4">Contact Us</div>
+          <p className="header-content contact-us-page">
+            We are here to help you with any queries and questions you may have. <br />
+            Get familiar with us and kick-start with our services.
+          </p>
+        </div> */}
+        <div className="section-title1 d-flex justify-content-center align-items-center flex-column">
+          <div className="text-center" role="heading" aria-level="1">
+            Contact Us
+          </div>
           <p className="header-content contact-us-page">
             We are here to help you with any queries and questions you may have. <br />
             Get familiar with us and kick-start with our services.

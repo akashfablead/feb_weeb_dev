@@ -250,12 +250,12 @@ function Footer() {
             </Row>
           </Container>
         </div>
-        <div className="footer-bottom ">
+        <div className="footer-bottom">
           <div className="col-md-12 text-center">
             <p className="mt-3">
               © Copyright {currentYear}{" "}
               <strong>
-                <Link to={logoUrl} className="text-light">
+                <Link to={logoUrl} className="text-light ">
                   - Fablead Developers Technolab
                 </Link>
               </strong>
