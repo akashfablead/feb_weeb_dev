@@ -187,8 +187,7 @@ function Inventorbilling() {
                     Get Started <MdOutlineArrowOutward />
                   </Link>
 
-                <div className="d-flex justify-content-between align-items-center">
-                <div className="stats-container mt-5">
+                  <div className="stats-container mt-5">
                     <div className="stat-item">
                       <div className="stat-value">50+</div>
                       <div className="stat-label">Happy Clients</div>
@@ -201,14 +200,10 @@ function Inventorbilling() {
                       <div className="stat-value">24/7</div>
                       <div className="stat-label">Support</div>
                     </div>
-                    
-                
-                  </div>
-                  <div className="mt-5 justify-content-start">
-                  <a
+                    <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://www.techjockey.com/detail/fablead-erp?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                      href="https://www.techjockey.com/brand/fablead-technolab?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
                     >
                       <img
                         src="https://cdn.techjockey.com/web/assets/new-assets/images/badges_img/available_3.png"
@@ -217,7 +212,6 @@ function Inventorbilling() {
                       />
                     </a>
                   </div>
-                </div>
                 </div>
               </div>
             </Col>
