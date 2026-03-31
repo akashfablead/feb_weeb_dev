@@ -264,8 +264,6 @@ function CareerPage() {
       type: "job",
     };
 
-    console.log("Career Application Data:", submissionData);
-
     try {
       const response = await fetch(`${BASE_URL}`, {
         method: "POST",
@@ -296,24 +294,19 @@ function CareerPage() {
           }, 5000);
         } else {
           setErrorMessage("Failed to submit application. Please try again.");
-          console.error("Error sending application:", data.message);
           setTimeout(() => {
             setErrorMessage("");
           }, 1000);
         }
       } else {
         setErrorMessage("Failed to submit application. Server error.");
-        console.error(
-          "Error sending application. Server returned status:",
-          response.status,
-        );
+
         setTimeout(() => {
           setErrorMessage("");
         }, 1000);
       }
     } catch (error) {
       setErrorMessage("An error occurred. Please try again later.");
-      console.error("Error sending application:", error.message);
       setTimeout(() => {
         setErrorMessage("");
       }, 1000);

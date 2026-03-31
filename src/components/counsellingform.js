@@ -59,8 +59,6 @@ function CounsellingForm() {
     setVerified(false);
     setFormReady(false);
 
-    console.log("Form Data:", formData);
-
     try {
       const response = await fetch(`${BASE_URL}`, {
         method: "POST",
@@ -88,13 +86,13 @@ function CounsellingForm() {
           }, 3000);
 
         } else {
-          console.error("Error sending message");
+          // console.error("Error sending message");
         }
       } else {
-        console.error("Error sending message. Server returned status:", response.status);
+        // console.error("Error sending message. Server returned status:", response.status);
       }
     } catch (error) {
-      console.error("Error sending message:", error.message);
+      //  console.error("Error sending message:", error.message);
     }
   };
 

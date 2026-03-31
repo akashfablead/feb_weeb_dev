@@ -17,7 +17,6 @@ self.addEventListener('install', (event) => {
                 return cache.addAll(urlsToCache);
             })
             .catch((error) => {
-                console.log('Cache installation failed:', error);
             })
     );
     self.skipWaiting();
@@ -72,7 +71,6 @@ self.addEventListener('fetch', (event) => {
             })
             .catch(() => {
                 // Return offline page if needed
-                console.log('Network request failed, returning cached version or offline fallback');
             })
     );
 });
