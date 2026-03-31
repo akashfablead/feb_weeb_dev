@@ -2868,7 +2868,7 @@ div#herocrmfeatures {
   line-height: 1 !important;
   opacity: 0.75 !important;
   color: #e66136 !important;
-  margin-right: 30px !important;
+  /* margin-right: 30px !important; */
 }
 
 .testimonial-item {

@@ -9,12 +9,7 @@ import crmBanner from "../assets/images/Hero_Banner/ecommerce.webp";
 // import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
-  //   {
-  //   image: ProdectBanner,
-  //   alt: "our-products",
-  //   title: "Complete Business Solutions Portfolio",
-  //   subtitle: "Discover our comprehensive range of products: CRM, Hospital Management, HR System, Inventory & Billing, E-commerce, and WhatsApp Bulk Messaging",
-  // },
+
   {
     image: crmBanner,
     alt: "our-products",
