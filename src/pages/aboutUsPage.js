@@ -37,7 +37,7 @@ function AboutUsPage() {
           <div className="about_us">About Us</div>
         </div>
         <Container className="aos-init aos-animate" data-aos="fade-up">
-          <Row className="content1">
+          {/* <Row className="content1">
             <Col lg={12} className="text-center">
               <p className="about_inner_page">
                 With Over {Years} Years Of Experience In Software/Web/Mobile App
@@ -46,7 +46,17 @@ function AboutUsPage() {
                 Understanding Your Business Objective Expectations
               </p>
             </Col>
-          </Row>
+          </Row> */}
+          <div className="content1">
+            <div className="text-center">
+              <p className="about_inner_page">
+                With Over {Years} Years Of Experience In Software/Web/Mobile App
+                Development, We Always Aim To Provide Reliable And Quality
+                Services To Our Customers Using Latest Technologies By
+                Understanding Your Business Objective Expectations
+              </p>
+            </div>
+          </div>
           <hr className="slider_hr"></hr>
           <div id="why-us" className="why-us section-bg fade-up">
             <div className="container-fluid " data-aos="fade-up">
@@ -222,7 +232,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    On-Time Execution 
+                    On-Time Execution
                   </p>
                   <p className="left-tabs-text-2">
                     <span>
@@ -240,7 +250,7 @@ function AboutUsPage() {
                         <FontAwesomeIcon icon={faCheckCircle} />
                       </i>
                     </span>
-                    Innovation & Creativity 
+                    Innovation & Creativity
                   </p>
                   <p className="left-tabs-text-2">
                     <span>

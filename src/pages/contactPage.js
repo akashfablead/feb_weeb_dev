@@ -164,7 +164,7 @@ function ContactPage() {
           className="container mt-3 content1 aos-init aos-animate"
           data-aos="fade-up"
         >
-          <Row>
+          <Row className="m-0">
             <Col lg={5} className="d-flex align-items-stretch">
               <div className="info">
                 <div className="address">
