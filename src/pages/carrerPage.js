@@ -25,7 +25,7 @@ function CareerPage() {
     type: "Full Time",
     qualification: "BCA/MCA, B.Tech/M.Tech or equivalent",
   };
-  
+
   const jobsData = [
     {
       id: 7,
@@ -192,50 +192,50 @@ function CareerPage() {
     setShowDetailsModal(false);
     setJobDetails(null);
   };
-const validateForm = () => {
-  const errors = {};
+  const validateForm = () => {
+    const errors = {};
 
-  if (!formData.name.trim()) {
-    errors.name = "Full Name is required";
-  }
-
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!formData.email || !emailRegex.test(formData.email)) {
-    errors.email = "Enter a valid email address";
-  }
-
-  const phoneRegex = /^[0-9]{10}$/;
-  if (!formData.phone_no || !phoneRegex.test(formData.phone_no)) {
-    errors.phone_no = "Enter a valid 10-digit phone number";
-  }
-
-  if (!formData.city.trim()) {
-    errors.city = "City is required";
-  }
-
-  if (!formData.resume) {
-    errors.resume = "Please upload your resume";
-  } else {
-    const allowedTypes = ["application/pdf"];
-    if (!allowedTypes.includes(formData.resume.type)) {
-      errors.resume = "Only PDF files are allowed";
-    } else if (formData.resume.size > 2 * 1024 * 1024) {
-      errors.resume = "File size should be less than 2MB";
+    if (!formData.name.trim()) {
+      errors.name = "Full Name is required";
     }
-  }
 
-  return errors;
-};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email || !emailRegex.test(formData.email)) {
+      errors.email = "Enter a valid email address";
+    }
+
+    const phoneRegex = /^[0-9]{10}$/;
+    if (!formData.phone_no || !phoneRegex.test(formData.phone_no)) {
+      errors.phone_no = "Enter a valid 10-digit phone number";
+    }
+
+    if (!formData.city.trim()) {
+      errors.city = "City is required";
+    }
+
+    if (!formData.resume) {
+      errors.resume = "Please upload your resume";
+    } else {
+      const allowedTypes = ["application/pdf"];
+      if (!allowedTypes.includes(formData.resume.type)) {
+        errors.resume = "Only PDF files are allowed";
+      } else if (formData.resume.size > 2 * 1024 * 1024) {
+        errors.resume = "File size should be less than 2MB";
+      }
+    }
+
+    return errors;
+  };
   const handleSubmitApplication = async (e) => {
-   e.preventDefault();
+    e.preventDefault();
 
-  const validationErrors = validateForm();
-  setFieldErrors(validationErrors);
+    const validationErrors = validateForm();
+    setFieldErrors(validationErrors);
 
-  if (Object.keys(validationErrors).length > 0) {
-    setTimeout(() => setErrorMessage(""), 3000);
-    return;
-  }
+    if (Object.keys(validationErrors).length > 0) {
+      setTimeout(() => setErrorMessage(""), 3000);
+      return;
+    }
 
     // Convert resume file to base64
     const resumeBase64 = await new Promise((resolve) => {
@@ -553,7 +553,7 @@ const validateForm = () => {
                 </div>
               )}
 
-           
+
 
               {/* 🔥 2 Column Row */}
               <Row>
@@ -569,11 +569,11 @@ const validateForm = () => {
                       placeholder="Enter your full name"
                       value={formData.name}
                       onChange={handleInputChange}
-                     
+
                       className="career-form-control"
                     />
                     {fieldErrors.name && (
-                     <p className="text-danger">{fieldErrors.name}</p>
+                      <p className="text-danger">{fieldErrors.name}</p>
                     )}
                   </Form.Group>
 
@@ -587,11 +587,11 @@ const validateForm = () => {
                       placeholder="Enter your email"
                       value={formData.email}
                       onChange={handleInputChange}
-                    
+
                       className="career-form-control"
                     />
-                      {fieldErrors.email && (
-                     <p className="text-danger">{fieldErrors.email}</p>
+                    {fieldErrors.email && (
+                      <p className="text-danger">{fieldErrors.email}</p>
                     )}
                   </Form.Group>
 
@@ -605,11 +605,11 @@ const validateForm = () => {
                       placeholder="Enter your city"
                       value={formData.city}
                       onChange={handleInputChange}
-                  
+
                       className="career-form-control"
                     />
-                      {fieldErrors.city && (
-                     <p className="text-danger">{fieldErrors.city}</p>
+                    {fieldErrors.city && (
+                      <p className="text-danger">{fieldErrors.city}</p>
                     )}
                   </Form.Group>
                 </Col>
@@ -626,11 +626,11 @@ const validateForm = () => {
                       placeholder="Enter your phone number"
                       value={formData.phone_no}
                       onChange={handleInputChange}
-                    
+
                       className="career-form-control"
                     />
-                      {fieldErrors.phone_no && (
-                     <p className="text-danger">{fieldErrors.phone_no}</p>
+                    {fieldErrors.phone_no && (
+                      <p className="text-danger">{fieldErrors.phone_no}</p>
                     )}
                   </Form.Group>
 
@@ -642,7 +642,7 @@ const validateForm = () => {
                       name="timeline"
                       value={formData.timeline}
                       onChange={handleInputChange}
-                
+
                       className="career-form-control"
                     >
                       <option value="Immediately">Immediately</option>
@@ -662,11 +662,11 @@ const validateForm = () => {
                       name="resume"
                       accept=".pdf,.doc,.docx"
                       onChange={handleFileChange}
-                  
+
                       className="career-form-control"
                     />
-                      {fieldErrors.resume && (
-                     <p className="text-danger">{fieldErrors.resume}</p>
+                    {fieldErrors.resume && (
+                      <p className="text-danger">{fieldErrors.resume}</p>
                     )}
                     <Form.Text className="career-form-text">
                       Accepted formats: PDF

@@ -109,8 +109,8 @@ function Contact() {
         formData.interest_type === "product"
           ? formData.product_interest
           : formData.interest_type === "service"
-          ? formData.service_interest
-          : "",
+            ? formData.service_interest
+            : "",
       interest_type: formData.interest_type,
     };
 
