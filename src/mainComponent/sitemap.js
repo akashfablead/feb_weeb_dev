@@ -44,5 +44,3 @@ const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 const outputPath = path.join("public", "sitemap.xml");
 
 fs.writeFileSync(outputPath, sitemapXml);
-
-console.log(`Sitemap generated successfully at: ${outputPath}`);

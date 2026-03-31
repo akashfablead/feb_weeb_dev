@@ -187,30 +187,36 @@ function Inventorbilling() {
                     Get Started <MdOutlineArrowOutward />
                   </Link>
 
-                  <div className="stats-container mt-5">
-                    <div className="stat-item">
-                      <div className="stat-value">50+</div>
-                      <div className="stat-label">Happy Clients</div>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div className="stats-container mt-5">
+                      <div className="stat-item">
+                        <div className="stat-value">50+</div>
+                        <div className="stat-label">Happy Clients</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-value">99%</div>
+                        <div className="stat-label">Satisfaction Rate</div>
+                      </div>
+                      <div className="stat-item">
+                        <div className="stat-value">24/7</div>
+                        <div className="stat-label">Support</div>
+                      </div>
+
+
                     </div>
-                    <div className="stat-item">
-                      <div className="stat-value">99%</div>
-                      <div className="stat-label">Satisfaction Rate</div>
+                    <div className="mt-5 justify-content-start">
+                      <a
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://www.techjockey.com/detail/fablead-erp?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
+                      >
+                        <img
+                          src="https://cdn.techjockey.com/web/assets/new-assets/images/badges_img/available_3.png"
+                          style={{ width: "80px", maxWidth: "100%" }}
+                          alt="Available on TechJockey"
+                        />
+                      </a>
                     </div>
-                    <div className="stat-item">
-                      <div className="stat-value">24/7</div>
-                      <div className="stat-label">Support</div>
-                    </div>
-                    <a
-                      target="_blank"
-                      rel="noreferrer"
-                      href="https://www.techjockey.com/brand/fablead-technolab?utm_source=oem-badges&utm_medium=website&utm_campaign=referral"
-                    >
-                      <img
-                        src="https://cdn.techjockey.com/web/assets/new-assets/images/badges_img/available_3.png"
-                        style={{ width: "80px", maxWidth: "100%" }}
-                        alt="Available on TechJockey"
-                      />
-                    </a>
                   </div>
                 </div>
               </div>

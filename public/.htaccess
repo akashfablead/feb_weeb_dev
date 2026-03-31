@@ -1,0 +1,41 @@
+<IfModule mod_mime.c>
+  # Set correct MIME type for JavaScript files
+  <FilesMatch "\\.js$">
+    AddType application/javascript .js
+  </FilesMatch>
+  
+  # Set correct MIME type for CSS files
+  <FilesMatch "\\.css$">
+    AddType text/css .css
+  </FilesMatch>
+  
+  # Set correct MIME type for JSON files
+  <FilesMatch "\\.json$">
+    AddType application/json .json
+  </FilesMatch>
+  
+  # Set correct MIME type for Web App Manifest
+  <FilesMatch "manifest\\.json$">
+    AddType application/manifest+json .json
+  </FilesMatch>
+</IfModule>
+
+# Enable compression for assets
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# Service Worker caching headers
+<FilesMatch "service-worker\\.js$">
+  <IfModule mod_headers.c>
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+  </IfModule>
+</FilesMatch>
+
+# Set long cache expiration for assets with hash/version in name
+<FilesMatch "\\.(js|css|png|jpg|jpeg|gif|svg|webp|woff|woff2|ttf|eot)$">
+  <IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+  </IfModule>
+</FilesMatch>

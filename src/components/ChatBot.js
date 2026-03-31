@@ -354,8 +354,6 @@ const ChatBot = () => {
         setTimeout(() => {
             switch (nextStep) {
                 case 1:
-                    // Debug: log the selection type
-                    console.log('Selection type:', selectionType);
                     // Show options based on selection
                     if (selectionType === 'products' || selectionType === 'product') {
                         addMessage('Which product are you interested in?');
@@ -414,7 +412,6 @@ const ChatBot = () => {
             // Prepare lead data for submission
             // Map the requirement field to message field as expected by the API
             const requirementValue = window.currentRequirement || leadData.requirement || 'No specific requirements provided';
-            console.log('Requirement value:', requirementValue); // Log the requirement value
             const leadSubmission = {
                 ...leadData,
                 message: requirementValue, // Map requirement to message field
@@ -454,7 +451,6 @@ const ChatBot = () => {
                 }
 
                 const result = await response.json();
-                console.log('Lead submitted successfully:', result);
             } catch (apiError) {
                 console.error('Error sending lead to API:', apiError);
                 // Still show success to user but log the error
@@ -464,7 +460,6 @@ const ChatBot = () => {
             showNotification(leadSubmission);
 
         } catch (error) {
-            console.error('Error submitting lead:', error);
             addMessage('There was an issue submitting your information. Please try again or contact us directly.');
         }
     };
@@ -490,7 +485,7 @@ const ChatBot = () => {
         try {
             return JSON.parse(localStorage.getItem('leads') || '[]');
         } catch (error) {
-            console.error('Error retrieving leads:', error);
+            // console.error('Error retrieving leads:', error);
             return [];
         }
     };
@@ -501,7 +496,7 @@ const ChatBot = () => {
             localStorage.removeItem('leads');
             return true;
         } catch (error) {
-            console.error('Error clearing leads:', error);
+            //  console.error('Error clearing leads:', error);
             return false;
         }
     };
@@ -805,7 +800,7 @@ window.ChatBotAdmin = {
         try {
             return JSON.parse(localStorage.getItem('leads') || '[]');
         } catch (error) {
-            console.error('Error retrieving leads:', error);
+            // console.error('Error retrieving leads:', error);
             return [];
         }
     },
@@ -814,7 +809,7 @@ window.ChatBotAdmin = {
             localStorage.removeItem('leads');
             return true;
         } catch (error) {
-            console.error('Error clearing leads:', error);
+            // console.error('Error clearing leads:', error);
             return false;
         }
     },

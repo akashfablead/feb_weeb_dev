@@ -96,8 +96,6 @@ function ContactPage() {
       interest_type: formData.interest_type
     };
 
-    // console.log("Form Data:", submissionData);
-
     try {
       const response = await fetch(`${BASE_URL}`, {
         method: "POST",
@@ -127,16 +125,13 @@ function ContactPage() {
             setSuccessMessage("");
           }, 5000);
         } else {
-          console.error("Error sending message");
+          // console.error("Error sending message");
         }
       } else {
-        console.error(
-          "Error sending message. Server returned status:",
-          response.status
-        );
+        // console.error("Error sending message. Server returned status:", response.status); 
       }
     } catch (error) {
-      console.error("Error sending message:", error.message);
+      // console.error("Error sending message:", error.message);
     }
   };
 
