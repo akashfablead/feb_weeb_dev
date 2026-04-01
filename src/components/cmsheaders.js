@@ -124,7 +124,7 @@ function Cmsheader() {
             <FormGroup className="mt-3">
               <ReCAPTCHA
                 ref={recaptchaRef}
-                sitekey="6LeGy6AsAAAAAEmCNriAYQj4YUGhScFh8bGbQAfT"
+                sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
                 onChange={handleVerification}
               />
             </FormGroup>

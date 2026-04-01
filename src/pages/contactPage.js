@@ -392,7 +392,7 @@ function ContactPage() {
                   <Col lg={6}>
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey="6LeGy6AsAAAAAEmCNriAYQj4YUGhScFh8bGbQAfT"
+                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
                       onChange={handleVerification}
                     />
                   </Col>
