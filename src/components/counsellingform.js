@@ -178,7 +178,7 @@ function CounsellingForm() {
           <Col lg={12} >
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
+              sitekey="6LeGy6AsAAAAAEmCNriAYQj4YUGhScFh8bGbQAfT"
               onChange={handleVerification}
             />
           </Col>
