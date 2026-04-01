@@ -800,6 +800,7 @@ h6 {
   bottom: 0;
   left: calc(50% - 20px);
 }
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/
@@ -2887,6 +2888,7 @@ div#herocrmfeatures {
   line-height: 1 !important;
   opacity: 0.75 !important;
   color: #e66136 !important;
+  margin-right: 0px !important;
   /* margin-right: 30px !important; */
 }
 
@@ -4853,7 +4855,7 @@ input.form-call-to.action.form-control {
 /* Our Team cards */
 .team-members-row {
   align-items: stretch;
-  
+
 }
 
 .team-card {
