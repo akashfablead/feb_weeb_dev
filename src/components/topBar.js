@@ -75,10 +75,10 @@ function TopBar() {
       <Row>
         <Col lg={12}>
           <div className="top-bar d-flex justify-content-end">
-            <Container>
+            <Container className="gap-2" >
               <a
                 href="mailto:info@fableadtechnolabs.com"
-                className="topbar-icons"
+                className="topbar-icons "
                 rel="noopener"
                 target="_blank"
               >
@@ -86,7 +86,7 @@ function TopBar() {
               </a>
               <a
                 href="mailto:info@fableadtechnolabs.com"
-                className="mt-2"
+                className="mt-2 "
                 rel="noopener"
                 target="_blank"
               >

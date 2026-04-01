@@ -6,15 +6,16 @@ import banner2 from "../assets/images/Hero_Banner/web design (3)-min.webp";
 import banner3 from "../assets/images/Hero_Banner/web-development.webp";
 import banner4 from "../assets/images/Hero_Banner/ecommerce.webp";
 import crmBanner from "../assets/images/Hero_Banner/ecommerce.webp";
+import banner5 from "../assets/images/Hero_Banner/webandmobileImage.png";
 // import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
 
   {
-    image: crmBanner,
+    image: banner5,
     alt: "our-products",
-    title: "Complete Business Solutions Portfolio",
-    subtitle: "Discover our comprehensive range of products: CRM, Hospital Management, HR System, Inventory & Billing, E-commerce, and WhatsApp Bulk Messaging",
+    title: "Transform Your Business with Web & Mobile Apps",
+    subtitle: "We develop high-quality websites and mobile apps tailored to your business needs, ensuring performance, scalability, and a seamless user experience.",
   },
   {
     image: banner1,
