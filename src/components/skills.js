@@ -47,7 +47,7 @@ function Skills() {
                <div className="section-heading">
           <h2>What we Provide</h2>
         </div>
-        <Row>
+        <Row >
           <Col
             lg={6}
             className="d-flex align-items-center"

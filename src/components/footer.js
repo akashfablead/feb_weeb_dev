@@ -28,7 +28,7 @@ function Footer() {
       <footer id="footer">
         <div className="footer-top section-bg">
           <Container>
-            <Row>
+            <Row className="m-0">
               <Col lg={3} md={6} className="footer-contact">
                 <Link className=" logo-biss" to={logoUrl}>
                   {" "}

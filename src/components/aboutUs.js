@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import AboutUsImage from "../assets/images/Home_Page/satisfiedClientFablead.png";
+import AboutUsImage from "../assets/images/Home_Page/satisfiedClientFablead1.png";
 function AboutUs() {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -13,7 +13,7 @@ function AboutUs() {
         <div className="section-heading">
           <h2>About Us</h2>
         </div>
-        <Row>
+        <Row className="">
           <Col
             lg={6}
             className="d-flex justify-content-center align-items-stretch  order-lg-1 "

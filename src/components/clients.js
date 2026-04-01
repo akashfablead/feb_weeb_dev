@@ -96,7 +96,7 @@ function Clients() {
         
         ) : (
           // Desktop & Tablet: Show grid exactly like your original code
-          <Row data-aos="zoom-in">
+          <Row data-aos="zoom-in" c>
             {clients.map(({ src, alt, style }, index) => (
               <Col
                 key={index}

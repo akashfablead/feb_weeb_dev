@@ -501,7 +501,7 @@ function Portfolio() {
           </li>
         </ul>
 
-        <Row className="portfolio-container">
+        <Row className="portfolio-container ">
           {limitedItems.map((item) => (
             <Col
               key={item.id}

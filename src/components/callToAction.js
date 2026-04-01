@@ -7,7 +7,7 @@ function CallToAction() {
   return (
     <section id="cta" className="cta d-flex justify-content-center ">
       <Container data-aos="zoom-in">
-        <Row className="d-flex justify-content-center ">
+        <Row className="d-flex justify-content-center">
           <Col lg={3}  className="text-lg-center col-6 cta-div">
             <div className="text-center item-wow visible" data-number="700" >
               <i className="calltoactionfonts"> <FontAwesomeIcon icon={faDesktop} /></i>

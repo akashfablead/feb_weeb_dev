@@ -7,7 +7,7 @@ function Log() {
   return (
     <section id="cta" className="cta">
       <Container className="" data-aos="zoom-in">
-        <Row className="">
+        <Row>
           <Col lg={9} className="text-center text-lg-start">
             <h3 className="cta-heading">Grow Your Business With Us.</h3>
             <p>We are here to help you with any queries and questions you may have.

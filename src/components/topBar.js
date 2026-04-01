@@ -72,11 +72,12 @@ function TopBar() {
         </script>
       </Helmet>
 
-      <Row>
+      <Row className="">
         <Col lg={12}>
           <div className="top-bar d-flex justify-content-end">
-            <Container className="gap-2" >
-              <a
+          <Container className="d-flex justify-content-between align-items-center">
+          <div className="gap-2">
+            <a
                 href="mailto:info@fableadtechnolabs.com"
                 className="topbar-icons "
                 rel="noopener"
@@ -94,7 +95,9 @@ function TopBar() {
                   info@fableadtechnolabs.com
                 </label>
               </a>
-              <a
+            </div>
+             <div>  
+             <a
                 href="https://twitter.com/fablead_tech"
                 rel="noopener"
                 target="_blank"
@@ -118,6 +121,7 @@ function TopBar() {
               >
                 <Linkedin />
               </a>
+             </div>
             </Container>
           </div>
         </Col>
