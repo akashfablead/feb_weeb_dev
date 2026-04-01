@@ -20,6 +20,7 @@ function Contact() {
   const [isFormReady, setFormReady] = useState(false);
   const [isVerified, setVerified] = useState(false);
   const recaptchaRef = useRef(null);
+  const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
 
   const handleVerification = (value) => {
     setVerified(value);
@@ -436,7 +437,7 @@ function Contact() {
                   <Col lg={6}>
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey="6Lei7aAsAAAAALAHWGTaz0WDj9M2xKmi-fflm9bx"
+                      sitekey={recaptchaSiteKey}
                       onChange={handleVerification}
                     />
                   </Col>
