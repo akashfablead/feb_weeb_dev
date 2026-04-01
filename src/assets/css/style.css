@@ -3750,8 +3750,8 @@ div#herocrmfeatures {
     padding: 10px 10px 8px 10px !important;
     color: #fff !important;
     text-align: start !important;
-    width: 60vw;
-    max-width: 520px;
+    width: 75vw;
+    /* max-width: 520px; */
   }
 
   #hero .carousel-caption .d-flex {
@@ -3779,27 +3779,27 @@ div#herocrmfeatures {
   }
 
   #hero h1 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 34px;
     font-weight: 500;
     margin: 0px 0 10px 0;
-    width: 90%;
+    width: 100%;
   }
 
   #hero .heading-title {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 500;
+    margin: 0px 0 10px 0;
+    width: 100%;
+  }
+
+  #hero h2 {
     font-size: 20px;
     line-height: 26px;
     font-weight: 500;
     margin: 0px 0 10px 0;
-    width: 90%;
-  }
-
-  #hero h2 {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
-    margin: 0px 0 10px 0;
-    width: 90%;
+    width: 100%;
   }
 
   #hero h3 {
@@ -3812,8 +3812,8 @@ div#herocrmfeatures {
     -webkit-line-clamp: 4;
     line-clamp: 4;
     -webkit-box-orient: vertical;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 14px;
     font-weight: 400;
   }
