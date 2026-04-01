@@ -12,6 +12,7 @@ function CounsellingForm() {
   const [isVerified, setVerified] = useState(false);
   const recaptchaRef = useRef(null);
   const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+  const isRecaptchaConfigured = Boolean(recaptchaSiteKey.trim());
 
   const [logoUrl, setLogoUrl] = useState("");
   useEffect(() => {
@@ -45,7 +46,7 @@ function CounsellingForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isVerified) {
+    if (isRecaptchaConfigured && !isVerified) {
       setErrorMessage("Please verify that you're not a robot by clicking the ReCAPTCHA checkbox.");
       setTimeout(() => {
         setErrorMessage("");
@@ -177,11 +178,17 @@ function CounsellingForm() {
                 </div> */}
         <Row className="re-captcha my-3">
           <Col lg={12} >
-            <ReCAPTCHA
-              ref={recaptchaRef}
-              sitekey={recaptchaSiteKey}
-              onChange={handleVerification}
-            />
+            {isRecaptchaConfigured ? (
+              <ReCAPTCHA
+                ref={recaptchaRef}
+                sitekey={recaptchaSiteKey}
+                onChange={handleVerification}
+              />
+            ) : (
+              <div className="alert alert-warning">
+                reCAPTCHA site key is not configured. Set REACT_APP_RECAPTCHA_SITE_KEY in .env and restart the dev server.
+              </div>
+            )}
           </Col>
           <Col lg={12} className="mt-3 ">
             <div className="btn-learn-more">

@@ -21,6 +21,7 @@ function Contact() {
   const [isVerified, setVerified] = useState(false);
   const recaptchaRef = useRef(null);
   const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+  const isRecaptchaConfigured = Boolean(recaptchaSiteKey.trim());
 
   const handleVerification = (value) => {
     setVerified(value);
@@ -80,7 +81,7 @@ function Contact() {
     //   return; // Do nothing if the form is not ready
     // }
 
-    if (!isVerified) {
+    if (isRecaptchaConfigured && !isVerified) {
       setErrorMessage(
         "Please verify that you're not a robot by clicking the ReCAPTCHA checkbox."
       );
@@ -435,11 +436,17 @@ function Contact() {
                 </div>
                 <Row className="re-captcha">
                   <Col lg={6}>
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey={recaptchaSiteKey}
-                      onChange={handleVerification}
-                    />
+                    {isRecaptchaConfigured ? (
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={recaptchaSiteKey}
+                        onChange={handleVerification}
+                      />
+                    ) : (
+                      <div className="alert alert-warning">
+                        reCAPTCHA site key is not configured. Set REACT_APP_RECAPTCHA_SITE_KEY in .env and restart the dev server.
+                      </div>
+                    )}
                   </Col>
                   <Col lg={6} className="mt-3 ">
                     <button type="submit" className="send-message-btn">

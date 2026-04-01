@@ -15,6 +15,7 @@ function ContactPage() {
   const [isFormReady, setFormReady] = useState(false);
   const [isVerified, setVerified] = useState(false);
   const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+  const isRecaptchaConfigured = Boolean(recaptchaSiteKey.trim());
 
   const handleVerification = (value) => {
     setVerified(value);
@@ -67,7 +68,7 @@ function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!isVerified) {
+    if (isRecaptchaConfigured && !isVerified) {
       setErrorMessage(
         "Please verify that you're not a robot by clicking the ReCAPTCHA checkbox."
       );
