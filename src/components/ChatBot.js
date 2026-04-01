@@ -433,7 +433,7 @@ const ChatBot = () => {
                 }
                 localStorage.setItem('leads', JSON.stringify(existingLeads));
             } catch (storageError) {
-                console.warn('Could not save to localStorage:', storageError);
+                // console.warn('Could not save to localStorage:', storageError);
             }
             // Send to backend API
             try {
@@ -452,7 +452,7 @@ const ChatBot = () => {
 
                 const result = await response.json();
             } catch (apiError) {
-                console.error('Error sending lead to API:', apiError);
+                // console.error('Error sending lead to API:', apiError);
                 // Still show success to user but log the error
             }
 
