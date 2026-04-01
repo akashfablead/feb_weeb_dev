@@ -14,6 +14,7 @@ function ContactPage() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isFormReady, setFormReady] = useState(false);
   const [isVerified, setVerified] = useState(false);
+  const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
 
   const handleVerification = (value) => {
     setVerified(value);
@@ -390,11 +391,17 @@ function ContactPage() {
                 </div>
                 <Row className="re-captcha">
                   <Col lg={6}>
-                    <ReCAPTCHA
-                      ref={recaptchaRef}
-                      sitekey="6Lei7aAsAAAAALAHWGTaz0WDj9M2xKmi-fflm9bx"
-                      onChange={handleVerification}
-                    />
+                    {recaptchaSiteKey ? (
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={recaptchaSiteKey}
+                        onChange={handleVerification}
+                      />
+                    ) : (
+                      <div className="alert alert-warning">
+                        reCAPTCHA site key is not configured.
+                      </div>
+                    )}
                   </Col>
                   <Col lg={6} className="mt-3">
                     <button type="submit" className="send-message-btn">

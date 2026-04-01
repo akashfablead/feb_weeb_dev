@@ -13,6 +13,8 @@ function Cmsheader() {
   const [isVerified, setVerified] = useState(false);
   const recaptchaRef = useRef(null);
   const [isFormReady, setFormReady] = useState(false);
+  const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+
   useEffect(() => {
     const currentDomain = window.location.origin;
     const dynamicLogoUrl = `${currentDomain}/`;
@@ -122,11 +124,17 @@ function Cmsheader() {
             </FormGroup>
 
             <FormGroup className="mt-3">
-              <ReCAPTCHA
-                ref={recaptchaRef}
-                sitekey="6Lei7aAsAAAAALAHWGTaz0WDj9M2xKmi-fflm9bx"
-                onChange={handleVerification}
-              />
+              {recaptchaSiteKey ? (
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey={recaptchaSiteKey}
+                  onChange={handleVerification}
+                />
+              ) : (
+                <div className="alert alert-warning">
+                  reCAPTCHA site key is missing. Add REACT_APP_RECAPTCHA_SITE_KEY in .env for this environment.
+                </div>
+              )}
             </FormGroup>
           </Form>
         </Modal.Body>
