@@ -215,7 +215,7 @@ function Contact() {
                   title="Google Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.978800847412!2d72.7962328743919!3d21.193001082118858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0bbb40f751%3A0xbacdb736bad4987!2sFablead%20Developers%20Technolab!5e0!3m2!1sen!2sin!4v1700121136280!5m2!1sen!2sin"
                   frameBorder="0"
-                  allowFullScreen
+                  allowFullScreens
                   className="google_map"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
