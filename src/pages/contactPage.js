@@ -164,7 +164,7 @@ function ContactPage() {
           className="container mt-3 content1 aos-init aos-animate"
           data-aos="fade-up"
         >
-          <Row className="m-0">
+          <Row>
             <Col lg={5} className="d-flex align-items-stretch">
               <div className="info">
                 <div className="address">
@@ -392,7 +392,7 @@ function ContactPage() {
                   <Col lg={6}>
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
+                      sitekey="6LeGy6AsAAAAAEmCNriAYQj4YUGhScFh8bGbQAfT"
                       onChange={handleVerification}
                     />
                   </Col>

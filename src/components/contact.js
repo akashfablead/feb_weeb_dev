@@ -153,7 +153,7 @@ function Contact() {
         //   "Error sending message. Server returned status:",
         //   response.status
         // );
-       }
+      }
     } catch (error) {
       // console.error("Error sending message:", error.message);
     }
@@ -436,7 +436,7 @@ function Contact() {
                   <Col lg={6}>
                     <ReCAPTCHA
                       ref={recaptchaRef}
-                      sitekey="6LeARuMUAAAAAE1lFiqVl4FXq8bWKV-xrgRB5y-D"
+                      sitekey="6LeGy6AsAAAAAEmCNriAYQj4YUGhScFh8bGbQAfT"
                       onChange={handleVerification}
                     />
                   </Col>
