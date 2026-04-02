@@ -6,7 +6,7 @@ import banner2 from "../assets/images/Hero_Banner/web design (3)-min.webp";
 import banner3 from "../assets/images/Hero_Banner/web-development.webp";
 import banner4 from "../assets/images/Hero_Banner/ecommerce.webp";
 import crmBanner from "../assets/images/Hero_Banner/ecommerce.webp";
-import banner5 from "../assets/images/Hero_Banner/banner7.png";
+import banner5 from "../assets/images/Hero_Banner/banner7.webp";
 // import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
