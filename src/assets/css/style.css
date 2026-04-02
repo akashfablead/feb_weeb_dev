@@ -1105,7 +1105,8 @@ div#herocrmfeatures {
 }
 
 .CmsImage {
-  background-image: url(../../assets/images/service-banners/aboutusimge.webp);
+  /* background-image: url(../../assets/images/service-banners/aboutusimge.webp); */
+  background-image: url(../../assets/images/service-banners/Service_Images/cmsWebsitedevlopment.png);
 }
 
 .FramworkImage {
@@ -1116,19 +1117,21 @@ div#herocrmfeatures {
 }
 
 .EcommerceImage {
-  background-image: url(../../assets/images/service-banners/ecommerce.webp);
+  /* background-image: url(../../assets/images/service-banners/ecommerce.webp); */
+  background-image: url(../../assets/images/service-banners/Service_Images/E-commerce.png);
 }
 
 .MobileApp {
-  background-image: url(../../assets/images/Hero_Banner/Mobile_App-.webp);
+  background-image: url(../../assets/images/Hero_Banner/Mobile_App-.png);
 }
 
 .WebDesignImage {
-  background-image: url(../../assets/images/service-banners/cms.webp);
+  /* background-image: url(../../assets/images/service-banners/cms.webp); */
+  background-image: url(../../assets/images/service-banners/Service_Images/WebsiteDesign.png);
 }
 
 .WebMaintenanceImage {
-  background-image: url(../../assets/images/service-banners/website_updates_maintain-min.webp);
+  background-image: url(../../assets/images/service-banners/website_updates_maintain-min.png);
 }
 
 /* add new styles  */
@@ -1137,7 +1140,8 @@ div#herocrmfeatures {
 }
 
 .serverManage {
-  background-image: url(../../assets/images/service-banner/memory-storage.png);
+  /* background-image: url(../../assets/images/service-banner/memory-storage.png); */
+  background-image: url(../../assets/images/service-banners/Service_Images/serverManagement.png);
 }
 
 .ShopifyDev {
@@ -3750,8 +3754,8 @@ div#herocrmfeatures {
     padding: 10px 10px 8px 10px !important;
     color: #fff !important;
     text-align: start !important;
-    width: 60vw;
-    max-width: 520px;
+    width: 75vw;
+    /* max-width: 520px; */
   }
 
   #hero .carousel-caption .d-flex {
@@ -3769,6 +3773,30 @@ div#herocrmfeatures {
     object-position: center;
   }
 
+  /* Mobile hero: blur background, keep text readable */
+  #hero .carousel-item {
+    position: relative;
+  }
+
+  #hero .carousel-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  #hero .carousel-item img {
+    filter: blur(1.2px) brightness(0.7);
+    transform: scale(1.04);
+  }
+
+  #hero .carousel-caption {
+    z-index: 2;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  }
+
   #hero h1,
   #hero .heading-title,
   #hero h2,
@@ -3779,27 +3807,27 @@ div#herocrmfeatures {
   }
 
   #hero h1 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 34px;
     font-weight: 500;
     margin: 0px 0 10px 0;
-    width: 90%;
+    width: 100%;
   }
 
   #hero .heading-title {
+    font-size: 26px;
+    line-height: 34px;
+    font-weight: 500;
+    margin: 0px 0 10px 0;
+    width: 100%;
+  }
+
+  #hero h2 {
     font-size: 20px;
     line-height: 26px;
     font-weight: 500;
     margin: 0px 0 10px 0;
-    width: 90%;
-  }
-
-  #hero h2 {
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 500;
-    margin: 0px 0 10px 0;
-    width: 90%;
+    width: 100%;
   }
 
   #hero h3 {
@@ -3812,8 +3840,8 @@ div#herocrmfeatures {
     -webkit-line-clamp: 4;
     line-clamp: 4;
     -webkit-box-orient: vertical;
-    font-size: 13px;
-    line-height: 19px;
+    font-size: 16px;
+    line-height: 24px;
     margin-bottom: 14px;
     font-weight: 400;
   }

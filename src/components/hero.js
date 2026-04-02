@@ -6,16 +6,23 @@ import banner2 from "../assets/images/Hero_Banner/web design (3)-min.webp";
 import banner3 from "../assets/images/Hero_Banner/web-development.webp";
 import banner4 from "../assets/images/Hero_Banner/ecommerce.webp";
 import crmBanner from "../assets/images/Hero_Banner/ecommerce.webp";
-import banner5 from "../assets/images/Hero_Banner/banner7.webp";
+import banner5 from "../assets/images/Hero_Banner/WebandMobile.webp";
+import ProductImage from "../assets/images/Hero_Banner/ProductImage.webp";
 // import ProdectBanner from "../assets/images/Hero_Banner/prodect_banner.png";
 
 const slides = [
 
   {
     image: banner5,
-    alt: "our-products",
+    alt: "web and mobile apps",
     title: "Transform Your Business with Web & Mobile Apps",
     subtitle: "We develop high-quality websites and mobile apps tailored to your business needs, ensuring performance, scalability, and a seamless user experience.",
+  },
+  {
+    image: ProductImage,
+    alt: "Productivity and Automation",
+    title: "Enterprise Software That Grows With You",
+    subtitle: "Transform your business with our comprehensive suite of ERP, CRM, HMS, HRMS and e-commerce solutions.Built for scale, designed for success.",
   },
   {
     image: banner1,
