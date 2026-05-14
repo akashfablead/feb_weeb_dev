@@ -53,16 +53,16 @@ function AboutUs() {
                   </Link>{" "}
                 </p> */}
                 <p>
-                  At Fablead, we provide end-to-end digital solutions including{" "}
+                  At Fablead, we offer{" "}
                   <Link to="/services/website-development">Website Development</Link>,{" "}
                   <Link to="/services/website-design">Website Designing</Link>,{" "}
                   <Link to="/services/mobile-apps">Mobile App Development</Link>,{" "}
                   <Link to="/services/e-commerce">Ecommerce Development</Link>,{" "}
-                  <Link to="/services/cms-website">CMS Based Website Development</Link>, and{" "}
+                  <Link to="/services/cms-website">CMS Website Development</Link>, and{" "}
                   <Link to="/services/web-maintenance">
                     Web Maintenance & Customization
                   </Link>{" "}
-                  to help businesses grow online with user-focused, high-performance solutions.
+                  services to help businesses grow online.
                 </p>
                 <p>We also offer <a href="/products/inventory-billing-software-erp">ERP</a>, <a href="/products/crm-web-mobile-app-crm">CRM</a>, <a href="/products/hospital-clinic-management-system-hms">HMS</a>, <a href="/products/hr-management-system">HRMS</a>, <a href="/products/whatsapp-bulk-messaging-platform">WhatsApp Bulk Messaging</a> and <a href="/products/ecommerce-web-mobile-app">Ecommerce Web &amp; Mobile App Solutions</a>.</p>
                 <p>
