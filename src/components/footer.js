@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
-import { ChevronDoubleRight, Facebook, Linkedin, } from "react-bootstrap-icons";
+import { ChevronDoubleRight, Facebook, Linkedin, Instagram } from "react-bootstrap-icons";
 import logo from "../assets/images/service-banners/250x150 (1).webp";
 import { Link, useLocation } from "react-router-dom";
 // import MetaTags from "react-meta-tags";
@@ -40,11 +40,12 @@ function Footer() {
                 </Link>
                 <div className="social-links mt-3">
                   <a
-                    href="https://twitter.com/fablead_tech"
-                    rel="=noopener"
-                    className="twitter mx-4"
+                    href="https://www.instagram.com/fablead_technolab?igsh=MTZndnBocXp1NWxpNg=="
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="instagram mx-4"
                   >
-                               <i className="bi bi-twitter-x" style={{ fontSize: "14px" }}></i>
+                    <Instagram />
                   </a>
                   <a
                     href="https://www.facebook.com/fableaddevelopers"

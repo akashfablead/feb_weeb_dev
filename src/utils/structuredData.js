@@ -45,7 +45,8 @@ export const organizationSchema = {
   },
   sameAs: [
     "https://www.facebook.com/fableadtechnolabs",
-    "https://twitter.com/fableadtechnolabs",
+    // "https://twitter.com/fableadtechnolabs",
+    "https://www.instagram.com/fablead_technolab?igsh=MTZndnBocXp1NWxpNg==",
     "https://www.linkedin.com/company/fablead-developers-technolab",
     "https://www.instagram.com/fableadtechnolabs",
   ],

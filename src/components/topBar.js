@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { Twitter, Facebook, Linkedin, EnvelopeFill } from "react-bootstrap-icons";
+import { Twitter, Facebook, Linkedin, EnvelopeFill, Instagram } from "react-bootstrap-icons";
 import { Helmet } from "react-helmet-async";
 
 function TopBar() {
@@ -56,7 +56,8 @@ function TopBar() {
             },
             "sameAs": [
               "https://www.facebook.com/fableaddevelopers",
-              "https://twitter.com/fablead_tech",
+              // "https://twitter.com/fablead_tech",
+              "https://www.instagram.com/fablead_technolab?igsh=MTZndnBocXp1NWxpNg==",
               "https://in.linkedin.com/in/fablead-developers-technolab-0b8a07143"
             ],
             "priceRange": "$$",
@@ -75,53 +76,53 @@ function TopBar() {
       <Row className="">
         <Col lg={12}>
           <div className="top-bar d-flex justify-content-end">
-          <Container className="d-flex justify-content-between align-items-center">
-          <div className="gap-2">
-            <a
-                href="mailto:info@fableadtechnolabs.com"
-                className="topbar-icons "
-                rel="noopener"
-                target="_blank"
-              >
-                <EnvelopeFill />
-              </a>
-              <a
-                href="mailto:info@fableadtechnolabs.com"
-                className="mt-2 "
-                rel="noopener"
-                target="_blank"
-              >
-                <label className="email-text">
-                  info@fableadtechnolabs.com
-                </label>
-              </a>
-            </div>
-             <div>  
-             <a
-                href="https://twitter.com/fablead_tech"
-                rel="noopener"
-                target="_blank"
-                className="topbar-icons2"
-              >
-             <i className="bi bi-twitter-x" style={{ fontSize: "14px" }}></i>
-              </a>
-              <a
-                href="https://www.facebook.com/fableaddevelopers"
-                rel="noopener"
-                target="_blank"
-                className="topbar-icons2"
-              >
-                <Facebook />
-              </a>
-              <a
-                href="https://in.linkedin.com/in/fablead-developers-technolab-0b8a07143"
-                rel="noopener"
-                target="_blank"
-                className="topbar-icons2"
-              >
-                <Linkedin />
-              </a>
-             </div>
+            <Container className="d-flex justify-content-between align-items-center">
+              <div className="gap-2">
+                <a
+                  href="mailto:info@fableadtechnolabs.com"
+                  className="topbar-icons "
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <EnvelopeFill />
+                </a>
+                <a
+                  href="mailto:info@fableadtechnolabs.com"
+                  className="mt-2 "
+                  rel="noopener"
+                  target="_blank"
+                >
+                  <label className="email-text">
+                    info@fableadtechnolabs.com
+                  </label>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://www.instagram.com/fablead_technolab?igsh=MTZndnBocXp1NWxpNg=="
+                  rel="noopener"
+                  target="_blank"
+                  className="topbar-icons2"
+                >
+                  <Instagram />
+                </a>
+                <a
+                  href="https://www.facebook.com/fableaddevelopers"
+                  rel="noopener"
+                  target="_blank"
+                  className="topbar-icons2"
+                >
+                  <Facebook />
+                </a>
+                <a
+                  href="https://in.linkedin.com/in/fablead-developers-technolab-0b8a07143"
+                  rel="noopener"
+                  target="_blank"
+                  className="topbar-icons2"
+                >
+                  <Linkedin />
+                </a>
+              </div>
             </Container>
           </div>
         </Col>
