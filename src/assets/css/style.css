@@ -1144,6 +1144,11 @@ div#herocrmfeatures {
   background-image: url(../../assets/images/service-banners/Service_Images/serverManagement.png);
 }
 
+.aitools {
+  /* background-image: url(../../assets/images/service-banner/memory-storage.png); */
+  background-image: url(../../assets/images/service-banners/Service_Images/aitool_automation.png);
+}
+
 .ShopifyDev {
   background-image: url(../../assets/images/service-banner/ShopifiImage.png);
 }

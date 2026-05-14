@@ -116,7 +116,7 @@ function AIToolsService() {
 
             <Col
               lg={5}
-              className="col-lg-5 align-items-stretch order-lg-2 img serverManage"
+              className="col-lg-5 align-items-stretch order-lg-2 img aitools"
               data-aos="zoom-in"
               data-aos-delay="150"
             >
