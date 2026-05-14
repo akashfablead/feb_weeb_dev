@@ -11,6 +11,7 @@ import whattsupProductsImage2 from "../../assets/images/Products/whattsup/fablea
 import whattsupProductsImage7 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-marketing-image-7.png";
 import whattsupProductsImage9 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-marketing-image-9.png";
 import whattsupProductsImage11 from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-marketing-image-11.png";
+import whattsupProductslivechat from "../../assets/images/Products/whattsup/fableadtechnolabs-whatsapp-product-live-chat.png";
 import InnerCallToLog from "../innerCallToLog";
 import { Check2, ChevronDown, ChevronUp } from "react-bootstrap-icons";
 import { Link } from "react-router-dom";
@@ -70,7 +71,7 @@ function WhatsAppbulk() {
         "Import, organize, and segment your WhatsApp contacts efficiently for personalized and targeted messaging campaigns.",
     },
     {
-      img: whattsupProductsImage9,
+      img: whattsupProductslivechat,
       title: "Real-Time Chats",
       alt: "Fablead Technolabs WhatsApp real-time chat feature",
       description:
@@ -459,6 +460,15 @@ function WhatsAppbulk() {
                       loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="WhatsApp contact management"
+                    />
+                  </div>
+
+                  <div>
+                    <Image
+                      src={whattsupProductslivechat}
+                      loading="lazy"
+                      className="img-fluid rounded zoom-img w-100"
+                      alt="WhatsApp live chat"
                     />
                   </div>
 
