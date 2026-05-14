@@ -9,6 +9,7 @@ import Deal from "../../assets/images/Products/CRM/fableadtechnolabs-crm-deal-ma
 import followup from "../../assets/images/Products/CRM/fableadtechnolabs-crm-followup-tracking-page.png";
 import Lead from "../../assets/images/Products/CRM/fableadtechnolabs-crm-lead-management-page.png";
 import Pipeline from "../../assets/images/Products/CRM/fableadtechnolabs-crm-sales-pipeline-page.png";
+import crmwp from "../../assets/images/Products/CRM/fableadtechnolabs-crm-wp-chat.png";
 import Crm_main_feb from "../../assets/images/Products/CRM/fableadtechnolabs-crm-dashboard-main.png";
 import InnerCallToLog from "../innerCallToLog";
 import { Check2, ChevronDown, ChevronUp } from "react-bootstrap-icons";
@@ -24,6 +25,7 @@ function CRM() {
     item1: true,
     item2: false,
     item3: false,
+    item4: false,
   });
 
   const handleAccordionToggle = (item) => {
@@ -341,6 +343,49 @@ function CRM() {
                               </div>
                             </li>
 
+                            {/* Item 4 */}
+                            <li>
+                              <a
+                                data-bs-toggle="collapse"
+                                className={`collapse ${accordionState.item4 ? "show" : ""}`}
+                                onClick={() => handleAccordionToggle("item4")}
+                              >
+                                04. Chat with AI Assistant{" "}
+                                {accordionState.item4 ? (
+                                  <ChevronUp className="icon-close float-end" />
+                                ) : (
+                                  <ChevronDown className="icon-show float-end" />
+                                )}
+                              </a>
+
+                              <div
+                                id="accordion-list-4"
+                                className={`collapse ${accordionState.item4 ? "show" : ""}`}
+                                data-bs-parent=".accordion-list"
+                              >
+                                <ul className="list-unstyled">
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Instant AI Support:</strong> Get quick answers and insights from your AI-powered CRM assistant.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Task Automation:</strong> Automate routine tasks, queries, and customer interactions with smart chatbot support.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Smart Recommendations:</strong> Receive intelligent suggestions for lead prioritization and follow-ups.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Quick Actions:</strong> Improve productivity using natural language commands and fast CRM actions.
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
 
                           </ul>
                         </div>
@@ -388,6 +433,16 @@ function CRM() {
                       alt="Fablead Technolabs CRM pipeline management dashboard"
                     />
                   </div>
+
+                   <div>
+                    <Image
+                      src={crmwp}
+                      loading="lazy"
+                      className="img-fluid rounded zoom-img"
+                      alt="Fablead Technolabs Whatsapp chats management dashboard"
+                    />
+                  </div>
+                  
                 </Slider>
               </Col>
             </Row>
