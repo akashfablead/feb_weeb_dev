@@ -25,6 +25,7 @@ const routes = [
   "/services/shopify-development",
   "/services/graphics-design",
   "/services/server-management",
+  "/services/ai-tools",
   "/services/seo-service",
   "/training-and-courses",
   "/training-and-courses/front-end-development",

@@ -16,6 +16,7 @@ import ShopifyDevService from "../pages/servicePages/ShopifyDevService";
 import GraphicsDesignService from "../pages/servicePages/GraphicsDesignService";
 import ServerManageService from "../pages/servicePages/ServerManageService";
 import SeoService from "../pages/servicePages/SeoService";
+import AIToolsService from "../pages/servicePages/AIToolsService";
 import PageNotFound from "../components/pageNotFound";
 import MetaTags from "react-meta-tags";
 import IndexPage from ".";
@@ -1125,6 +1126,48 @@ function RoutesPage() {
                         <meta name="twitter:description" content="Secure and scalable cloud server management solutions." />
                      </MetaTags>
                      <ServerManageService />
+                  </>
+               }
+            />
+            <Route
+               exact
+               path="/services/ai-tools"
+               element={
+                  <>
+                     <MetaTags>
+                        <title>
+                           AI Tools & Automation | Fablead Technolabs
+                        </title>
+                        <meta charSet="utf-8" />
+                        <meta
+                           name="viewport"
+                           content="width=device-width, initial-scale=1"
+                        />
+                        <meta name="theme-color" content="#000000" />
+                        <meta
+                           name="description"
+                           content="AI tools and automation services for smarter websites, apps, ecommerce, CMS workflows, and customer engagement."
+                        />
+                        <meta
+                           name="keywords"
+                           content="AI tools, automation, chatbots, predictive analytics, website automation, ecommerce AI, CMS automation, Fablead Technolabs"
+                        />
+                        <link rel="canonical" href="https://fableadtechnolabs.com/services/ai-tools" />
+                        <meta property="og:title" content="AI Tools & Automation | Fablead Technolabs" />
+                        <meta property="og:description" content="AI tools and automation services to enhance web, mobile, ecommerce, and CMS experiences." />
+                        <meta property="og:url" content={window.location.href} />
+                        <meta property="og:type" content="website" />
+                        <meta name="twitter:card" content="summary_large_image" />
+                        <meta
+                           name="twitter:title"
+                           content="AI Tools & Automation | Fablead Technolabs"
+                        />
+                        <meta
+                           name="twitter:description"
+                           content="AI tools and automation services for smarter websites, apps, ecommerce, and CMS workflows."
+                        />
+                     </MetaTags>
+                     <AIToolsService />
                   </>
                }
             />

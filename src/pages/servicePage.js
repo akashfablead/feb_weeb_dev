@@ -3,7 +3,7 @@ import Header from "../components/headers";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faStore, faPaintBrush, faServer } from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faStore, faPaintBrush, faServer, faRobot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import TopBar from "../components/topBar";
 import { Link } from "react-router-dom";
@@ -324,6 +324,38 @@ function ServicePage() {
                 <div className="text-center">
                   <Link
                     to="/services/server-management"
+                    className="btn-learn-more mt-4"
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </div>
+            </Col>
+            <Col
+              xl={4}
+              md={6}
+              className="d-flex align-items-stretch pt-4 pb-4 mt-xl-0"
+              data-aos="zoom-in"
+            >
+              <div className="icon-box ">
+                <div className="icon text-center  w-100">
+                  <div className="mainicon-div">
+                    <i>
+                      <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
+                    </i>
+                  </div>
+                </div>
+                <h4 className="text-center">
+                  <Link to="/services/ai-tools">
+                    AI Tools & Automation
+                  </Link>
+                </h4>
+                <p className="text-center">
+                  We deliver AI tools and automation support that enhance digital workflows, optimize customer engagement, and power smarter websites, apps, and business systems.
+                </p>
+                <div className="text-center">
+                  <Link
+                    to="/services/ai-tools"
                     className="btn-learn-more mt-4"
                   >
                     Read More
