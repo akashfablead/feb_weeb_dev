@@ -26,6 +26,8 @@ function HRManagement() {
         item2: false,
         item3: false,
         item4: false,
+        item5: false,
+
     });
 
     const handleAccordionToggle = (item) => {
@@ -302,6 +304,49 @@ function HRManagement() {
                                                                         <li><Check2 className="service-icon me-2" /><strong>Job Postings:</strong> Create and publish job openings on the company website or social media platforms.</li>
                                                                         <li><Check2 className="service-icon me-2" /><strong>Applicant Tracking:</strong> Automatically accept or reject applicants based on predefined criteria; conduct background checks.</li>
                                                                         <li><Check2 className="service-icon me-2" /><strong>Onboarding Workflow:</strong> Guide new hires through document submissions, training schedules, and policy introductions.</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+
+                                                            <li>
+                                                                <a
+                                                                    data-bs-toggle="collapse"
+                                                                    className={`collapse ${accordionState.item5 ? "show" : ""}`}
+                                                                    onClick={() => handleAccordionToggle("item5")}
+                                                                >
+                                                                    05. Face Detection & Recognition{" "}
+                                                                    {accordionState.item5 ? (
+                                                                        <ChevronUp className="icon-close float-end" />
+                                                                    ) : (
+                                                                        <ChevronDown className="icon-show float-end" />
+                                                                    )}
+                                                                </a>
+
+                                                                <div
+                                                                    id="accordion-list-4"
+                                                                    className={`collapse ${accordionState.item5 ? "show" : ""}`}
+                                                                    data-bs-parent=".accordion-list"
+                                                                >
+                                                                    <ul className="list-unstyled">
+                                                                        <li>
+                                                                            <Check2 className="service-icon me-2" />
+                                                                            <strong>AI Face Recognition:</strong> Secure and contactless attendance marking with AI-powered facial recognition.
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <Check2 className="service-icon me-2" />
+                                                                            <strong>Real-Time Detection:</strong> Advanced anti-spoofing technology helps prevent fraud and fake attendance.
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <Check2 className="service-icon me-2" />
+                                                                            <strong>System Integration:</strong> Easily integrates with existing attendance and biometric systems.
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <Check2 className="service-icon me-2" />
+                                                                            <strong>Automated Logs:</strong> Attendance records sync directly with payroll and HR management systems.
+                                                                        </li>
                                                                     </ul>
                                                                 </div>
                                                             </li>
