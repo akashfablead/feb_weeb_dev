@@ -25,6 +25,7 @@ function WhatsAppbulk() {
     item2: false,
     item3: false,
     item4: false,
+    item5: false,
   });
 
   const handleAccordionToggle = (item) => {
@@ -58,7 +59,8 @@ function WhatsAppbulk() {
       title: "WhatsApp Bulk Sender",
       alt: "Fablead Technolabs WhatsApp bulk messaging sender feature",
       description:
-        "Send personalized WhatsApp messages to multiple contacts at once. Schedule, manage, and track all your campaigns effortlessly, ensuring every message reaches the right audience on time.",
+        // "Send personalized WhatsApp messages to multiple contacts at once. Schedule, manage, and track all your campaigns effortlessly, ensuring every message reaches the right audience on time.",
+        "Send personalized bulk WhatsApp messages with easy scheduling, tracking, and campaign management tools.",
     },
     {
       img: whattsupProductsImage9,
@@ -66,6 +68,13 @@ function WhatsAppbulk() {
       alt: "Fablead Technolabs WhatsApp contact management feature",
       description:
         "Import, organize, and segment your WhatsApp contacts efficiently for personalized and targeted messaging campaigns.",
+    },
+    {
+      img: whattsupProductsImage9,
+      title: "Real-Time Chats",
+      alt: "Fablead Technolabs WhatsApp real-time chat feature",
+      description:
+        "Manage real-time chats, track conversations, and connect with contacts instantly through one unified messaging platform.",
     },
     {
       img: whattsupProductsImage2,
@@ -360,6 +369,48 @@ function WhatsAppbulk() {
                                 </ul>
                               </div>
                             </li>
+                            <li>
+                              <a
+                                data-bs-toggle="collapse"
+                                className={`collapse ${accordionState.item5 ? "show" : ""}`}
+                                onClick={() => handleAccordionToggle("item5")}
+                              >
+                                05. Real-Time Chat & Messaging{" "}
+                                {accordionState.item5 ? (
+                                  <ChevronUp className="icon-close float-end" />
+                                ) : (
+                                  <ChevronDown className="icon-show float-end" />
+                                )}
+                              </a>
+
+                              <div
+                                id="accordion-list-5"
+                                className={`collapse ${accordionState.item5 ? "show" : ""}`}
+                                data-bs-parent=".accordion-list"
+                              >
+                                <ul className="list-unstyled">
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Unified Chat:</strong> Communicate instantly with all contacts from one interface.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Live Conversations:</strong> View real-time message updates and chat activity.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Quick Search:</strong> Find and filter contacts easily to start messaging faster.
+                                  </li>
+
+                                  <li>
+                                    <Check2 className="service-icon me-2" />
+                                    <strong>Message Tracking:</strong> Track delivery status and engagement for every conversation.
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
                           </ul>
                         </div>
                       </Col>
@@ -381,6 +432,33 @@ function WhatsAppbulk() {
                       loading="lazy"
                       className="img-fluid rounded zoom-img w-100"
                       alt="Fablead Technolabs WhatsApp marketing platform overview"
+                    />
+                  </div>
+
+                  <div>
+                    <Image
+                      src={whattsupProductsImage7}
+                      loading="lazy"
+                      className="img-fluid rounded zoom-img w-100"
+                      alt="WhatsApp campaign management"
+                    />
+                  </div>
+
+                  <div>
+                    <Image
+                      src={whattsupProductsImage11}
+                      loading="lazy"
+                      className="img-fluid rounded zoom-img w-100"
+                      alt="WhatsApp bulk sender"
+                    />
+                  </div>
+
+                  <div>
+                    <Image
+                      src={whattsupProductsImage9}
+                      loading="lazy"
+                      className="img-fluid rounded zoom-img w-100"
+                      alt="WhatsApp contact management"
                     />
                   </div>
 
@@ -486,7 +564,7 @@ function WhatsAppbulk() {
 
               <div className="grid-container">
                 {portfolioItems
-                  .slice(0, 4)
+                  .slice(0, 5)
                   .map(({ img, alt, title, description }, i) => (
                     <div key={i} className="grid-item">
                       <div className="card border-0 portfolio-img text-center mb-0">
