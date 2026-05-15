@@ -493,43 +493,71 @@ function HRManagement() {
                             </Col>
                         </Row>
                         <Row className="portfolio-row">
-                            <Col lg={7}>
+                            <Col lg={7} md={12}>
                                 <div className="grid-container">
                                     {portfolioItems.map(({ items }, rowIndex) => (
-                                        <div key={rowIndex} className="grid-item">
-                                            <Row className="align-items-center">
-                                                {items.map(({ img, alt, title, description }, colIndex) => (
-                                                    <Col key={colIndex} md={12} lg={12} className="">
-                                                        <div className="card border-0 portfolio-img text-center">
-                                                            <div className="image-container-prodect-screens">
-                                                                <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
-                                                            </div>
-                                                            <div className="card-body-prodect-info">
-                                                                <h5 className="card-title">{title}</h5>
-                                                                <p className="card-text text-muted">{description}</p>
-                                                            </div>
+                                        <Row key={rowIndex}>
+                                            {items.map(({ img, alt, title, description }, colIndex) => (
+                                                <Col key={colIndex} lg={12} md={12}>
+                                                    <div
+                                                        className="card border-0 portfolio-img text-center"
+                                                        style={{ height: "auto" }}
+                                                    >
+                                                        <div className="image-container-prodect-screens">
+                                                            <Image
+                                                                src={img}
+                                                                loading="lazy"
+                                                                className="card-img-top"
+                                                                alt={alt}
+                                                                style={{
+                                                                    objectFit: "contain",
+                                                                    width: "100%",
+                                                                    height: "100%",
+                                                                }}
+                                                            />
                                                         </div>
-                                                    </Col>
-                                                ))}
-                                            </Row>
-                                        </div>
+
+                                                        <div
+                                                            className="card-body-prodect-info text-center"
+                                                            style={{ height: "auto" }}
+                                                        >
+                                                            <h5 className="card-title">{title}</h5>
+                                                            <p className="card-text text-muted">
+                                                                {description}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </Col>
+                                            ))}
+                                        </Row>
                                     ))}
                                 </div>
                             </Col>
 
-                            <Col lg={5} className="">
+                            <Col lg={5} md={12}>
                                 <div className="grid-container">
-                                    <div className=" mobile-app-screen">
+                                    <div className="mobile-app-screen">
                                         <Image
                                             src={mobile_screenn_image}
                                             loading="lazy"
-                                            className="img-fluid rounded shadow object-fit-cover"
+                                            className="img-fluid rounded shadow"
                                             alt="Fablead Technolabs HRMS mobile application screens"
+                                            style={{
+                                                objectFit: "contain",
+                                                width: "100%",
+                                                height: "100%",
+                                            }}
                                         />
                                     </div>
-                                    <div>
-                                        <Link className="w-100 btn-learn-more-prodect text-center mt-3" to="/contact">Book Your Free Demo Now <FaArrowCircleRight className="appointment-btn mx-2 mb-1" /></Link>
 
+                                    <div>
+                                        <Link
+                                            className="w-100 btn-learn-more-prodect text-center mt-3"
+                                            to="/contact"
+                                        >
+                                            Book Your Free Demo Now
+                                            <FaArrowCircleRight className="appointment-btn mx-2 mb-1" />
+                                        </Link>
                                     </div>
                                 </div>
                             </Col>

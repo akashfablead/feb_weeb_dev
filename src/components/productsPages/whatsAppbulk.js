@@ -577,16 +577,17 @@ function WhatsAppbulk() {
                   .slice(0, 5)
                   .map(({ img, alt, title, description }, i) => (
                     <div key={i} className="grid-item">
-                      <div className="card border-0 portfolio-img text-center mb-0">
+                      <div className="card border-0 portfolio-img text-center mb-0" style={{ height: "auto" }}>
                         <div className="image-container-prodect-screens">
                           <Image
                             src={img}
                             loading="lazy"
                             className="card-img-top"
                             alt={alt}
+                            style={{ objectFit: "contain" }}
                           />
                         </div>
-                        <div className="card-body-prodect-info text-center">
+                        <div className="card-body-prodect-info text-center" style={{ height: "auto" }}>
                           <h5 className="card-title">{title}</h5>
                           <p className="card-text text-muted">{description}</p>
                         </div>

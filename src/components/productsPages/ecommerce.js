@@ -325,11 +325,11 @@ function EcommerceAndMobileApp() {
                     <Row key={rowIndex} className="">
                       {items.map(({ img, title, alt, description }, colIndex) => (
                         <Col key={colIndex} lg={12} md={12} className="">
-                          <div className="card border-0 portfolio-img text-center">
+                          <div className="card border-0 portfolio-img text-center" style={{ height: "auto" }}>
                             <div className="image-container-prodect-screens">
-                              <Image src={img} loading="lazy" className="card-img-top" alt={alt} />
+                              <Image src={img} loading="lazy" className="card-img-top" alt={alt} style={{ objectFit: "contain" }} />
                             </div>
-                            <div className="card-body-prodect-info text-center">
+                            <div className="card-body-prodect-info text-center" style={{ height: "auto" }}>
                               <h5 className="card-title">{title}</h5>
                               <p className="card-text text-muted">{description}</p>
                             </div>
