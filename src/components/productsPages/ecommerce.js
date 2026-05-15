@@ -6,7 +6,7 @@ import Header from "../headers";
 import Footer from "../footer";
 import TopBar from "../topBar";
 import All_Products from '../../assets/images/Products/ecommerce/fableadtechnolabs-ecommerce-all-products-page.png';
-import Ecom_admin from '../../assets/images/Products/ecommerce/fableadtechnolabs-ecommerce-admin-dashboard.jpeg';
+import Ecom_admin from '../../assets/images/Products/ecommerce/fableadtechnolabs-ecommerce-admin-dashboard.png';
 import Cart from '../../assets/images/Products/ecommerce/fableadtechnolabs-ecommerce-shopping-cart-page.png';
 import checkout from '../../assets/images/Products/ecommerce/fableadtechnolabs-ecommerce-secure-checkout-page.png';
 import E_commerce from '../../assets/images/Products/ecommerce/Ecommerce.png';
