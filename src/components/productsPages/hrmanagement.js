@@ -10,6 +10,7 @@ import attendance_page_img_feb from "../../assets/images/Products/HRMS/fableadte
 import employee_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-employee-management-page.png";
 import leave_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-leave-management-page.png";
 import manage_attendance_page_img_feb from "../../assets/images/Products/HRMS/fableadtechnolabs-hrms-manage-attendance-page.png";
+import face_detection from "../../assets/images/Products/HRMS/hrms-face-detection.png";
 
 import InnerCallToLog from "../innerCallToLog";
 import { Check2, ChevronDown, ChevronUp, } from "react-bootstrap-icons";
@@ -373,6 +374,9 @@ function HRManagement() {
                                     </div>
                                     <div>
                                         <Image src={manage_attendance_page_img_feb} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS manage attendance page" />
+                                    </div>
+                                    <div>
+                                        <Image src={face_detection} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs HRMS face detection page" />
                                     </div>
                                 </Slider>
                             </Col>
