@@ -42,6 +42,8 @@ import VzyCart from "../assets/images/portfolioImages/mobileApp/VzyCart.webp";
 import Altallahcrc from "../assets/images/portfolioImages/mobileApp/Altallahcrc.webp";
 import Jigshow from "../assets/images/portfolioImages/mobileApp/jigshow.webp";
 import Eskil from "../assets/images/portfolioImages/react/reactimage-min.webp";
+import FableadStudio from "../assets/images/portfolioImages/react/fablead-studio.png";
+import stagshrishti from "../assets/images/portfolioImages/react/stagshrishtirip.png";
 import ReactFablead from "../assets/images/portfolioImages/react/react-fablead.webp";
 import newIcon from "../assets/images/portfolioImages/react/ToDoImage.webp";
 import Fliho from "../assets/images/portfolioImages/Fliho.png";
@@ -396,29 +398,43 @@ const portfolioItems = [
     image: Jigshow,
     filterClass: "filter-mobile-app",
   },
-  {
+   {
     id: 49,
+    title: "Fablead Studio",
+    description: "React JS",
+    image: FableadStudio,
+    filterClass: "filter-react",
+  },
+   {
+    id: 50,
+    title: "Shrishti Trip",
+    description: "React JS",
+    image: stagshrishti,
+    filterClass: "filter-react",
+  },
+  {
+    id: 51,
     title: "Eskil",
     description: "React JS",
     image: Eskil,
     filterClass: "filter-react",
   },
   {
-    id: 50,
+    id: 52,
     title: "Fablead Developers Technolab",
     description: "React JS",
     image: ReactFablead,
     filterClass: "filter-react",
   },
   {
-    id: 51,
+    id: 53,
     image: whatsappbluk,
     title: "WhatsApp Bulk Messaging",
     description: "React JS",
     filterClass: "filter-react",
   },
   {
-    id: 52,
+    id: 54,
     image: tanishphysiofitness,
     title: "Tanish Physio & Fitness",
     description: "React JS",

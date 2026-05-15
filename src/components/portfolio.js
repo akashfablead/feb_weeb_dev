@@ -37,6 +37,8 @@ import Wedding from "../assets/images/portfolioImages/mobileApp/weddingTouch.web
 import VzyCart from "../assets/images/portfolioImages/mobileApp/VzyCart.webp";
 import Altallahcrc from "../assets/images/portfolioImages/mobileApp/Altallahcrc.webp";
 import Eskil from "../assets/images/portfolioImages/react/reactimage-min.webp";
+import FableadStudio from "../assets/images/portfolioImages/react/fablead-studio.png";
+import stagshrishti from "../assets/images/portfolioImages/react/stagshrishtirip.png";
 import ReactFablead from "../assets/images/portfolioImages/react/react-fablead.webp";
 import newIcon from "../assets/images/portfolioImages/react/ToDoImage.webp";
 import Fliho from "../assets/images/portfolioImages/Fliho.png";
@@ -411,36 +413,50 @@ function Portfolio() {
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-    {
+     {
       id: 47,
+      image: FableadStudio,
+      title: "Fablead Studio",
+      category: "filter-react",
+      description: "React JS",
+    },
+     {
+      id: 48,
+      image: stagshrishti,
+      title: "Shrishti Trip",
+      category: "filter-react",
+      description: "React JS",
+    },
+     {
+      id: 49,
       image: Eskil,
       title: "eSkil",
       category: "filter-react",
       description: "React JS",
     },
     {
-      id: 48,
+      id: 50,
       image: ReactFablead,
       title: "Fablead Developers Technolab",
       category: "filter-react",
       description: "React JS",
     },
     {
-      id: 49,
+      id: 51,
       image: newIcon,
       title: "ToDo-App",
       category: "filter-react",
       description: "React Native",
     },
     {
-      id: 50,
+      id: 52,
       image: whatsappbluk,
       title: "WhatsApp Bulk Messaging",
       category: "filter-react",
       description: "React JS",
     },
     {
-      id: 51,
+      id: 53,
       image: tanishphysiofitness,
       title: "Tanish Physio & Fitness",
       category: "filter-react",
