@@ -123,6 +123,14 @@ function Footer() {
                       Website Development
                     </Link>
                   </li>
+                  <li>
+                    <i>
+                      <ChevronDoubleRight />
+                    </i>{" "}
+                    <Link to="/services/ai-tools">
+                      AI Tools & Automation
+                    </Link>
+                  </li>
                   {/* <li>
                     <i>
                       <ChevronDoubleRight />
@@ -184,12 +192,7 @@ function Footer() {
                       Server Manage & Support{" "}
                     </Link>
                   </li>
-                  <li>
-                    <i>
-                      <ChevronDoubleRight />
-                    </i>{" "}
-                    <Link to="/services/seo-service">Search Engine Optimization </Link>
-                  </li>
+
                   {/* add new services */}
                 </ul>
               </Col>

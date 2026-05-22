@@ -106,7 +106,7 @@ function AIToolsService() {
                     <div className={`collapse ${accordionState.item3 ? "show" : ""}`}>
                       <p>
                         <ChevronDoubleRight className="service-icon" aria-hidden="true" />
-                        We leverage modern AI toolkits, APIs, natural language processing, automation scripts, and data integration to create solutions that fit your existing web and app ecosystem.
+                        We use advanced technologies and platforms such as Laravel, CodeIgniter, Node.js, Python/Django, React.js and Angular to build scalable digital solutions.
                       </p>
                     </div>
                   </li>

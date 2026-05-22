@@ -336,6 +336,9 @@ function Contact() {
                             Website Development
                           </option>
                           <option value="Web Design">Web Design</option>
+                          <option value="AI Tools & Automation">
+                            AI Tools & Automation
+                          </option>
                           <option value="E-commerce Development">
                             E-commerce Development
                           </option>

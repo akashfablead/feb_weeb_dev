@@ -32,6 +32,7 @@ import ShaterShack from "../assets/images/portfolioImages/shuter-shack.webp";
 import MIXAIDA from "../assets/images/portfolioImages/MIXAIDA-WERF.webp";
 import Jackeames from "../assets/images/portfolioImages/jack-eames.webp";
 import ParkPal from "../assets/images/portfolioImages/mobileApp/parkpal.webp";
+import dateonmobile from "../assets/images/portfolioImages/mobileApp/dateon.webp";
 import fableadstudiomobile from "../assets/images/portfolioImages/mobileApp/fablead-studio-mobile.webp";
 import Localwala from "../assets/images/portfolioImages/mobileApp/Localwala.webp";
 import Udibaba from "../assets/images/portfolioImages/mobileApp/udibaba.webp";
@@ -60,6 +61,9 @@ import Pharmaxy from "../assets/images/portfolioImages/Pharmaxy.png";
 import parkpal from "../assets/images/portfolioImages/parkpal.png";
 import whatsappbluk from "../assets/images/portfolioImages/react/whatsappBulk.png";
 import tanishphysiofitness from "../assets/images/portfolioImages/react/tanishphysiofitness.png";
+import hrmanagement from "../assets/images/portfolioImages/hrmanagement.png";
+import crmewebileapp from "../assets/images/portfolioImages/crmeweb.png";
+
 
 const portfolioItems = [
   {
@@ -322,13 +326,20 @@ const portfolioItems = [
     filterClass: "filter-squarespace",
   },
   {
+    id: 56,
+    image: dateonmobile,
+    title: "Dateon",
+    description: "Mobile App",
+    filterClass: "filter-mobile-app",
+  },
+  {
     id: 38,
     title: "Fablead Studio",
     description: "Mobile App",
     image: fableadstudiomobile,
     filterClass: "filter-mobile-app",
   },
-   {
+  {
     id: 39,
     title: "ParkPal App",
     description: "Mobile App",
@@ -356,21 +367,20 @@ const portfolioItems = [
     image: Grubb,
     filterClass: "filter-mobile-app",
   },
-  {
-    id: 43,
-    title: "Grubb Bolt",
-    description: "Mobile App",
-    image: GrubbBolt,
-    filterClass: "filter-mobile-app",
-  },
-  {
-    id: 44,
-    title: "Grubb Merchant",
-    description: "Mobile App",
-    image: GrubbMerchant,
-    filterClass: "filter-mobile-app",
-  },
-
+  // {
+  //   id: 43,
+  //   title: "Grubb Bolt",
+  //   description: "Mobile App",
+  //   image: GrubbBolt,
+  //   filterClass: "filter-mobile-app",
+  // },
+  // {
+  //   id: 44,
+  //   title: "Grubb Merchant",
+  //   description: "Mobile App",
+  //   image: GrubbMerchant,
+  //   filterClass: "filter-mobile-app",
+  // },
   {
     id: 45,
     title: "Wedding Touch",
@@ -392,13 +402,7 @@ const portfolioItems = [
     image: Altallahcrc,
     filterClass: "filter-mobile-app",
   },
-  {
-    id: 48,
-    title: "ToDo App",
-    description: "React Native",
-    image: newIcon,
-    filterClass: "filter-react",
-  },
+
   {
     id: 49,
     title: "Jigsaw",
@@ -406,14 +410,14 @@ const portfolioItems = [
     image: Jigshow,
     filterClass: "filter-mobile-app",
   },
-   {
+  {
     id: 50,
     title: "Fablead Studio",
     description: "React JS",
     image: FableadStudio,
     filterClass: "filter-react",
   },
-   {
+  {
     id: 51,
     title: "Shrishti Trip",
     description: "React JS",
@@ -447,6 +451,27 @@ const portfolioItems = [
     title: "Tanish Physio & Fitness",
     description: "React JS",
     filterClass: "filter-react",
+  },
+  {
+    id: 48,
+    title: "ToDo App",
+    description: "React Native",
+    image: newIcon,
+    filterClass: "filter-react",
+  },
+  {
+    id: 56,
+    image: hrmanagement,
+    title: "HR Management",
+    filterClass: "filter-ai-tools",
+    description: "AI Automation",
+  },
+  {
+    id: 57,
+    image: crmewebileapp,
+    title: "CRM Web & Mobile App",
+    filterClass: "filter-ai-tools",
+    description: "AI Automation",
   },
 ];
 
@@ -512,6 +537,9 @@ function PortfolioPage() {
           </li>
           <li data-filter=".filter-mobile-app">
             <span>MOBILE APP</span>
+          </li>
+          <li data-filter=".filter-ai-tools">
+            <span>AI TOOLS</span>
           </li>
           <li data-filter=".filter-react">
             <span>REACT & REACT NATIVE</span>

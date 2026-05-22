@@ -1,4 +1,4 @@
-import { faCartArrowDown, faDesktop, faMobileScreenButton, faTv, faDiamond, faCogs, faServer, faPaintBrush, faStore, } from "@fortawesome/free-solid-svg-icons";
+import { faCartArrowDown, faDesktop, faMobileScreenButton, faRobot, faTv, faDiamond, faCogs, faServer, faPaintBrush, faStore, } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useEffect } from "react";
@@ -85,7 +85,38 @@ function Services() {
               </div>
             </div>
           </Col>
-
+          <Col
+            xl={4}
+            md={6}
+            className="mb-3 d-flex align-items-stretch mt-4 mt-md-0"
+            data-aos="zoom-in"
+          >
+            <div className="icon-box ">
+              <div className="icon text-center w-100">
+                <div className="mainicon-div">
+                  <i>
+                    <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
+                  </i>
+                </div>
+              </div>
+              <h4 className="text-center">
+                <Link to="/services/ai-tools">
+                  AI Tools & Automation
+                </Link>
+              </h4>
+              <p className="text-center">
+                We build smart AI tools and automation solutions that improve workflowsand overall business performance.
+              </p>
+              <div className="text-center">
+                <Link
+                  to="/services/ai-tools"
+                  className="btn-learn-more mt-4"
+                >
+                  Read More
+                </Link>
+              </div>
+            </div>
+          </Col>
           <Col
             xl={4}
             md={6}
@@ -119,7 +150,6 @@ function Services() {
               </div>
             </div>
           </Col>
-
           <Col
             xl={4}
             md={6}
@@ -290,7 +320,7 @@ function Services() {
               </div>
             </div>
           </Col>
-          <Col
+          {/* <Col
             xl={4}
             md={6}
             className="d-flex align-items-stretch pt-3 mt-xl-0"
@@ -324,7 +354,7 @@ function Services() {
                 </Link>
               </div>
             </div>
-          </Col>
+          </Col> */}
           {/* add new services  */}
         </Row>
       </Container>

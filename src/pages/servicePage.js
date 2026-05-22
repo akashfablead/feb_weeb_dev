@@ -99,6 +99,46 @@ function ServicePage() {
             <Col
               xl={4}
               md={6}
+              className="mb-3 d-flex align-items-stretch mt-4 mt-md-0"
+              data-aos="zoom-in"
+            >
+              <div className="icon-box ">
+                {/* <div className="icon text-center  w-100">
+                  <div className="mainicon-div">
+                    <i>
+                      <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
+                    </i>
+                  </div>
+                </div> */}
+                <div className="icon text-center w-100">
+                  <div className="mainicon-div">
+                    <i>
+                      <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
+                    </i>
+                  </div>
+                </div>
+                <h4 className="text-center">
+                  <Link to="/services/ai-tools">
+                    AI Tools & Automation
+                  </Link>
+                </h4>
+                <p className="text-center">
+                  We build smart AI tools and automation solutions that improve workflowsand overall business performance.                
+                  </p>
+                <div className="text-center">
+                  <Link
+                    to="/services/ai-tools"
+                    className="btn-learn-more mt-4"
+                  >
+                    Read More
+                  </Link>
+                </div>
+              </div>
+            </Col>
+
+            <Col
+              xl={4}
+              md={6}
               className="mb-3 d-flex align-items-stretch mt-4 mt-xl-0"
               data-aos="zoom-in"
             >
@@ -331,38 +371,7 @@ function ServicePage() {
                 </div>
               </div>
             </Col>
-            <Col
-              xl={4}
-              md={6}
-              className="d-flex align-items-stretch pt-4 pb-4 mt-xl-0"
-              data-aos="zoom-in"
-            >
-              <div className="icon-box ">
-                <div className="icon text-center  w-100">
-                  <div className="mainicon-div">
-                    <i>
-                      <FontAwesomeIcon icon={faRobot} aria-hidden="true" />
-                    </i>
-                  </div>
-                </div>
-                <h4 className="text-center">
-                  <Link to="/services/ai-tools">
-                    AI Tools & Automation
-                  </Link>
-                </h4>
-                <p className="text-center">
-                  We deliver AI tools and automation support that enhance digital workflows, optimize customer engagement, and power smarter websites, apps, and business systems.
-                </p>
-                <div className="text-center">
-                  <Link
-                    to="/services/ai-tools"
-                    className="btn-learn-more mt-4"
-                  >
-                    Read More
-                  </Link>
-                </div>
-              </div>
-            </Col>
+
             {/* add more new services */}
           </Row>
         </Container>

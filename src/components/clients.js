@@ -41,7 +41,7 @@ function Clients() {
       alt: "Graphics",
       style: { width: isMobile ? "50%" : "100%", height: isMobile ? "50%" : "100%" }
     },
-    { src: SEO, alt: "SEO" ,style: { width: isMobile ? "50%" : "100%", height: isMobile ? "50%" : "100%" }},
+    { src: SEO, alt: "SEO", style: { width: isMobile ? "50%" : "100%", height: isMobile ? "50%" : "100%" } },
   ];
 
   const sliderSettings = {
@@ -71,29 +71,29 @@ function Clients() {
       style={{ padding: "40px 0" }}
     >
       <Container>
-      <div class="section-heading">
-  <h2>Our Technologies</h2>
-</div>
+        <div class="section-heading">
+          <h2>Our Technologies</h2>
+        </div>
         {isMobile ? (
           // Mobile: Show slider with 2 logos per slide
           <Slider {...sliderSettings} className="">
-          {clients.map(({ src, alt, style }, index) => (
-            <div
-              key={index}
-              className="mb-3 d-flex align-items-center justify-content-center"
-            >
-              <div className="technology_img mobileView bg-white d-flex justify-content-center align-items-center p-2 mx-2">
-                <Image
-                  src={src}
-                  className="img-fluid mobileViewImg"
-                  alt={alt}
+            {clients.map(({ src, alt, style }, index) => (
+              <div
+                key={index}
+                className="mb-3 d-flex align-items-center justify-content-center"
+              >
+                <div className="technology_img mobileView bg-white d-flex justify-content-center align-items-center p-2 mx-2">
+                  <Image
+                    src={src}
+                    className="img-fluid mobileViewImg"
+                    alt={alt}
                   // style={style}
-                />
+                  />
+                </div>
               </div>
-            </div>
-          ))}
-        </Slider>
-        
+            ))}
+          </Slider>
+
         ) : (
           // Desktop & Tablet: Show grid exactly like your original code
           <Row data-aos="zoom-in" c>

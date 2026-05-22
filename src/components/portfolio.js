@@ -28,6 +28,7 @@ import ShaterShack from "../assets/images/portfolioImages/shuter-shack.webp";
 import MIXAIDA from "../assets/images/portfolioImages/MIXAIDA-WERF.webp";
 import Jackeames from "../assets/images/portfolioImages/jack-eames.webp";
 import ParkPal from "../assets/images/portfolioImages/mobileApp/parkpal.webp";
+import dateonmobile from "../assets/images/portfolioImages/mobileApp/dateon.webp";
 import fableadstudiomobile from "../assets/images/portfolioImages/mobileApp/fablead-studio-mobile.webp";
 import Localwala from "../assets/images/portfolioImages/mobileApp/Localwala.webp";
 import Udibaba from "../assets/images/portfolioImages/mobileApp/udibaba.webp";
@@ -56,6 +57,8 @@ import parkpal from "../assets/images/portfolioImages/parkpal.png";
 import useWindowDimensions from "../hooks/useWindowDimensions";
 import whatsappbluk from "../assets/images/portfolioImages/react/whatsappBulk.png";
 import tanishphysiofitness from "../assets/images/portfolioImages/react/tanishphysiofitness.png";
+import hrmanagement from "../assets/images/portfolioImages/hrmanagement.png";
+import crmewebileapp from "../assets/images/portfolioImages/crmeweb.png";
 
 function Portfolio() {
   const { width } = useWindowDimensions();
@@ -351,13 +354,21 @@ function Portfolio() {
       category: "filter-squarespace",
       description: "Squarespace",
     },
-     {
+    {
+      id: 56,
+      image: dateonmobile,
+      title: "Dateon",
+      category: "filter-mobile-app",
+      description: "Mobile App",
+    },
+    {
       id: 38,
       image: fableadstudiomobile,
       title: "Fablead Studio",
       category: "filter-mobile-app",
       description: "Mobile App",
     },
+
     {
       id: 39,
       image: ParkPal,
@@ -386,20 +397,20 @@ function Portfolio() {
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-    {
-      id: 43,
-      image: GrubbBolt,
-      title: "Grubb Bolt",
-      category: "filter-mobile-app",
-      description: "Mobile App",
-    },
-    {
-      id: 44,
-      image: GrubbMerchant,
-      title: "Grubb Merchant",
-      category: "filter-mobile-app",
-      description: "Mobile App",
-    },
+    // {
+    //   id: 43,
+    //   image: GrubbBolt,
+    //   title: "Grubb Bolt",
+    //   category: "filter-mobile-app",
+    //   description: "Mobile App",
+    // },
+    // {
+    //   id: 44,
+    //   image: GrubbMerchant,
+    //   title: "Grubb Merchant",
+    //   category: "filter-mobile-app",
+    //   description: "Mobile App",
+    // },
     {
       id: 45,
       image: VzyCart,
@@ -421,21 +432,22 @@ function Portfolio() {
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-     {
+    {
       id: 48,
       image: FableadStudio,
       title: "Fablead Studio",
       category: "filter-react",
       description: "React JS",
     },
-     {
+
+    {
       id: 49,
       image: stagshrishti,
       title: "Shrishti Trip",
       category: "filter-react",
       description: "React JS",
     },
-     {
+    {
       id: 50,
       image: Eskil,
       title: "eSkil",
@@ -451,25 +463,40 @@ function Portfolio() {
     },
     {
       id: 52,
-      image: newIcon,
-      title: "ToDo-App",
-      category: "filter-react",
-      description: "React Native",
-    },
-    {
-      id: 53,
       image: whatsappbluk,
       title: "WhatsApp Bulk Messaging",
       category: "filter-react",
       description: "React JS",
     },
     {
-      id: 54,
+      id: 53,
       image: tanishphysiofitness,
       title: "Tanish Physio & Fitness",
       category: "filter-react",
       description: "React JS",
     },
+    {
+      id: 54,
+      image: newIcon,
+      title: "ToDo-App",
+      category: "filter-react",
+      description: "React Native",
+    },
+    {
+      id: 55,
+      image: hrmanagement,
+      title: "HR Management",
+      category: "filter-ai-tools",
+      description: "AI Automation",
+    },
+    {
+      id: 56,
+      image: crmewebileapp,
+      title: "CRM Web & Mobile App",
+      category: "filter-ai-tools",
+      description: "AI Automation",
+    },
+
   ];
   const filteredItems = portfolioItems.filter((item) => {
     if (activeFilter === "*") return true;
@@ -481,7 +508,7 @@ function Portfolio() {
   return (
     <section id="portfolio" className="portfolio section-bg">
       <Container data-aos="fade-up">
-        <div className="section-heading"> 
+        <div className="section-heading">
           <h2>Our Works</h2>
         </div>
 
@@ -531,6 +558,15 @@ function Portfolio() {
             onClick={() => setActiveFilter(".filter-mobile-app")}
           >
             <span>MOBILE APP</span>
+          </li>
+          <li
+            data-filter=".filter-ai-tools"
+            className={
+              activeFilter === ".filter-ai-tools" ? "filter-active" : ""
+            }
+            onClick={() => setActiveFilter(".filter-ai-tools")}
+          >
+            <span>AI TOOLS</span>
           </li>
           <li
             data-filter=".filter-react"
