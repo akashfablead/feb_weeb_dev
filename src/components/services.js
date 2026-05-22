@@ -105,7 +105,7 @@ function Services() {
                 </Link>
               </h4>
               <p className="text-center">
-                We build smart AI tools and automation solutions that improve workflowsand overall business performance.
+                We build smart AI tools and automation solutions that improve workflows and overall business performance.
               </p>
               <div className="text-center">
                 <Link

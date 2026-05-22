@@ -66,13 +66,7 @@ import crmewebileapp from "../assets/images/portfolioImages/crmeweb.png";
 
 
 const portfolioItems = [
-  {
-    id: 1,
-    title: "Fliho",
-    description: "React JS and Laravel",
-    image: Fliho,
-    filterClass: "filter-react",
-  },
+
   {
     id: 2,
     title: "UNP Medical School",
@@ -325,27 +319,30 @@ const portfolioItems = [
     image: Jackeames,
     filterClass: "filter-squarespace",
   },
+
   {
     id: 56,
-    image: dateonmobile,
-    title: "Dateon",
-    description: "Mobile App",
-    filterClass: "filter-mobile-app",
-  },
-  {
-    id: 38,
     title: "Fablead Studio",
     description: "Mobile App",
     image: fableadstudiomobile,
     filterClass: "filter-mobile-app",
   },
   {
-    id: 39,
-    title: "ParkPal App",
+    id: 38,
+    title: "Jigsaw",
     description: "Mobile App",
-    image: ParkPal,
+    image: Jigshow,
     filterClass: "filter-mobile-app",
   },
+  {
+    id: 49,
+    image: dateonmobile,
+    title: "Dateon",
+    description: "Mobile App",
+    filterClass: "filter-mobile-app",
+  },
+
+
   {
     id: 40,
     title: "Localwala",
@@ -397,40 +394,62 @@ const portfolioItems = [
   },
   {
     id: 47,
+    title: "ParkPal App",
+    description: "Mobile App",
+    image: ParkPal,
+    filterClass: "filter-mobile-app",
+  },
+  {
+    id: 39,
     title: "Altallahcrc",
     description: "Mobile App",
     image: Altallahcrc,
     filterClass: "filter-mobile-app",
   },
-
-  {
-    id: 49,
-    title: "Jigsaw",
-    description: "Mobile App",
-    image: Jigshow,
-    filterClass: "filter-mobile-app",
-  },
   {
     id: 50,
-    title: "Fablead Studio",
+    title: "Fliho",
+    description: "React JS and Laravel",
+    image: Fliho,
+    filterClass: "filter-react",
+  },
+  {
+    id: 1,
+    title: "Eskil",
     description: "React JS",
-    image: FableadStudio,
+    image: Eskil,
     filterClass: "filter-react",
   },
   {
     id: 51,
+    image: tanishphysiofitness,
+    title: "Tanish Physio & Fitness",
+    description: "React JS",
+    filterClass: "filter-react",
+  },
+  {
+    id: 52,
+    image: whatsappbluk,
+    title: "WhatsApp Bulk Messaging",
+    description: "React JS",
+    filterClass: "filter-react",
+  },
+  {
+    id: 54,
     title: "Shrishti Trip",
     description: "React JS",
     image: stagshrishti,
     filterClass: "filter-react",
   },
   {
-    id: 52,
-    title: "Eskil",
+    id: 55,
+    title: "Fablead Studio",
     description: "React JS",
-    image: Eskil,
+    image: FableadStudio,
     filterClass: "filter-react",
   },
+
+
   {
     id: 53,
     title: "Fablead Developers Technolab",
@@ -438,20 +457,8 @@ const portfolioItems = [
     image: ReactFablead,
     filterClass: "filter-react",
   },
-  {
-    id: 54,
-    image: whatsappbluk,
-    title: "WhatsApp Bulk Messaging",
-    description: "React JS",
-    filterClass: "filter-react",
-  },
-  {
-    id: 55,
-    image: tanishphysiofitness,
-    title: "Tanish Physio & Fitness",
-    description: "React JS",
-    filterClass: "filter-react",
-  },
+
+
   {
     id: 48,
     title: "ToDo App",
@@ -478,28 +485,58 @@ const portfolioItems = [
 function PortfolioPage() {
   useEffect(() => {
     const portfolioContainer = document.querySelector(".portfolio-container");
-    if (portfolioContainer) {
-      const portfolioIsotope = new Isotope(portfolioContainer, {
+    let portfolioIsotope = null;
+    let portfolioFilters = null;
+    const imageListeners = [];
+
+    function onFilterClick(e) {
+      e.preventDefault();
+      if (!portfolioFilters || !portfolioIsotope) return;
+      portfolioFilters.forEach((el) => el.classList.remove("filter-active"));
+      const target = e.currentTarget || e.target;
+      target.classList.add("filter-active");
+      portfolioIsotope.arrange({ filter: target.getAttribute("data-filter") });
+    }
+
+    function initIsotope() {
+      if (!portfolioContainer) return;
+      portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: ".portfolio-item",
       });
 
-      const portfolioFilters = document.querySelectorAll(
-        "#portfolio-flters li"
-      );
-      portfolioFilters.forEach((filter) => {
-        filter.addEventListener("click", (e) => {
-          e.preventDefault();
-          portfolioFilters.forEach((el) => {
-            el.classList.remove("filter-active");
-          });
-          filter.classList.add("filter-active");
-          portfolioIsotope.arrange({
-            filter: filter.getAttribute("data-filter"),
-          });
-        });
+      // Re-layout when images finish loading (helps Isotope calculate sizes)
+      const imgs = portfolioContainer.querySelectorAll("img");
+      imgs.forEach((img) => {
+        const onLoad = () => portfolioIsotope.layout();
+        if (img.complete) {
+          // image already loaded
+          portfolioIsotope.layout();
+        } else {
+          img.addEventListener("load", onLoad);
+          imageListeners.push({ img, onLoad });
+        }
       });
+
+      portfolioFilters = document.querySelectorAll("#portfolio-flters li");
+      portfolioFilters.forEach((filter) => filter.addEventListener("click", onFilterClick));
     }
+
+    initIsotope();
+
+    // In some SPA navigations images or DOM may render slightly later — try again briefly
+    const initRetry = setTimeout(() => {
+      if (!portfolioIsotope) initIsotope();
+    }, 300);
+
     window.scrollTo(0, 0);
+
+    return () => {
+      clearTimeout(initRetry);
+      if (portfolioFilters)
+        portfolioFilters.forEach((filter) => filter.removeEventListener("click", onFilterClick));
+      imageListeners.forEach(({ img, onLoad }) => img.removeEventListener("load", onLoad));
+      if (portfolioIsotope) portfolioIsotope.destroy();
+    };
   }, []);
 
   return (
@@ -510,7 +547,7 @@ function PortfolioPage() {
         <div className="section-title1">
           <div className="pt-5" role="heading" aria-level="1">Portfolio</div>
           <p className="header-content">
-            We build and develop web applications & mobile applications <br />
+            We build and develop web & mobile applications <br />
             to improve your business & take your Services to new heights.
           </p>
         </div>
@@ -546,7 +583,7 @@ function PortfolioPage() {
           </li>
         </ul>
         <div className="container">
-          <Row
+          {/* <Row
             className="portfolio-container "
             data-aos="fade-up"
             data-aos-delay="200"
@@ -572,6 +609,38 @@ function PortfolioPage() {
                 </div>
               </Col>
             ))}
+          </Row> */}
+          <Row
+            className="portfolio-container "
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            {[...portfolioItems]
+              .sort((a, b) => b.id - a.id)
+              .map((item, idx) => (
+                <Col
+                  lg={4}
+                  sm={6}
+                  xs={12}
+                  key={`${item.id}-${idx}`}
+                  className={`portfolio-item ${item.filterClass}`}
+                >
+                  <div className="position-div portfolio-div">
+                    <div className="portfolio-img text-center">
+                      <Image
+                        src={item.image}
+                        className="portfolio-img"
+                        alt={item.title}
+                      />
+                    </div>
+
+                    <div className="portfolio-info text-center">
+                      <h4>{item.title}</h4>
+                      <p>{item.description}</p>
+                    </div>
+                  </div>
+                </Col>
+              ))}
           </Row>
         </div>
       </section>

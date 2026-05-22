@@ -350,14 +350,13 @@ function CRM() {
                                 className={`collapse ${accordionState.item4 ? "show" : ""}`}
                                 onClick={() => handleAccordionToggle("item4")}
                               >
-                                04. Chat with AI Assistant{" "}
+                                04. AI Assistant & Smart Automation{" "}
                                 {accordionState.item4 ? (
                                   <ChevronUp className="icon-close float-end" />
                                 ) : (
                                   <ChevronDown className="icon-show float-end" />
                                 )}
                               </a>
-
                               <div
                                 id="accordion-list-4"
                                 className={`collapse ${accordionState.item4 ? "show" : ""}`}
@@ -434,7 +433,7 @@ function CRM() {
                     />
                   </div>
 
-                   <div>
+                  <div>
                     <Image
                       src={crmwp}
                       loading="lazy"
@@ -442,7 +441,7 @@ function CRM() {
                       alt="Fablead Technolabs Whatsapp chats management dashboard"
                     />
                   </div>
-                  
+
                 </Slider>
               </Col>
             </Row>

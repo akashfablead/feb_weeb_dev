@@ -24,7 +24,7 @@ function ServicePage() {
           <div className=" pt-5" role="heading" aria-level="1">Services</div>
           <p className="header-content">
             Accelerate internal process & develop / design <br />
-            web applications & mobile applications as per requirements.
+            web & mobile applications as per requirements.
           </p>
         </div>
         <Container className=" content1" data-aos="fade-up">
@@ -123,8 +123,8 @@ function ServicePage() {
                   </Link>
                 </h4>
                 <p className="text-center">
-                  We build smart AI tools and automation solutions that improve workflowsand overall business performance.                
-                  </p>
+                  We build smart AI tools and automation solutions that improve workflows and overall business performance.
+                </p>
                 <div className="text-center">
                   <Link
                     to="/services/ai-tools"

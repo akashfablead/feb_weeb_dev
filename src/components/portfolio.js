@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Row, Col, Image, Container } from "react-bootstrap";
-import Isotope from "isotope-layout";
 import callsforspeakers from "../assets/images/portfolioImages/callsforspeakers.webp";
 import xero from "../assets/images/portfolioImages/xero.webp";
 import healthNutricial from "../assets/images/portfolioImages/health-nutricial.webp";
@@ -67,40 +66,21 @@ function Portfolio() {
 
   const [activeFilter, setActiveFilter] = useState("*");
 
-  useEffect(() => {
-    const portfolioContainer = document.querySelector(".portfolio-container");
-    if (portfolioContainer) {
-      const iso = new Isotope(portfolioContainer, {
-        itemSelector: ".portfolio-item",
-        layoutMode: "fitRows",
-      });
-
-      const filters = document.querySelectorAll("#portfolio-flters li");
-
-      filters.forEach((filter) => {
-        filter.addEventListener("click", function (e) {
-          e.preventDefault();
-          filters.forEach((el) => el.classList.remove("filter-active"));
-          this.classList.add("filter-active");
-
-          const filterValue = this.getAttribute("data-filter");
-          setActiveFilter(filterValue);
-        });
-      });
-
-      return () => {
-        if (iso) iso.destroy();
-      };
-    }
-  }, []);
-
   const portfolioItems = [
     {
-      id: 1,
+      id: 50,
       image: Fliho,
       title: "Fliho",
       category: "filter-react",
       description: "React JS and Laravel",
+    },
+
+    {
+      id: 1,
+      image: Eskil,
+      title: "eSkil",
+      category: "filter-react",
+      description: "React JS",
     },
     {
       id: 2,
@@ -361,21 +341,9 @@ function Portfolio() {
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-    {
-      id: 38,
-      image: fableadstudiomobile,
-      title: "Fablead Studio",
-      category: "filter-mobile-app",
-      description: "Mobile App",
-    },
 
-    {
-      id: 39,
-      image: ParkPal,
-      title: "ParkPal",
-      category: "filter-mobile-app",
-      description: "Mobile App",
-    },
+
+
     {
       id: 40,
       image: Localwala,
@@ -397,20 +365,6 @@ function Portfolio() {
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-    // {
-    //   id: 43,
-    //   image: GrubbBolt,
-    //   title: "Grubb Bolt",
-    //   category: "filter-mobile-app",
-    //   description: "Mobile App",
-    // },
-    // {
-    //   id: 44,
-    //   image: GrubbMerchant,
-    //   title: "Grubb Merchant",
-    //   category: "filter-mobile-app",
-    //   description: "Mobile App",
-    // },
     {
       id: 45,
       image: VzyCart,
@@ -420,47 +374,30 @@ function Portfolio() {
     },
     {
       id: 46,
+      image: ParkPal,
+      title: "ParkPal",
+      category: "filter-mobile-app",
+      description: "Mobile App",
+    },
+    {
+      id: 39,
       image: Altallahcrc,
       title: "Altallahcrc",
       category: "filter-mobile-app",
       description: "Mobile App",
     },
+
+
     {
-      id: 47,
+      id: 38,
       image: Wedding,
       title: "Wedding Touch",
       category: "filter-mobile-app",
       description: "Mobile App",
     },
-    {
-      id: 48,
-      image: FableadStudio,
-      title: "Fablead Studio",
-      category: "filter-react",
-      description: "React JS",
-    },
 
-    {
-      id: 49,
-      image: stagshrishti,
-      title: "Shrishti Trip",
-      category: "filter-react",
-      description: "React JS",
-    },
-    {
-      id: 50,
-      image: Eskil,
-      title: "eSkil",
-      category: "filter-react",
-      description: "React JS",
-    },
-    {
-      id: 51,
-      image: ReactFablead,
-      title: "Fablead Developers Technolab",
-      category: "filter-react",
-      description: "React JS",
-    },
+
+
     {
       id: 52,
       image: whatsappbluk,
@@ -469,18 +406,47 @@ function Portfolio() {
       description: "React JS",
     },
     {
+      id: 49,
+      image: fableadstudiomobile,
+      title: "Fablead Studio",
+      category: "filter-mobile-app",
+      description: "Mobile App",
+    },
+    {
+      id: 47,
+      image: newIcon,
+      title: "ToDo-App",
+      category: "filter-react",
+      description: "React Native",
+    },
+    {
+      id: 54,
+      image: stagshrishti,
+      title: "Shrishti Trip",
+      category: "filter-react",
+      description: "React JS",
+    },
+    {
       id: 53,
+      image: FableadStudio,
+      title: "Fablead Studio",
+      category: "filter-react",
+      description: "React JS",
+    },
+    {
+      id: 51,
       image: tanishphysiofitness,
       title: "Tanish Physio & Fitness",
       category: "filter-react",
       description: "React JS",
     },
+
     {
-      id: 54,
-      image: newIcon,
-      title: "ToDo-App",
+      id: 48,
+      image: ReactFablead,
+      title: "Fablead Developers Technolab",
       category: "filter-react",
-      description: "React Native",
+      description: "React JS",
     },
     {
       id: 55,
@@ -490,7 +456,7 @@ function Portfolio() {
       description: "AI Automation",
     },
     {
-      id: 56,
+      id: 57,
       image: crmewebileapp,
       title: "CRM Web & Mobile App",
       category: "filter-ai-tools",
@@ -498,10 +464,23 @@ function Portfolio() {
     },
 
   ];
-  const filteredItems = portfolioItems.filter((item) => {
-    if (activeFilter === "*") return true;
-    return item.category.split(" ").includes(activeFilter.replace(".", ""));
-  });
+  // const filteredItems = portfolioItems.filter((item) => {
+  //   if (activeFilter === "*") return true;
+  //   return item.category.split(" ").includes(activeFilter.replace(".", ""));
+  // });
+
+  const filteredItems = portfolioItems
+    .filter((item) => {
+      if (activeFilter === "*") return true;
+
+      return item.category
+        .split(" ")
+        .includes(activeFilter.replace(".", ""));
+    })
+    .sort((a, b) => b.id - a.id); // Last ID first
+
+
+  // const limitedItems = filteredItems.slice(0, maxItems);
 
   const limitedItems = filteredItems.slice(0, maxItems);
 
