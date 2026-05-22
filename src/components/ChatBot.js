@@ -43,6 +43,7 @@ const ChatBot = () => {
         'Cloud Services',
         'IT Consulting',
         'Web Design',
+        "AI Tools & Automation",
         'App Development',
         'Software Solutions'
     ];

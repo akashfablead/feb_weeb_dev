@@ -20,20 +20,29 @@ function AboutUs() {
           >
             <div className="content-div">
               <div className="about_left_text wow fadeInUp">
-                <p>
-                  Fablead Developers Technolab is the best IT company in surat
-                  for{" "}
-                  <Link to="/services/website-development">
-                    Website Development
-                  </Link>{" "},
-                  <Link to="/services/website-design">Website Designing</Link>{" "},
-                  <Link to="/services/ai-tools">
-                    AI Tools & Automation
-                  </Link>{" "},
-                  <Link to="/services/mobile-apps">Mobile App Development</Link>{" "}
-                  ,<Link to="/services/e-commerce">Ecommerce Solutions</Link> ,
-                  SEO.{" "}
-                </p>
+           <p>
+  Fablead Developers Technolab is the best IT company in Surat for{" "}
+  <Link to="/services/website-development">
+    Website Development
+  </Link>
+  ,{" "}
+  <Link to="/services/website-design">
+    Website Designing
+  </Link>
+  ,{" "}
+  <Link to="/services/ai-tools">
+    AI Tools & Automation
+  </Link>
+  ,{" "}
+  <Link to="/services/mobile-apps">
+    Mobile App Development
+  </Link>
+  ,{" "}
+  <Link to="/services/e-commerce">
+    Ecommerce Solutions
+  </Link>
+  , SEO.
+</p>
                 <p>
                   Our experienced team combines creativity and technology to give
                   your business a strong online presence and measurable results.
