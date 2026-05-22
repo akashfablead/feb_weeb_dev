@@ -53,9 +53,7 @@ const slides = [
 function Hero() {
   return (
     <div id="hero" className="align-items-center">
-      <Carousel defaultActiveIndex={0}
-
-      >
+      <Carousel>
         {slides.map((slide, index) => (
           <Carousel.Item key={index}>
             <Image className="d-block w-100" src={slide.image} alt={slide.alt}/>
