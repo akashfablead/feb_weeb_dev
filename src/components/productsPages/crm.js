@@ -350,7 +350,7 @@ function CRM() {
                                 className={`collapse ${accordionState.item4 ? "show" : ""}`}
                                 onClick={() => handleAccordionToggle("item4")}
                               >
-                                04. AI Assistant & Smart Automation{" "}
+                                04. AI-Powered CRM Assistant & Smart Automation{" "}
                                 {accordionState.item4 ? (
                                   <ChevronUp className="icon-close float-end" />
                                 ) : (
