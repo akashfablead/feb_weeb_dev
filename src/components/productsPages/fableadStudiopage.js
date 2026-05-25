@@ -197,15 +197,16 @@ const portfolioItems = [
 
   <div className="d-flex justify-content-between align-items-center">
     <div className="stats-container mt-5">
-      <div className="stat-item">
-        <div className="stat-value">100+</div>
-        <div className="stat-label">Events Managed</div>
-      </div>
-
-      <div className="stat-item">
-        <div className="stat-value">50K+</div>
+         <div className="stat-item">
+        <div className="stat-value">10K+</div>
         <div className="stat-label">Photos Shared</div>
       </div>
+      <div className="stat-item">
+        <div className="stat-value">99.9%</div>
+        <div className="stat-label">Uptime Guarantee</div>
+      </div>
+
+   
 
       <div className="stat-item">
         <div className="stat-value">24/7</div>
