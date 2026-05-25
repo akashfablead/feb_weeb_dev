@@ -181,7 +181,7 @@ function Hero() {
                 {slide.subtitle}
               </h3>
 
-              <div className="d-flex justify-content-start">
+              <div className="d-flex justify-content-start ">
                 <Link
                   to="/about"
                   className="btn-get-started scrollto"
