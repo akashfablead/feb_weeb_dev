@@ -20,34 +20,34 @@ function AboutUs() {
           >
             <div className="content-div">
               <div className="about_left_text wow fadeInUp">
-           <p>
-  Fablead Developers Technolab is the best IT company in Surat for{" "}
-  <Link to="/services/website-development">
-    Website Development
-  </Link>
-  ,{" "}
-  <Link to="/services/website-design">
-    Website Designing
-  </Link>
-  ,{" "}
-  <Link to="/services/ai-tools">
-    AI Tools & Automation
-  </Link>
-  ,{" "}
-  <Link to="/services/mobile-apps">
-    Mobile App Development
-  </Link>
-  ,{" "}
-  <Link to="/services/e-commerce">
-    Ecommerce Solutions
-  </Link>
-  , SEO.
-</p>
+                <p>
+                  Fablead Developers Technolab is the best IT company in Surat for{" "}
+                  <Link to="/services/website-development">
+                    Website Development
+                  </Link>
+                  ,{" "}
+                  <Link to="/services/website-design">
+                    Website Designing
+                  </Link>
+                  ,{" "}
+                  <Link to="/services/ai-tools">
+                    AI Tools & Automation
+                  </Link>
+                  ,{" "}
+                  <Link to="/services/mobile-apps">
+                    Mobile App Development
+                  </Link>
+                  ,{" "}
+                  <Link to="/services/e-commerce">
+                    Ecommerce Solutions
+                  </Link>
+                  , SEO.
+                </p>
                 <p>
                   Our experienced team combines creativity and technology to give
                   your business a strong online presence and measurable results.
                 </p>
-                <p>We also offer <a href="/products/inventory-billing-software-erp">ERP</a>, <a href="/products/crm-web-mobile-app-crm">CRM</a>, <a href="/products/hospital-clinic-management-system-hms">HMS</a>, <a href="/products/hr-management-system">HRMS</a>, <a href="/products/whatsapp-bulk-messaging-platform">WhatsApp Bulk Messaging</a> and <a href="/products/ecommerce-web-mobile-app">Ecommerce Web &amp; Mobile App Solutions</a>.</p>
+                <p>We also offer <a href="/products/inventory-billing-software-erp">ERP</a>, <a href="/products/crm-web-mobile-app-crm">CRM</a>, <a href="/products/hospital-clinic-management-system-hms">HMS</a>, <a href="/products/hr-management-system">HRMS</a>, <a href="/products/whatsapp-bulk-messaging-platform">WhatsApp Bulk Messaging</a>, <a href="/products/fablead-studio">fablead Studio</a> and <a href="/products/ecommerce-web-mobile-app">Ecommerce Web &amp; Mobile App Solutions</a>.</p>
                 <p>
                   We always aim to provide Reliable and Quality services to your
                   customers using Latest Technologies by understanding your

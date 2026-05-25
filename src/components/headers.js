@@ -166,6 +166,15 @@ function Header() {
               </Link>
               <ul className={productsDropdownActive ? "dropdown-active" : ""}>
                 <li>
+                 <Link
+  to="/products/fablead-studio"
+  rel="noopener noreferrer"
+  className="product-dropdown"
+>
+  Fablead Studio
+</Link>
+                </li>
+                <li>
                   <Link
                     to="/products/inventory-billing-software-erp"
                     rel="noopener noreferrer"

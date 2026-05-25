@@ -50,6 +50,7 @@ const ChatBot = () => {
 
     // Products options
     const products = [
+        'Fablead Studio',
         'Inventory & Billing Software (ERP)',
         'CRM Web & Mobile APP',
         'CMS Sites',

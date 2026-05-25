@@ -28,6 +28,8 @@ import ApplicationDevelopment from "../pages/trainingAndDevelopment/applicationd
 import CmsDevelopment from "../pages/trainingAndDevelopment/cmsdevelopment";
 import CrmIndexPage from "./cmsindex";
 import RealEstate from "../components/productsPages/realEstate";
+import FableadStudio from "../components/productsPages/fableadStudiopage";
+
 import Crm from "../components/productsPages/crm";
 import EcommerceAndMobileApp from "../components/productsPages/ecommerce";
 import Hrmanagement from "../components/productsPages/hrmanagement";
@@ -393,6 +395,74 @@ function RoutesPage() {
                   </>
                }
             />
+            <Route
+  path="/products/fablead-studio"
+  element={
+    <>
+      <MetaTags>
+        <title>
+          Fablead Studio | AI-Powered Event Photo Sharing Platform
+        </title>
+
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+        <meta name="theme-color" content="#000000" />
+
+        <meta
+          name="description"
+          content="Fablead Studio is an AI-powered event photo sharing platform for photographers and guests. Create event galleries, use Face Match, share photos with QR codes, and manage memories effortlessly."
+        />
+
+        <meta
+          name="keywords"
+          content="Fablead Studio, Event Photo Sharing, Face Match, AI Photo Recognition, Wedding Gallery, Event Gallery Platform, Photographer Software, QR Code Photo Sharing, Photo Management System, Event Photo App"
+        />
+
+        <link
+          rel="canonical"
+          href="https://fableadtechnolabs.com/products/fablead-studio"
+        />
+
+        <meta
+          property="og:title"
+          content="Fablead Studio | AI-Powered Event Photo Sharing Platform"
+        />
+
+        <meta
+          property="og:description"
+          content="Create event galleries, share photos instantly, and let guests find their memories using AI-powered Face Match technology."
+        />
+
+        <meta
+          property="og:url"
+          content="https://fableadtechnolabs.com/products/fablead-studio"
+        />
+
+        <meta property="og:type" content="website" />
+
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+
+        <meta
+          name="twitter:title"
+          content="Fablead Studio | Event Photo Sharing Platform"
+        />
+
+        <meta
+          name="twitter:description"
+          content="AI-powered event galleries with Face Match, QR sharing, guest uploads, and secure photo management."
+        />
+      </MetaTags>
+
+      <FableadStudio />
+    </>
+  }
+/>
             <Route
                exact
                path="/products/crm-web-mobile-app-crm"
