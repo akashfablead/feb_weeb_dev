@@ -165,15 +165,7 @@ function Header() {
                 <i className="bi bi-chevron-down pt-1"></i>
               </Link>
               <ul className={productsDropdownActive ? "dropdown-active" : ""}>
-                <li>
-                 <Link
-  to="/products/fablead-studio"
-  rel="noopener noreferrer"
-  className="product-dropdown"
->
-  Fablead Studio
-</Link>
-                </li>
+
                 <li>
                   <Link
                     to="/products/inventory-billing-software-erp"
@@ -226,6 +218,15 @@ function Header() {
                     className="product-dropdown disabled"
                   >
                     HR Management System
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/products/fablead-studio"
+                    rel="noopener noreferrer"
+                    className="product-dropdown"
+                  >
+                    Fablead Studio
                   </Link>
                 </li>
               </ul>
