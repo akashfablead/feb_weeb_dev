@@ -51,7 +51,7 @@ function EcommerceAndMobileApp() {
           img: Cart,
           title: "Shopping Cart Screen",
           alt: "Fablead Technolabs ecommerce shopping cart page",
-          description: "Fill in your details and complete your order securely.",
+          description: "Review your selected items, apply coupons, and proceed to checkout.",
         },
       ],
     },
@@ -61,7 +61,7 @@ function EcommerceAndMobileApp() {
           img: checkout,
           title: "Checkout Page Screen",
           alt: "Fablead Technolabs ecommerce checkout page",
-          description: "Review your selected items, apply coupons, and proceed to checkout.",
+          description: "Fill in your details and complete your order securely.",
         },
         {
           img: Ecom_admin,
@@ -253,10 +253,10 @@ function EcommerceAndMobileApp() {
                     <Image src={Cart} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce shopping cart page" />
                   </div>
                   <div>
-                    <Image src={checkout}  loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce checkout page" />
+                    <Image src={checkout} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce checkout page" />
                   </div>
                   <div>
-                    <Image src={Ecom_admin}  loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce admin dashboard" />
+                    <Image src={Ecom_admin} loading="lazy" className="img-fluid rounded zoom-img w-100" alt="Fablead Technolabs ecommerce admin dashboard" />
                   </div>
                 </Slider>
               </Col>
