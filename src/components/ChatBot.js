@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import '../assets/css/ChatBot.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRobot, faComments, faTimes, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
@@ -13,6 +14,13 @@ const ChatBot = () => {
     // const [selectedOption, setSelectedOption] = useState(null); // Will be used in future updates
     const messagesEndRef = useRef(null);
     const inputRef = useRef(null);
+
+    const SITE_KEY = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+    const handleCaptcha = (value) => {
+        if (value) {
+            proceedToNextStep();
+        }
+    };
 
     // Lead data storage
     const [leadData, setLeadData] = useState({
@@ -345,7 +353,7 @@ const ChatBot = () => {
 
     const proceedToNextStep = () => {
         // Don't proceed if we're already at the final step
-        if (currentStep >= 9) {
+        if (currentStep >= 10) {
             return;
         }
 
@@ -395,6 +403,10 @@ const ChatBot = () => {
                     addMessage('Please describe your requirement briefly.');
                     break;
                 case 9:
+                    // Captcha verification step
+                    addMessage('Please verify you are human to submit your inquiry.');
+                    break;
+                case 10:
                     // Final step - thank you and submit
                     addMessage('Thank you! Our team will contact you shortly.');
 
@@ -616,7 +628,7 @@ const ChatBot = () => {
         }
 
         // After final step, show restart button instead of input
-        if (currentStep >= 9) {
+        if (currentStep >= 10) {
             return (
                 <div className="chatbot-restart-container">
                     <button
@@ -626,6 +638,17 @@ const ChatBot = () => {
                         <FontAwesomeIcon icon={faRobot} />
                         Start New Conversation
                     </button>
+                </div>
+            );
+        }
+
+        if (currentStep === 9) {
+            return (
+                <div style={{ display: 'flex', justifyContent: 'center', padding: '10px', background: '#fff', borderRadius: '8px', margin: '0 15px 15px 15px', border: '1px solid #ddd' }}>
+                    <ReCAPTCHA
+                        sitekey={SITE_KEY}
+                        onChange={handleCaptcha}
+                    /> 
                 </div>
             );
         }
@@ -778,16 +801,16 @@ const ChatBot = () => {
                 {/* Input area */}
                 {renderInput()}
 
-                {currentStep > 0 && currentStep < 9 && (
+                {currentStep > 0 && currentStep < 10 && (
                     <div className="chatbot-progress">
                         <div className="chatbot-progress-bar">
                             <div
                                 className="chatbot-progress-fill"
-                                style={{ width: `${(currentStep / 9) * 100}%` }}
+                                style={{ width: `${(currentStep / 10) * 100}%` }}
                             ></div>
                         </div>
                         <span className="chatbot-progress-text">
-                            {Math.round((currentStep / 9) * 100)}% Complete
+                            {Math.round((currentStep / 10) * 100)}% Complete
                         </span>
                     </div>
                 )}
