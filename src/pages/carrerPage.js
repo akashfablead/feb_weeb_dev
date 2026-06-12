@@ -136,6 +136,7 @@ function CareerPage() {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [isVerified, setVerified] = useState(false);
   const recaptchaRef = useRef(null);
@@ -259,6 +260,8 @@ function CareerPage() {
       return;
     }
 
+    setIsSubmitting(true);
+
     // Convert resume file to base64
     const resumeBase64 = await new Promise((resolve) => {
       const reader = new FileReader();
@@ -332,6 +335,8 @@ function CareerPage() {
       setTimeout(() => {
         setErrorMessage("");
       }, 1000);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -731,11 +736,16 @@ function CareerPage() {
                   type="button"
                   onClick={handleCloseModal}
                   className="career-cancel-btn"
+                  disabled={isSubmitting}
                 >
                   Cancel
                 </button>
-                <button type="submit" className="career-submit-btn">
-                  Submit Application
+                <button 
+                  type="submit" 
+                  className="career-submit-btn" 
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Loading..." : "Submit Application"}
                 </button>
               </div>
             </Form>
