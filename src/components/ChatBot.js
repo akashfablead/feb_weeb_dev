@@ -644,11 +644,19 @@ const ChatBot = () => {
 
         if (currentStep === 9) {
             return (
-                <div style={{ display: 'flex', justifyContent: 'center', padding: '10px', background: '#fff', borderRadius: '8px', margin: '0 15px 15px 15px', border: '1px solid #ddd' }}>
-                    <ReCAPTCHA
-                        sitekey={SITE_KEY}
-                        onChange={handleCaptcha}
-                    /> 
+                <div className="chatbot-recaptcha-container" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '15px 10px', background: '#fdfdfd', borderRadius: '12px', margin: '15px 15px 15px 15px', border: '1px solid #eaeaea', boxShadow: '0 4px 15px rgba(0, 0, 0, 0.05)', overflow: 'hidden' }}>
+                    {SITE_KEY ? (
+                        <div style={{ transform: 'scale(0.85)', transformOrigin: 'center center', margin: '-10px 0' }}>
+                            <ReCAPTCHA
+                                sitekey={SITE_KEY}
+                                onChange={handleCaptcha}
+                            />
+                        </div>
+                    ) : (
+                        <div style={{ color: '#F05A28', fontSize: '14px', textAlign: 'center', padding: '10px' }}>
+                            reCAPTCHA site key is not configured.
+                        </div>
+                    )}
                 </div>
             );
         }
