@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Col, Container, Row, Modal, Button, Form } from "react-bootstrap";
+import ReCAPTCHA from "react-google-recaptcha";
 import Header from "../components/headers";
 import Footer from "../components/footer";
 import Log from "../components/innerCallToLog";
@@ -136,6 +137,15 @@ function CareerPage() {
   const [errorMessage, setErrorMessage] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
 
+  const [isVerified, setVerified] = useState(false);
+  const recaptchaRef = useRef(null);
+  const recaptchaSiteKey = process.env.REACT_APP_RECAPTCHA_SITE_KEY || "";
+  const isRecaptchaConfigured = Boolean(recaptchaSiteKey.trim());
+
+  const handleVerification = (value) => {
+    setVerified(value);
+  };
+
   // Filter states
   const [locationFilter, setLocationFilter] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("");
@@ -186,6 +196,10 @@ function CareerPage() {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedJob(null);
+    setVerified(false);
+    if (recaptchaRef.current) {
+      recaptchaRef.current.reset();
+    }
   };
 
   const handleCloseDetailsModal = () => {
@@ -234,6 +248,14 @@ function CareerPage() {
 
     if (Object.keys(validationErrors).length > 0) {
       setTimeout(() => setErrorMessage(""), 3000);
+      return;
+    }
+
+    if (isRecaptchaConfigured && !isVerified) {
+      setErrorMessage("Please verify that you're not a robot by clicking the ReCAPTCHA checkbox.");
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 5000);
       return;
     }
 
@@ -539,6 +561,12 @@ function CareerPage() {
           </Modal.Header>
           <Modal.Body>
             <Form onSubmit={handleSubmitApplication} className="career-form">
+              {/* Error Message */}
+              {errorMessage && (
+                <div className="alert alert-danger mb-3" role="alert">
+                  {errorMessage}
+                </div>
+              )}
               {/* Success Message */}
               {successMessage && (
                 <div className="alert alert-success mb-3" role="alert">
@@ -682,6 +710,20 @@ function CareerPage() {
                   onChange={handleInputChange}
                   className="career-form-control career-textarea"
                 />
+              </Form.Group>
+
+              <Form.Group className="mb-3 d-flex justify-content-start">
+                {isRecaptchaConfigured ? (
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={recaptchaSiteKey}
+                    onChange={handleVerification}
+                  />
+                ) : (
+                  <div className="alert alert-warning mb-0" style={{ fontSize: '14px', padding: '10px' }}>
+                    reCAPTCHA site key is not configured. Set REACT_APP_RECAPTCHA_SITE_KEY in .env
+                  </div>
+                )}
               </Form.Group>
 
               <div className="career-modal-actions">
