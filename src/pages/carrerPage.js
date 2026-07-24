@@ -497,14 +497,14 @@ function CareerPage() {
                     {job.fullDescription}
 
                   </div>
-                  <div className="career-job-actions">
+                  {/* <div className="career-job-actions">
                     <button
                       onClick={() => handleApplyClick(job)}
                       className="career-apply-btn"
                     >
                       Apply
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               ))
             ) : (
@@ -740,9 +740,9 @@ function CareerPage() {
                 >
                   Cancel
                 </button>
-                <button 
-                  type="submit" 
-                  className="career-submit-btn" 
+                <button
+                  type="submit"
+                  className="career-submit-btn"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Loading..." : "Submit Application"}

@@ -161,7 +161,7 @@ const ChatBot = () => {
         }, 300);
 
         setTimeout(() => {
-            addMessage('Are you interested in our products, services, or joining our team (Job)?');
+            addMessage('Are you interested in our products or services?');
         }, 1000);
     };
 
@@ -532,12 +532,12 @@ const ChatBot = () => {
                         >
                             Services
                         </button>
-                        <button
+                        {/* <button
                             className="chatbot-option-btn"
                             onClick={() => handleOptionSelect('Job')}
                         >
                             Finding Jobs
-                        </button>
+                        </button> */}
                     </div>
                 );
             case 1: // Show options based on selection
